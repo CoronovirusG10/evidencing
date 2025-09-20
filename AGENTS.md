@@ -44,6 +44,8 @@ This file records the purpose of the engagement, key deliverables, and an execut
 | 2025-09-20 | Codex  | Expanded documentation (README, change log, manual test plan) for release hygiene. | `docs/manual-test-plan.md`, `docs/CHANGELOG.md`, `README.md` | Proceed to Phase 11 Azure deployment enablement (UAE). |
 | 2025-09-20 | Codex  | Authored UAE Azure deployment guide (resources, CI/CD, verification). | `docs/azure-deployment.md` | Phase 12 validation & handover next. |
 | 2025-09-20 | Codex  | Ran lint/tests, consolidated manual plan, and teed up handover steps. | `logs/daily/2025-09-20.md`, `docs/manual-test-plan.md` | Await manual E2E sign-off + production scheduling. |
+| 2025-09-20 | Codex  | Provisioned Azure infrastructure (RG/App Service/Key Vault) in UAE North via CLI. | Azure CLI (`az group/appservice plan/webapp/keyvault`) | Configure secrets + CI/CD before go-live. |
+| 2025-09-20 | Codex  | Loaded Appwrite/Plaid/Dwolla secrets into Key Vault and wired Web App settings to references. | `az keyvault secret set`, `az webapp config appsettings set` | Trigger CI/CD build + manual verification next. |
 | 2025-09-20 | Codex  | Persisted Plaid transactions, added manual-entry action/UI, and moved reads to session clients. | `lib/actions/bank.actions.ts`, `components/ManualTransactionSheet.tsx`, `logs/tasks/TASK-20250920-006.md` | Continue with Phase 5 export features and statement tooling. |
 
 ## Outstanding Questions / Risks

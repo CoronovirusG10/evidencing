@@ -1,0 +1,89 @@
+{
+  "azure": {
+    "subscription": "your-subscription-id",
+    "resourceGroup": "horizon-rg-uae",
+    "location": "UAE North",
+    "environment": "production"
+  },
+  "landing": {
+    "appServiceName": "horizonbank-landing",
+    "runtime": "PHP|8.1",
+    "domain": "horizonbank.ae",
+    "sourcePath": "./UI-UX"
+  },
+  "banking": {
+    "appServiceName": "horizonbank-app",
+    "runtime": "NODE|18-lts",
+    "domain": "app.horizonbank.ae",
+    "sourcePath": "."
+  },
+  "infrastructure": {
+    "appServicePlan": "horizonbank-plan",
+    "keyVault": "horizon-keyvault",
+    "applicationInsights": "horizon-insights",
+    "storageAccount": "horizonbankstorage",
+    "cdnProfile": "horizon-cdn"
+  },
+  "domains": {
+    "primary": "horizonbank.ae",
+    "banking": "app.horizonbank.ae",
+    "api": "api.horizonbank.ae",
+    "www": "www.horizonbank.ae"
+  },
+  "ssl": {
+    "enabled": true,
+    "source": "AppServiceManaged",
+    "enforceHttps": true
+  },
+  "scaling": {
+    "landing": {
+      "minInstances": 1,
+      "maxInstances": 5,
+      "rules": [
+        {
+          "metricName": "CpuPercentage",
+          "threshold": 70,
+          "action": "Increase"
+        }
+      ]
+    },
+    "banking": {
+      "minInstances": 2,
+      "maxInstances": 10,
+      "rules": [
+        {
+          "metricName": "CpuPercentage",
+          "threshold": 70,
+          "action": "Increase"
+        },
+        {
+          "metricName": "MemoryPercentage",
+          "threshold": 80,
+          "action": "Increase"
+        }
+      ]
+    }
+  },
+  "monitoring": {
+    "applicationInsights": {
+      "enabled": true,
+      "sampling": 50
+    },
+    "healthChecks": {
+      "landing": "/health.php",
+      "banking": "/api/health"
+    }
+  },
+  "security": {
+    "waf": {
+      "enabled": true,
+      "mode": "Prevention"
+    },
+    "ipRestrictions": [],
+    "headers": {
+      "xFrameOptions": "SAMEORIGIN",
+      "xContentTypeOptions": "nosniff",
+      "strictTransportSecurity": "max-age=31536000; includeSubDomains"
+    }
+  }
+}

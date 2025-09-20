@@ -137,8 +137,8 @@
     @apply flex w-full flex-col gap-6;
   }
 
-.view-all-btn {
-    @apply text-14 rounded-lg border border-brand-100 bg-white px-4 py-2.5 font-semibold text-brand-700 shadow-subtle/40 hover:bg-brand-25;
+  .view-all-btn {
+    @apply text-14 rounded-lg border border-brand-100 bg-white px-4 py-2.5 font-semibold text-brand-700 shadow-subtle hover:bg-brand-25;
   }
 
   .recent-transactions {
@@ -235,7 +235,7 @@
 
   /* Bank Info */
   .bank-info {
-    @apply gap-[18px] flex p-4 transition-all border border-brand-100 bg-white shadow-subtle/40 hover:border-brand-300;
+    @apply gap-[18px] flex p-4 transition-all border border-brand-100 bg-white shadow-subtle hover:border-brand-300;
   }
 
   /* Category Badge */
@@ -321,7 +321,7 @@
   }
 
   .legal-banner {
-    @apply flex w-full flex-col gap-3 rounded-xl border border-brand-100 bg-white/90 p-4 text-sm text-gray-600 shadow-subtle/40 md:flex-row md:items-center md:justify-between;
+    @apply flex w-full flex-col gap-3 rounded-xl border border-brand-100 bg-white/90 p-4 text-sm text-gray-600 shadow-subtle md:flex-row md:items-center md:justify-between;
   }
 
   .legal-banner__cta {

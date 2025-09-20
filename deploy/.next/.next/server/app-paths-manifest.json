@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/statements/pdf/route": "app/api/statements/pdf/route.js",
+  "/api/transactions/export/route": "app/api/transactions/export/route.js",
+  "/api/sentry-example-api/route": "app/api/sentry-example-api/route.js",
+  "/(root)/legal/disclaimer/page": "app/(root)/legal/disclaimer/page.js",
+  "/(root)/my-banks/page": "app/(root)/my-banks/page.js",
+  "/(root)/page": "app/(root)/page.js",
+  "/(auth)/sign-up/page": "app/(auth)/sign-up/page.js",
+  "/(root)/statements/page": "app/(root)/statements/page.js",
+  "/(root)/transaction-history/page": "app/(root)/transaction-history/page.js",
+  "/(auth)/sign-in/page": "app/(auth)/sign-in/page.js",
+  "/(root)/payment-transfer/page": "app/(root)/payment-transfer/page.js"
+}
