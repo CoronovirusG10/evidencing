@@ -1,40 +1,75 @@
 "use server";
 
 import {
-  ACHClass,
   CountryCode,
   TransferAuthorizationCreateRequest,
   TransferCreateRequest,
-  TransferNetwork,
-  TransferType,
 } from "plaid";
 
 import { plaidClient } from "../plaid";
 import { parseStringify } from "../utils";
+import { isPlaidEnabled } from "../feature-flags";
 
-import { getTransactionsByBankId } from "./transaction.actions";
+import { getTransactionsByBankId, upsertPlaidTransactions } from "./transaction.actions";
 import { getBanks, getBank } from "./user.actions";
+
+const mapStoredTransaction = (transaction: Transaction) => ({
+  id: transaction.id,
+  name: transaction.name,
+  amount: transaction.amount,
+  date: transaction.date,
+  paymentChannel: transaction.paymentChannel,
+  category: transaction.category,
+  type: transaction.type || transaction.direction,
+});
+
+const buildFallbackAccount = (bank: Bank) => {
+  const shareableId = (bank as any).shareableId || (bank as any).sharaebleId;
+  const maskSource = bank.accountId || shareableId || bank.$id;
+  const mask = maskSource ? maskSource.slice(-4) : "0000";
+
+  return {
+    id: bank.accountId || bank.$id,
+    availableBalance: 0,
+    currentBalance: 0,
+    institutionId: bank.bankId || "manual",
+    name: `Manual Account ${mask}`,
+    officialName: bank.bankId || "Manual Account",
+    mask,
+    type: "manual",
+    subtype: "manual",
+    appwriteItemId: bank.$id,
+    sharaebleId: shareableId,
+  };
+};
 
 // Get multiple bank accounts
 export const getAccounts = async ({ userId }: getAccountsProps) => {
   try {
-    // get banks from db
     const banks = await getBanks({ userId });
+
+    if (!isPlaidEnabled()) {
+      const accounts = banks?.map(buildFallbackAccount) ?? [];
+
+      return parseStringify({
+        data: accounts,
+        totalBanks: accounts.length,
+        totalCurrentBalance: 0,
+      });
+    }
 
     const accounts = await Promise.all(
       banks?.map(async (bank: Bank) => {
-        // get each account info from plaid
         const accountsResponse = await plaidClient.accountsGet({
           access_token: bank.accessToken,
         });
         const accountData = accountsResponse.data.accounts[0];
 
-        // get institution info from plaid
         const institution = await getInstitution({
           institutionId: accountsResponse.data.item.institution_id!,
         });
 
-        const account = {
+        return {
           id: accountData.account_id,
           availableBalance: accountData.balances.available!,
           currentBalance: accountData.balances.current!,
@@ -45,11 +80,9 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
           type: accountData.type as string,
           subtype: accountData.subtype! as string,
           appwriteItemId: bank.$id,
-          sharaebleId: bank.shareableId,
+          sharaebleId: (bank as any).shareableId,
         };
-
-        return account;
-      })
+      }) ?? []
     );
 
     const totalBanks = accounts.length;
@@ -66,39 +99,54 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
 // Get one bank account
 export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
   try {
-    // get bank from db
     const bank = await getBank({ documentId: appwriteItemId });
 
-    // get account info from plaid
+    const storedTransactionsData = await getTransactionsByBankId({
+      bankId: bank.$id,
+    });
+
+    const storedTransactions = storedTransactionsData.documents
+      .map(mapStoredTransaction)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    if (!isPlaidEnabled()) {
+      const account = buildFallbackAccount(bank);
+      return parseStringify({
+        data: account,
+        transactions: storedTransactions,
+      });
+    }
+
     const accountsResponse = await plaidClient.accountsGet({
       access_token: bank.accessToken,
     });
     const accountData = accountsResponse.data.accounts[0];
 
-    // get transfer transactions from appwrite
-    const transferTransactionsData = await getTransactionsByBankId({
-      bankId: bank.$id,
+    const userId = typeof bank.userId === "string" ? bank.userId : bank.userId?.$id;
+
+    const plaidTransactions = await getTransactions({
+      accessToken: bank?.accessToken,
     });
 
-    const transferTransactions = transferTransactionsData.documents.map(
-      (transferData: Transaction) => ({
-        id: transferData.$id,
-        name: transferData.name!,
-        amount: transferData.amount!,
-        date: transferData.$createdAt,
-        paymentChannel: transferData.channel,
-        category: transferData.category,
-        type: transferData.senderBankId === bank.$id ? "debit" : "credit",
-      })
-    );
+    if (userId) {
+      await upsertPlaidTransactions(
+        bank.$id,
+        userId,
+        plaidTransactions.map((transaction: any) => ({
+          name: transaction.name,
+          amount: transaction.amount,
+          date: transaction.date,
+          category: transaction.category,
+          paymentChannel: transaction.paymentChannel,
+          externalId: transaction.id,
+          status: transaction.pending ? "pending" : "posted",
+          accountId: transaction.accountId,
+        }))
+      );
+    }
 
-    // get institution info from plaid
     const institution = await getInstitution({
       institutionId: accountsResponse.data.item.institution_id!,
-    });
-
-    const transactions = await getTransactions({
-      accessToken: bank?.accessToken,
     });
 
     const account = {
@@ -114,14 +162,9 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
       appwriteItemId: bank.$id,
     };
 
-    // sort transactions by date such that the most recent transaction is first
-      const allTransactions = [...transactions, ...transferTransactions].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-
     return parseStringify({
       data: account,
-      transactions: allTransactions,
+      transactions: storedTransactions,
     });
   } catch (error) {
     console.error("An error occurred while getting the account:", error);
@@ -150,36 +193,77 @@ export const getInstitution = async ({
 export const getTransactions = async ({
   accessToken,
 }: getTransactionsProps) => {
+  if (!isPlaidEnabled()) {
+    return [];
+  }
+
   let hasMore = true;
-  let transactions: any = [];
+  let cursor: string | undefined;
+  const transactions: any[] = [];
 
   try {
-    // Iterate through each page of new transaction updates for item
     while (hasMore) {
       const response = await plaidClient.transactionsSync({
         access_token: accessToken,
+        cursor,
       });
 
-      const data = response.data;
-
-      transactions = response.data.added.map((transaction) => ({
-        id: transaction.transaction_id,
-        name: transaction.name,
-        paymentChannel: transaction.payment_channel,
-        type: transaction.payment_channel,
-        accountId: transaction.account_id,
-        amount: transaction.amount,
-        pending: transaction.pending,
-        category: transaction.category ? transaction.category[0] : "",
-        date: transaction.date,
-        image: transaction.logo_url,
-      }));
-
-      hasMore = data.has_more;
+      transactions.push(...response.data.added);
+      cursor = response.data.next_cursor || undefined;
+      hasMore = response.data.has_more;
     }
 
-    return parseStringify(transactions);
+    return parseStringify(
+      transactions.map((transaction) => {
+        const direction = transaction.amount >= 0 ? "debit" : "credit";
+        const signedAmount =
+          direction === "debit"
+            ? -Math.abs(transaction.amount)
+            : Math.abs(transaction.amount);
+
+        return {
+          id: transaction.transaction_id,
+          name: transaction.name,
+          paymentChannel: transaction.payment_channel,
+          type: direction,
+          accountId: transaction.account_id,
+          amount: signedAmount,
+          pending: transaction.pending,
+          category: transaction.category ? transaction.category[0] : "Uncategorized",
+          date: transaction.date,
+          image: transaction.logo_url,
+        };
+      })
+    );
   } catch (error) {
     console.error("An error occurred while getting the accounts:", error);
+  }
+};
+
+// dwolla functions remain unchanged below...
+
+// Create Dwolla transfer authorization
+export const createDwollaTransferAuthorization = async (
+  transferAuthorization: TransferAuthorizationCreateRequest
+) => {
+  try {
+    const response = await plaidClient.transferAuthorizationCreate(
+      transferAuthorization
+    );
+
+    return parseStringify(response.data);
+  } catch (error) {
+    console.error("An error occurred during transfer authorization:", error);
+  }
+};
+
+// Create Dwolla transfer
+export const createDwollaTransfer = async (transfer: TransferCreateRequest) => {
+  try {
+    const response = await plaidClient.transferCreate(transfer);
+
+    return parseStringify(response.data);
+  } catch (error) {
+    console.error("An error occurred while creating the transfer:", error);
   }
 };

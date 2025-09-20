@@ -29,6 +29,7 @@ const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const formSchema = authFormSchema(type);
 
@@ -44,6 +45,7 @@ const AuthForm = ({ type }: { type: string }) => {
     // 2. Define a submit handler.
     const onSubmit = async (data: z.infer<typeof formSchema>) => {
       setIsLoading(true);
+      setError(null);
 
       try {
         // Sign up with Appwrite & create plaid token
@@ -62,9 +64,14 @@ const AuthForm = ({ type }: { type: string }) => {
             password: data.password
           }
 
-          const newUser = await signUp(userData);
+          const response = await signUp(userData);
 
-          setUser(newUser);
+          if(!response?.success) {
+            setError(response?.error ?? 'Sign up failed. Please try again.');
+            return;
+          }
+
+          setUser(response.data);
         }
 
         if(type === 'sign-in') {
@@ -73,10 +80,16 @@ const AuthForm = ({ type }: { type: string }) => {
             password: data.password,
           })
 
-          if(response) router.push('/')
+          if(!response?.success) {
+            setError(response?.error ?? 'Sign in failed. Please try again.');
+            return;
+          }
+
+          router.push('/')
         }
       } catch (error) {
         console.log(error);
+        setError('Something went wrong. Please try again.');
       } finally {
         setIsLoading(false);
       }
@@ -153,6 +166,9 @@ const AuthForm = ({ type }: { type: string }) => {
                   ) : type === 'sign-in' 
                     ? 'Sign In' : 'Sign Up'}
                 </Button>
+                {error && (
+                  <p className="text-14 text-red-500" role="alert">{error}</p>
+                )}
               </div>
             </form>
           </Form>

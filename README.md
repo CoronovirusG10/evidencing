@@ -70,6 +70,10 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Transaction History**: Includes pagination and filtering options for viewing transaction history of different banks
 
+👉 **Statements & Exports**: Filter transactions by date/direction, export CSVs, and download branded PDF statements per account
+
+👉 **Branding Toolkit**: Follow `docs/theming-guide.md` to adjust palettes, typography, and legal copy for bespoke deployments
+
 👉 **Real-time Updates**: Reflects changes across all relevant pages upon connecting new bank accounts.
 
 👉 **Funds Transfer**: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
@@ -77,6 +81,26 @@ If you're getting started and need assistance or face any bugs, join our active 
 👉 **Responsiveness**: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
 
 and many more, including code architecture and reusability. 
+
+## Feature Flags
+
+- `NEXT_PUBLIC_ENABLE_PLAID`: Disable Plaid linking while keeping manual transaction workflows available.
+- `NEXT_PUBLIC_ENABLE_TRANSFERS`: Disable Dwolla-powered transfers and hide related UI while retaining manual entries.
+
+**Rate Limiting:** CSV exports and PDF statements are limited to 5 requests per user per minute. Requests exceeding the limit receive a 429 response with `Retry-After` guidance.
+
+## Tooling
+
+- `npm run lint` — ESLint with `--max-warnings=0` enforcement.
+- `npm run test` — Runs CSV formatting + PDF smoke tests (see `tests/` directory).
+- Pre-commit recommendations and secured-environment reminders are documented in `docs/tooling.md`.
+
+## Documentation references
+
+- Manual test plan: `docs/manual-test-plan.md`
+- Theming & rebranding guide: `docs/theming-guide.md`
+- Tooling & pre-commit guidance: `docs/tooling.md`
+- Azure deployment (UAE): `docs/azure-deployment.md`
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -103,6 +127,7 @@ Install the project dependencies using npm:
 
 ```bash
 npm install
+npm run test
 ```
 
 **Set Up Environment Variables**
@@ -120,7 +145,10 @@ APPWRITE_DATABASE_ID=
 APPWRITE_USER_COLLECTION_ID=
 APPWRITE_BANK_COLLECTION_ID=
 APPWRITE_TRANSACTION_COLLECTION_ID=
-APPWRITE_SECRET=
+NEXT_APPWRITE_KEY=
+ALLOWED_EMAILS=
+NEXT_PUBLIC_ENABLE_PLAID=true
+NEXT_PUBLIC_ENABLE_TRANSFERS=true
 
 #PLAID
 PLAID_CLIENT_ID=
@@ -163,7 +191,8 @@ APPWRITE_DATABASE_ID=
 APPWRITE_USER_COLLECTION_ID=
 APPWRITE_BANK_COLLECTION_ID=
 APPWRITE_TRANSACTION_COLLECTION_ID=
-APPWRITE_SECRET=
+NEXT_APPWRITE_KEY=
+ALLOWED_EMAILS=
 
 #PLAID
 PLAID_CLIENT_ID=

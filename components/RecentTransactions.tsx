@@ -4,6 +4,7 @@ import { BankTabItem } from './BankTabItem'
 import BankInfo from './BankInfo'
 import TransactionsTable from './TransactionsTable'
 import { Pagination } from './Pagination'
+import { ManualTransactionSheet } from './ManualTransactionSheet'
 
 const RecentTransactions = ({
   accounts,
@@ -23,14 +24,20 @@ const RecentTransactions = ({
 
   return (
     <section className="recent-transactions">
-      <header className="flex items-center justify-between">
+      <header className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="recent-transactions-label">Recent transactions</h2>
-        <Link
-          href={`/transaction-history/?id=${appwriteItemId}`}
-          className="view-all-btn"
-        >
-          View all
-        </Link>
+        <div className="flex items-center gap-2">
+          <ManualTransactionSheet
+            accounts={accounts}
+            defaultBankId={appwriteItemId}
+          />
+          <Link
+            href={`/transaction-history/?id=${appwriteItemId}`}
+            className="view-all-btn"
+          >
+            View all
+          </Link>
+        </div>
       </header>
 
       <Tabs defaultValue={appwriteItemId} className="w-full">

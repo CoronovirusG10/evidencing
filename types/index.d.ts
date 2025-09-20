@@ -66,20 +66,25 @@ declare type Account = {
 declare type Transaction = {
   id: string;
   $id: string;
+  bankId: string;
   name: string;
-  paymentChannel: string;
-  type: string;
-  accountId: string;
+  paymentChannel?: string;
+  direction?: 'credit' | 'debit';
+  type?: string;
+  accountId?: string;
   amount: number;
-  pending: boolean;
-  category: string;
+  pending?: boolean;
+  category?: string;
   date: string;
-  image: string;
-  type: string;
+  image?: string;
+  status?: string;
+  source?: 'plaid' | 'manual' | 'transfer';
+  externalId?: string;
+  notes?: string;
   $createdAt: string;
-  channel: string;
-  senderBankId: string;
-  receiverBankId: string;
+  channel?: string;
+  senderBankId?: string;
+  receiverBankId?: string;
 };
 
 declare type Bank = {
@@ -283,15 +288,36 @@ declare interface CreateFundingSourceOptions {
 declare interface CreateTransactionProps {
   name: string;
   amount: string;
-  senderId: string;
-  senderBankId: string;
-  receiverId: string;
-  receiverBankId: string;
-  email: string;
+  senderId?: string;
+  senderBankId?: string;
+  receiverId?: string;
+  receiverBankId?: string;
+  email?: string;
+  bankId?: string;
+  userId?: string;
+  source?: 'plaid' | 'manual' | 'transfer';
+  direction?: 'credit' | 'debit';
+  category?: string;
+  date?: string;
+  paymentChannel?: string;
+  externalId?: string;
+  status?: string;
+  notes?: string;
+  metadata?: Record<string, unknown>;
 }
 
 declare interface getTransactionsByBankIdProps {
   bankId: string;
+}
+
+declare interface CreateManualTransactionInput {
+  bankId: string;
+  name: string;
+  amount: number;
+  direction: 'credit' | 'debit';
+  category?: string;
+  date: string;
+  notes?: string;
 }
 
 declare interface signInProps {

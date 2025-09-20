@@ -1,0 +1,824 @@
+0 verbose cli /opt/homebrew/Cellar/node/24.7.0/bin/node /opt/homebrew/bin/npm
+1 info using npm@11.5.1
+2 info using node@v24.7.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/kaveh/Horizon-bank/banking/.npmrc
+5 silly config load:file:/Users/kaveh/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/Users/kaveh/Horizon-bank/banking/.npm-cache/_logs/2025-09-20T12_38_50_915Z-
+10 verbose logfile /Users/kaveh/Horizon-bank/banking/.npm-cache/_logs/2025-09-20T12_38_50_915Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/acorn' ]
+15 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/aria-hidden' ]
+16 silly reify mark retired [
+16 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array-buffer-byte-length'
+16 silly reify ]
+17 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/array-includes' ]
+18 silly reify mark retired [
+18 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.findlastindex'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flat'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.toreversed'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.tosorted'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flatmap'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/arraybuffer.prototype.slice'
+23 silly reify ]
+24 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/axe-core' ]
+25 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/axios' ]
+26 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/axobject-query' ]
+27 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/brace-expansion' ]
+28 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/braces' ]
+29 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/call-bind' ]
+30 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/caniuse-lite' ]
+31 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/chalk' ]
+32 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/chart.js' ]
+33 silly reify mark retired [
+33 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority'
+33 silly reify ]
+34 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/countup.js' ]
+35 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/cross-spawn' ]
+36 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/cssesc' ]
+37 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-buffer' ]
+38 silly reify mark retired [
+38 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-length'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-offset'
+39 silly reify ]
+40 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/debug' ]
+41 silly reify mark retired [
+41 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/decode-uri-component'
+41 silly reify ]
+42 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/detect-node-es' ]
+43 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/dwolla-v2' ]
+44 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/enhanced-resolve' ]
+45 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-abstract' ]
+46 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-define-property' ]
+47 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-object-atoms' ]
+48 silly reify mark retired [
+48 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-iterator-helpers'
+48 silly reify ]
+49 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-set-tostringtag' ]
+50 silly reify mark retired [
+50 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-shim-unscopables'
+50 silly reify ]
+51 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-to-primitive' ]
+52 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/eslint' ]
+53 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-config-next' ]
+54 silly reify mark retired [
+54 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-import-resolver-typescript'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-module-utils'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-import'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-jsx-a11y'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-react'
+58 silly reify ]
+59 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/esquery' ]
+60 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/estree-walker' ]
+61 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/fast-glob' ]
+62 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/fastq' ]
+63 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/fill-range' ]
+64 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/filter-obj' ]
+65 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/flatted' ]
+66 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/follow-redirects' ]
+67 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/for-each' ]
+68 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/foreground-child' ]
+69 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/form-data' ]
+70 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/form-urlencoded' ]
+71 silly reify mark retired [
+71 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/function.prototype.name'
+71 silly reify ]
+72 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/get-intrinsic' ]
+73 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/get-nonce' ]
+74 silly reify mark retired [
+74 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-symbol-description'
+74 silly reify ]
+75 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/get-tsconfig' ]
+76 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/glob' ]
+77 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/globalthis' ]
+78 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/gopd' ]
+79 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/has-bigints' ]
+80 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/has-proto' ]
+81 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/has-symbols' ]
+82 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/ignore' ]
+83 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/import-fresh' ]
+84 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/immediate' ]
+85 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/internal-slot' ]
+86 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/invariant' ]
+87 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-array-buffer' ]
+88 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-async-function' ]
+89 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-bigint' ]
+90 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-boolean-object' ]
+91 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-core-module' ]
+92 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-data-view' ]
+93 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-date-object' ]
+94 silly reify mark retired [
+94 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-finalizationregistry'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-generator-function'
+95 silly reify ]
+96 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-number-object' ]
+97 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-reference' ]
+98 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-regex' ]
+99 silly reify mark retired [
+99 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-shared-array-buffer'
+99 silly reify ]
+100 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-stream' ]
+101 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-string' ]
+102 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-symbol' ]
+103 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-typed-array' ]
+104 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakref' ]
+105 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakset' ]
+106 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/iterator.prototype' ]
+107 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/jackspeak' ]
+108 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/jiti' ]
+109 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/js-yaml' ]
+110 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/json5' ]
+111 silly reify mark retired [
+111 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/language-subtag-registry'
+111 silly reify ]
+112 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lie' ]
+113 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/localforage' ]
+114 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lodash.snakecase' ]
+115 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/loose-envify' ]
+116 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lru-cache' ]
+117 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lucide-react' ]
+118 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/magic-string' ]
+119 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/micromatch' ]
+120 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/mkdirp' ]
+121 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/minipass' ]
+122 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/ms' ]
+123 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/nanoid' ]
+124 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/next' ]
+125 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/node-appwrite' ]
+126 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/node-fetch' ]
+127 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object-inspect' ]
+128 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.assign' ]
+129 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.entries' ]
+130 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.hasown' ]
+131 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.values' ]
+132 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/path-scurry' ]
+133 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/picocolors' ]
+134 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/pirates' ]
+135 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/plaid' ]
+136 silly reify mark retired [
+136 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/possible-typed-array-names'
+136 silly reify ]
+137 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/postcss' ]
+138 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-nested' ]
+139 silly reify mark retired [
+139 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-selector-parser'
+139 silly reify ]
+140 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/progress' ]
+141 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/query-string' ]
+142 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react' ]
+143 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-chartjs-2' ]
+144 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-countup' ]
+145 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-dom' ]
+146 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-hook-form' ]
+147 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-plaid-link' ]
+148 silly reify mark retired [
+148 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll'
+148 silly reify ]
+149 silly reify mark retired [
+149 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll-bar'
+149 silly reify ]
+150 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-script-hook' ]
+151 silly reify mark retired [
+151 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-style-singleton'
+151 silly reify ]
+152 silly reify mark retired [
+152 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/reflect.getprototypeof'
+152 silly reify ]
+153 silly reify mark retired [
+153 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regenerator-runtime'
+153 silly reify ]
+154 silly reify mark retired [
+154 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regexp.prototype.flags'
+154 silly reify ]
+155 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/resolve' ]
+156 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/resolve-pkg-maps' ]
+157 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/reusify' ]
+158 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/rimraf' ]
+159 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/rollup' ]
+160 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/safe-array-concat' ]
+161 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/safe-regex-test' ]
+162 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/scheduler' ]
+163 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/semver' ]
+164 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/side-channel' ]
+165 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/source-map-js' ]
+166 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/split-on-first' ]
+167 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/stacktrace-parser' ]
+168 silly reify mark retired [
+168 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.matchall'
+168 silly reify ]
+169 silly reify mark retired [
+169 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trim'
+169 silly reify ]
+170 silly reify mark retired [
+170 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trimend'
+170 silly reify ]
+171 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/styled-jsx' ]
+172 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/sucrase' ]
+173 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tailwind-merge' ]
+174 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss' ]
+175 silly reify mark retired [
+175 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss-animate'
+175 silly reify ]
+176 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tapable' ]
+177 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tr46' ]
+178 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/ts-api-utils' ]
+179 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tslib' ]
+180 silly reify mark retired [
+180 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-length'
+180 silly reify ]
+181 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-buffer' ]
+182 silly reify mark retired [
+182 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-offset'
+182 silly reify ]
+183 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-length' ]
+184 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/typescript' ]
+185 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/unbox-primitive' ]
+186 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/undici' ]
+187 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/undici-types' ]
+188 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/use-callback-ref' ]
+189 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/use-sidecar' ]
+190 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/webidl-conversions' ]
+191 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/webpack-sources' ]
+192 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/whatwg-url' ]
+193 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/which' ]
+194 silly reify mark retired [
+194 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-boxed-primitive'
+194 silly reify ]
+195 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/which-builtin-type' ]
+196 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/which-typed-array' ]
+197 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/yallist' ]
+198 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/yaml' ]
+199 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/zod' ]
+200 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@babel/runtime' ]
+201 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint/js' ]
+202 silly reify mark retired [
+202 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/eslint-utils'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/regexpp'
+203 silly reify ]
+204 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@fastify/busboy' ]
+205 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/core' ]
+206 silly reify mark retired [
+206 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/react-dom'
+206 silly reify ]
+207 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/dom' ]
+208 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/utils' ]
+209 silly reify mark retired [
+209 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@hookform/resolvers'
+209 silly reify ]
+210 silly reify mark retired [
+210 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@humanwhocodes/config-array'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/gen-mapping'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/set-array'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/sourcemap-codec'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/trace-mapping'
+214 silly reify ]
+215 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@kurkle/color' ]
+216 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@next/env' ]
+217 silly reify mark retired [
+217 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/eslint-plugin-next'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-arm64'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-x64'
+219 silly reify ]
+220 silly reify mark retired [
+220 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-gnu'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-musl'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-musl'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-gnu'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-arm64-msvc'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-ia32-msvc'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-x64-msvc'
+226 silly reify ]
+227 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/number' ]
+228 silly reify mark retired [
+228 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/primitive'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-arrow'
+229 silly reify ]
+230 silly reify mark retired [
+230 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-collection'
+230 silly reify ]
+231 silly reify mark retired [
+231 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-compose-refs'
+231 silly reify ]
+232 silly reify mark retired [
+232 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-context'
+232 silly reify ]
+233 silly reify mark retired [
+233 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dialog'
+233 silly reify ]
+234 silly reify mark retired [
+234 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-direction'
+234 silly reify ]
+235 silly reify mark retired [
+235 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dismissable-layer'
+235 silly reify ]
+236 silly reify mark retired [
+236 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-guards'
+236 silly reify ]
+237 silly reify mark retired [
+237 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-scope'
+237 silly reify ]
+238 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-id' ]
+239 silly reify mark retired [
+239 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-label'
+239 silly reify ]
+240 silly reify mark retired [
+240 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-popper'
+240 silly reify ]
+241 silly reify mark retired [
+241 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-portal'
+241 silly reify ]
+242 silly reify mark retired [
+242 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-presence'
+242 silly reify ]
+243 silly reify mark retired [
+243 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-primitive'
+243 silly reify ]
+244 silly reify mark retired [
+244 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-progress'
+244 silly reify ]
+245 silly reify mark retired [
+245 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-roving-focus'
+245 silly reify ]
+246 silly reify mark retired [
+246 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-select'
+246 silly reify ]
+247 silly reify mark retired [
+247 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-slot'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-tabs'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-callback-ref'
+249 silly reify ]
+250 silly reify mark retired [
+250 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-controllable-state'
+250 silly reify ]
+251 silly reify mark retired [
+251 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-escape-keydown'
+251 silly reify ]
+252 silly reify mark retired [
+252 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-layout-effect'
+252 silly reify ]
+253 silly reify mark retired [
+253 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-previous'
+253 silly reify ]
+254 silly reify mark retired [
+254 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-rect'
+254 silly reify ]
+255 silly reify mark retired [
+255 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-size'
+255 silly reify ]
+256 silly reify mark retired [
+256 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-visually-hidden'
+256 silly reify ]
+257 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/rect' ]
+258 silly reify mark retired [
+258 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/plugin-commonjs'
+258 silly reify ]
+259 silly reify mark retired [
+259 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/pluginutils'
+259 silly reify ]
+260 silly reify mark retired [
+260 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rushstack/eslint-patch'
+260 silly reify ]
+261 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/browser' ]
+262 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/cli' ]
+263 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/core' ]
+264 silly reify mark retired [
+264 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/integrations'
+264 silly reify ]
+265 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/nextjs' ]
+266 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/node' ]
+267 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/react' ]
+268 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/replay' ]
+269 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/types' ]
+270 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/utils' ]
+271 silly reify mark retired [
+271 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/vercel-edge'
+271 silly reify ]
+272 silly reify mark retired [
+272 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/webpack-plugin'
+272 silly reify ]
+273 silly reify mark retired [
+273 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/feedback'
+273 silly reify ]
+274 silly reify mark retired [
+274 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/replay-canvas'
+274 silly reify ]
+275 silly reify mark retired [
+275 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/tracing'
+275 silly reify ]
+276 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/counter' ]
+277 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/helpers' ]
+278 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/estree' ]
+279 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/node' ]
+280 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/prop-types' ]
+281 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react' ]
+282 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react-dom' ]
+283 silly reify mark retired [
+283 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/parser'
+283 silly reify ]
+284 silly reify mark retired [
+284 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/scope-manager'
+284 silly reify ]
+285 silly reify mark retired [
+285 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/types'
+285 silly reify ]
+286 silly reify mark retired [
+286 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/typescript-estree'
+286 silly reify ]
+287 silly reify mark retired [
+287 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/visitor-keys'
+287 silly reify ]
+288 silly reify mark retired [
+288 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@ungap/structured-clone'
+288 silly reify ]
+289 silly reify mark retired [
+289 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-load-config/node_modules/lilconfig'
+289 silly reify ]
+290 silly reify mark retired [
+290 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/ansi-regex'
+290 silly reify ]
+291 silly reify mark retired [
+291 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/strip-ansi'
+291 silly reify ]
+292 silly reify mark retired [
+292 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-regex'
+292 silly reify ]
+293 silly reify mark retired [
+293 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-styles'
+293 silly reify ]
+294 silly reify mark retired [
+294 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/strip-ansi'
+294 silly reify ]
+295 silly reify mark retired [
+295 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/ansi-regex'
+295 silly reify ]
+296 silly reify mark retired [
+296 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/strip-ansi'
+296 silly reify ]
+297 silly reify moves {
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/acorn': '/Users/kaveh/Horizon-bank/banking/node_modules/.acorn-r4VbRSxV',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/aria-hidden': '/Users/kaveh/Horizon-bank/banking/node_modules/.aria-hidden-ffPB0etR',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array-buffer-byte-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.array-buffer-byte-length-00ljXXsP',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array-includes': '/Users/kaveh/Horizon-bank/banking/node_modules/.array-includes-KZ7bIHaq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.findlastindex': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.findlastindex-5ebzy85W',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flat': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.flat-QNwYMrgM',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.toreversed': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.toreversed-cnHaFlHy',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.tosorted': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.tosorted-rJikeWOe',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flatmap': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.flatmap-mixwhjUf',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/arraybuffer.prototype.slice': '/Users/kaveh/Horizon-bank/banking/node_modules/.arraybuffer.prototype.slice-LBvVe8XW',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/axe-core': '/Users/kaveh/Horizon-bank/banking/node_modules/.axe-core-I1Z3xq0N',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/axios': '/Users/kaveh/Horizon-bank/banking/node_modules/.axios-Vfnf68Tk',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/axobject-query': '/Users/kaveh/Horizon-bank/banking/node_modules/.axobject-query-7VTzkifw',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/brace-expansion': '/Users/kaveh/Horizon-bank/banking/node_modules/.brace-expansion-Bje2HzB8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/braces': '/Users/kaveh/Horizon-bank/banking/node_modules/.braces-2mZObfxU',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/call-bind': '/Users/kaveh/Horizon-bank/banking/node_modules/.call-bind-9yigQCbD',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/caniuse-lite': '/Users/kaveh/Horizon-bank/banking/node_modules/.caniuse-lite-tl3qVK4S',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/chalk': '/Users/kaveh/Horizon-bank/banking/node_modules/.chalk-JYwPWZJt',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/chart.js': '/Users/kaveh/Horizon-bank/banking/node_modules/.chart.js-1DEO3Jdj',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority': '/Users/kaveh/Horizon-bank/banking/node_modules/.class-variance-authority-K0NJqf2Z',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/countup.js': '/Users/kaveh/Horizon-bank/banking/node_modules/.countup.js-ZEMvul0P',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/cross-spawn': '/Users/kaveh/Horizon-bank/banking/node_modules/.cross-spawn-9P9g1THB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/cssesc': '/Users/kaveh/Horizon-bank/banking/node_modules/.cssesc-nD6joUsO',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.data-view-buffer-Da6rfrke',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.data-view-byte-length-PmaGQ8x8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-offset': '/Users/kaveh/Horizon-bank/banking/node_modules/.data-view-byte-offset-Ad6eGUae',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/debug': '/Users/kaveh/Horizon-bank/banking/node_modules/.debug-sv49LNjp',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/decode-uri-component': '/Users/kaveh/Horizon-bank/banking/node_modules/.decode-uri-component-zW0IkQhx',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/detect-node-es': '/Users/kaveh/Horizon-bank/banking/node_modules/.detect-node-es-y83fFJXM',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/dwolla-v2': '/Users/kaveh/Horizon-bank/banking/node_modules/.dwolla-v2-pvzySFk5',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/enhanced-resolve': '/Users/kaveh/Horizon-bank/banking/node_modules/.enhanced-resolve-k6UyemIg',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-abstract': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-abstract-NGh2LPYP',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-define-property': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-define-property-9Yr38c7x',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-object-atoms': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-object-atoms-MfDijPKb',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-iterator-helpers': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-iterator-helpers-cyUW70xI',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-set-tostringtag': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-set-tostringtag-gWSS1EHY',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-shim-unscopables': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-shim-unscopables-0H4gX8eq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-to-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-to-primitive-i7cZxlor',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-bIHnTFPm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-config-next': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-config-next-VqbKcPTO',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-import-resolver-typescript': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-import-resolver-typescript-bcSoiNar',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-module-utils': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-module-utils-AMJ56AHq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-import': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-plugin-import-jrbVR1hw',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-jsx-a11y': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-plugin-jsx-a11y-xOTWTvji',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-react': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-plugin-react-ccY7FgID',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/esquery': '/Users/kaveh/Horizon-bank/banking/node_modules/.esquery-luM2izkB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/estree-walker': '/Users/kaveh/Horizon-bank/banking/node_modules/.estree-walker-OP5yQWhn',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/fast-glob': '/Users/kaveh/Horizon-bank/banking/node_modules/.fast-glob-CMd8rd4O',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/fastq': '/Users/kaveh/Horizon-bank/banking/node_modules/.fastq-97hBKkdB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/fill-range': '/Users/kaveh/Horizon-bank/banking/node_modules/.fill-range-G0uOs8Pa',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/filter-obj': '/Users/kaveh/Horizon-bank/banking/node_modules/.filter-obj-PyD85EtZ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/flatted': '/Users/kaveh/Horizon-bank/banking/node_modules/.flatted-PeFh3H1Y',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/follow-redirects': '/Users/kaveh/Horizon-bank/banking/node_modules/.follow-redirects-8xwxxEUp',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/for-each': '/Users/kaveh/Horizon-bank/banking/node_modules/.for-each-VpmjMS0R',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/foreground-child': '/Users/kaveh/Horizon-bank/banking/node_modules/.foreground-child-LKLl1fL6',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/form-data': '/Users/kaveh/Horizon-bank/banking/node_modules/.form-data-UF5Imc4v',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/form-urlencoded': '/Users/kaveh/Horizon-bank/banking/node_modules/.form-urlencoded-zVzg6qNx',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/function.prototype.name': '/Users/kaveh/Horizon-bank/banking/node_modules/.function.prototype.name-HJW88ep9',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-intrinsic': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-intrinsic-eNKHi2Zy',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-nonce': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-nonce-XlDLXHlA',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-symbol-description': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-symbol-description-ljMvX2ql',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-tsconfig': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-tsconfig-g8Slp7N8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/glob': '/Users/kaveh/Horizon-bank/banking/node_modules/.glob-ZbNj3hOI',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/globalthis': '/Users/kaveh/Horizon-bank/banking/node_modules/.globalthis-I0oV9BXs',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/gopd': '/Users/kaveh/Horizon-bank/banking/node_modules/.gopd-VbCGIRZ6',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/has-bigints': '/Users/kaveh/Horizon-bank/banking/node_modules/.has-bigints-Zjd6vdYJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/has-proto': '/Users/kaveh/Horizon-bank/banking/node_modules/.has-proto-SmbJUjyZ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/has-symbols': '/Users/kaveh/Horizon-bank/banking/node_modules/.has-symbols-CzpqAm9u',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/ignore': '/Users/kaveh/Horizon-bank/banking/node_modules/.ignore-vyuZ1zog',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/import-fresh': '/Users/kaveh/Horizon-bank/banking/node_modules/.import-fresh-9TDBgdaA',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/immediate': '/Users/kaveh/Horizon-bank/banking/node_modules/.immediate-MkTTn0yn',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/internal-slot': '/Users/kaveh/Horizon-bank/banking/node_modules/.internal-slot-Rl3L5soI',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/invariant': '/Users/kaveh/Horizon-bank/banking/node_modules/.invariant-zm5F3uQg',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-array-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-array-buffer-3lMXeNJr',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-async-function': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-async-function-SnsQwhzK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-bigint': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-bigint-VSAwjijx',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-boolean-object': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-boolean-object-H7T89rfZ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-core-module': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-core-module-e8h06ybO',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-data-view': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-data-view-OiuuSXlY',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-date-object': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-date-object-UflmAfDa',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-finalizationregistry': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-finalizationregistry-XV5QZGR7',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-generator-function': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-generator-function-5FNlrckl',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-number-object': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-number-object-7C12jpVm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-reference': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-reference-0hSRlgNu',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-regex-0TW5LsxB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-shared-array-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-shared-array-buffer-pMu1plM7',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-stream': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-stream-APvb6W7K',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-string': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-string-ikDhtlMp',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-symbol': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-symbol-ZtkWDou8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-typed-array': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-typed-array-i9x4HV3G',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakref': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-weakref-SRiQdwha',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakset': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-weakset-BQNXUWvy',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/iterator.prototype': '/Users/kaveh/Horizon-bank/banking/node_modules/.iterator.prototype-JyVSe7kc',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/jackspeak': '/Users/kaveh/Horizon-bank/banking/node_modules/.jackspeak-RVCOOeIH',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/jiti': '/Users/kaveh/Horizon-bank/banking/node_modules/.jiti-57UT9nQt',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/js-yaml': '/Users/kaveh/Horizon-bank/banking/node_modules/.js-yaml-wrBC1c9U',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/json5': '/Users/kaveh/Horizon-bank/banking/node_modules/.json5-8qluNC3a',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/language-subtag-registry': '/Users/kaveh/Horizon-bank/banking/node_modules/.language-subtag-registry-805FcZoJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lie': '/Users/kaveh/Horizon-bank/banking/node_modules/.lie-WVK5JR5C',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/localforage': '/Users/kaveh/Horizon-bank/banking/node_modules/.localforage-jSZHzo4C',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lodash.snakecase': '/Users/kaveh/Horizon-bank/banking/node_modules/.lodash.snakecase-oynGMaDC',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/loose-envify': '/Users/kaveh/Horizon-bank/banking/node_modules/.loose-envify-U4IsOwwK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lru-cache': '/Users/kaveh/Horizon-bank/banking/node_modules/.lru-cache-eSY9mthm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lucide-react': '/Users/kaveh/Horizon-bank/banking/node_modules/.lucide-react-RfyDwpCT',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/magic-string': '/Users/kaveh/Horizon-bank/banking/node_modules/.magic-string-zBoSZnhw',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/micromatch': '/Users/kaveh/Horizon-bank/banking/node_modules/.micromatch-9IYxHsW1',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/mkdirp': '/Users/kaveh/Horizon-bank/banking/node_modules/.mkdirp-pvEhg2C8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/minipass': '/Users/kaveh/Horizon-bank/banking/node_modules/.minipass-Rc2xnsy8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/ms': '/Users/kaveh/Horizon-bank/banking/node_modules/.ms-Lpiui9jH',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/nanoid': '/Users/kaveh/Horizon-bank/banking/node_modules/.nanoid-9GEKbd4c',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/next': '/Users/kaveh/Horizon-bank/banking/node_modules/.next-Gxs82bCN',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/node-appwrite': '/Users/kaveh/Horizon-bank/banking/node_modules/.node-appwrite-pmN4XQOB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/node-fetch': '/Users/kaveh/Horizon-bank/banking/node_modules/.node-fetch-xj414PQF',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object-inspect': '/Users/kaveh/Horizon-bank/banking/node_modules/.object-inspect-7ZuxNY71',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.assign': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.assign-j5D4dvrw',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.entries': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.entries-QYv4KEPl',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.hasown': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.hasown-E0mfEYh9',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.values': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.values-CuExrHGe',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/path-scurry': '/Users/kaveh/Horizon-bank/banking/node_modules/.path-scurry-sUJfp9Lb',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/picocolors': '/Users/kaveh/Horizon-bank/banking/node_modules/.picocolors-7K91iwnh',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/pirates': '/Users/kaveh/Horizon-bank/banking/node_modules/.pirates-bPyWV7UZ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/plaid': '/Users/kaveh/Horizon-bank/banking/node_modules/.plaid-91I9ZbIm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/possible-typed-array-names': '/Users/kaveh/Horizon-bank/banking/node_modules/.possible-typed-array-names-4i7lwne1',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss': '/Users/kaveh/Horizon-bank/banking/node_modules/.postcss-SyceBlLK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-nested': '/Users/kaveh/Horizon-bank/banking/node_modules/.postcss-nested-kGTfy3ys',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-selector-parser': '/Users/kaveh/Horizon-bank/banking/node_modules/.postcss-selector-parser-9Yq5KiLt',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/progress': '/Users/kaveh/Horizon-bank/banking/node_modules/.progress-ai52fkGn',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/query-string': '/Users/kaveh/Horizon-bank/banking/node_modules/.query-string-TbRyzGIz',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-KlwRcVjg',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-chartjs-2': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-chartjs-2-V0kH4WED',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-countup': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-countup-XQe47NSt',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-dom': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-dom-515oiehN',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-hook-form': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-hook-form-ZaIlnxdF',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-plaid-link': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-plaid-link-jUGa1GE6',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-remove-scroll-ZHNltyT6',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll-bar': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-remove-scroll-bar-UfScmLKl',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-script-hook': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-script-hook-jnxpS0ba',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-style-singleton': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-style-singleton-MzipAfnN',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/reflect.getprototypeof': '/Users/kaveh/Horizon-bank/banking/node_modules/.reflect.getprototypeof-rj6sNTcW',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regenerator-runtime': '/Users/kaveh/Horizon-bank/banking/node_modules/.regenerator-runtime-EBOTReq6',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regexp.prototype.flags': '/Users/kaveh/Horizon-bank/banking/node_modules/.regexp.prototype.flags-4FmFlXcS',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/resolve': '/Users/kaveh/Horizon-bank/banking/node_modules/.resolve-Iqqxqsf5',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/resolve-pkg-maps': '/Users/kaveh/Horizon-bank/banking/node_modules/.resolve-pkg-maps-8o2iwOtY',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/reusify': '/Users/kaveh/Horizon-bank/banking/node_modules/.reusify-VsO7Yd58',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/rimraf': '/Users/kaveh/Horizon-bank/banking/node_modules/.rimraf-UHeKGwx0',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/rollup': '/Users/kaveh/Horizon-bank/banking/node_modules/.rollup-xvonztGS',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/safe-array-concat': '/Users/kaveh/Horizon-bank/banking/node_modules/.safe-array-concat-HoedaFhS',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/safe-regex-test': '/Users/kaveh/Horizon-bank/banking/node_modules/.safe-regex-test-KeV5tsB3',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/scheduler': '/Users/kaveh/Horizon-bank/banking/node_modules/.scheduler-ViNBqxeE',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/semver': '/Users/kaveh/Horizon-bank/banking/node_modules/.semver-vXsUMJep',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/side-channel': '/Users/kaveh/Horizon-bank/banking/node_modules/.side-channel-4XsFUuxn',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/source-map-js': '/Users/kaveh/Horizon-bank/banking/node_modules/.source-map-js-aHRIyuKM',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/split-on-first': '/Users/kaveh/Horizon-bank/banking/node_modules/.split-on-first-IGZzrT5i',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/stacktrace-parser': '/Users/kaveh/Horizon-bank/banking/node_modules/.stacktrace-parser-PvLZ0f7V',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.matchall': '/Users/kaveh/Horizon-bank/banking/node_modules/.string.prototype.matchall-lWBnnuoj',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trim': '/Users/kaveh/Horizon-bank/banking/node_modules/.string.prototype.trim-OLUDNJr2',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trimend': '/Users/kaveh/Horizon-bank/banking/node_modules/.string.prototype.trimend-ktfbHYmF',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/styled-jsx': '/Users/kaveh/Horizon-bank/banking/node_modules/.styled-jsx-5WLRvknM',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/sucrase': '/Users/kaveh/Horizon-bank/banking/node_modules/.sucrase-rmBk9kTt',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwind-merge': '/Users/kaveh/Horizon-bank/banking/node_modules/.tailwind-merge-osFPcHum',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss': '/Users/kaveh/Horizon-bank/banking/node_modules/.tailwindcss-o7mACMfV',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss-animate': '/Users/kaveh/Horizon-bank/banking/node_modules/.tailwindcss-animate-DQkYU7Kn',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tapable': '/Users/kaveh/Horizon-bank/banking/node_modules/.tapable-Ww8SLGEh',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tr46': '/Users/kaveh/Horizon-bank/banking/node_modules/.tr46-hreA6Tfq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/ts-api-utils': '/Users/kaveh/Horizon-bank/banking/node_modules/.ts-api-utils-577P6tJT',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tslib': '/Users/kaveh/Horizon-bank/banking/node_modules/.tslib-AqGmlbdK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-byte-length-pJYXnjlo',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-buffer-nzJcRWor',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-offset': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-byte-offset-s7axxWSe',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-length-vWqocq41',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typescript': '/Users/kaveh/Horizon-bank/banking/node_modules/.typescript-vrd9Ub3e',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/unbox-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/.unbox-primitive-m6BDzIlE',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/undici': '/Users/kaveh/Horizon-bank/banking/node_modules/.undici-XY11yndr',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/undici-types': '/Users/kaveh/Horizon-bank/banking/node_modules/.undici-types-9JrUAvRb',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/use-callback-ref': '/Users/kaveh/Horizon-bank/banking/node_modules/.use-callback-ref-5oNPzzok',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/use-sidecar': '/Users/kaveh/Horizon-bank/banking/node_modules/.use-sidecar-RSzbqIBo',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/webidl-conversions': '/Users/kaveh/Horizon-bank/banking/node_modules/.webidl-conversions-eep7gVG3',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/webpack-sources': '/Users/kaveh/Horizon-bank/banking/node_modules/.webpack-sources-S52T4X9w',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/whatwg-url': '/Users/kaveh/Horizon-bank/banking/node_modules/.whatwg-url-UhDE9uVf',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-3A3Bj5Ci',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-boxed-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-boxed-primitive-gIihDFDw',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-builtin-type': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-builtin-type-Krumsy6U',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-typed-array': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-typed-array-PpbdQaRG',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/yallist': '/Users/kaveh/Horizon-bank/banking/node_modules/.yallist-TzzK8X1g',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/yaml': '/Users/kaveh/Horizon-bank/banking/node_modules/.yaml-LUmTWV7a',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/zod': '/Users/kaveh/Horizon-bank/banking/node_modules/.zod-QnVjRSlz',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@babel/runtime': '/Users/kaveh/Horizon-bank/banking/node_modules/@babel/.runtime-TpEIatqS',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint/js': '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint/.js-7Xp6kUnq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/eslint-utils': '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/.eslint-utils-1gseGsS0',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/regexpp': '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/.regexpp-tb0LZyMR',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@fastify/busboy': '/Users/kaveh/Horizon-bank/banking/node_modules/@fastify/.busboy-P15WsHmd',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/core': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.core-NlFAqwA2',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/react-dom': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.react-dom-ugsOQkUe',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/dom': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.dom-PFC4tXA7',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/utils': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.utils-Bb0HNuwR',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@hookform/resolvers': '/Users/kaveh/Horizon-bank/banking/node_modules/@hookform/.resolvers-YZRcBztG',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@humanwhocodes/config-array': '/Users/kaveh/Horizon-bank/banking/node_modules/@humanwhocodes/.config-array-ymBNYKJ5',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/gen-mapping': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.gen-mapping-OrTdAGkg',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/set-array': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.set-array-831afeWN',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/sourcemap-codec': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.sourcemap-codec-oJXf8SI8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/trace-mapping': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.trace-mapping-aaqACxCx',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@kurkle/color': '/Users/kaveh/Horizon-bank/banking/node_modules/@kurkle/.color-etW8Nb1K',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/env': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.env-C1H3TTjJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/eslint-plugin-next': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.eslint-plugin-next-CkSzCcqr',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-arm64': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-darwin-arm64-8WBTvaWM',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-x64': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-darwin-x64-k96ivQwb',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-gnu': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-arm64-gnu-DNwCarQA',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-musl': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-arm64-musl-TXaqpuHS',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-musl': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-x64-musl-JJyq38uj',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-gnu': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-x64-gnu-X9IWRiNJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-arm64-msvc': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-win32-arm64-msvc-2zTrYQvH',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-ia32-msvc': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-win32-ia32-msvc-sGFTGaHK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-x64-msvc': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-win32-x64-msvc-JZxadZMq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/number': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.number-kVWki1iu',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.primitive-xvHTpiRJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-arrow': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-arrow-XuLCAieE',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-collection': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-collection-V0pd5wSS',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-compose-refs': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-compose-refs-9XWDpveT',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-context': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-context-omjd79x0',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dialog': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-dialog-Gmy6aeEH',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-direction': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-direction-HIBcMhg4',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dismissable-layer': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-dismissable-layer-Ta6codAO',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-guards': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-focus-guards-yLU1vDj1',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-scope': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-focus-scope-wAmEuGPA',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-id': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-id-9uCrDDEV',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-label': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-label-p4WEKki5',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-popper': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-popper-rNeCiSqU',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-portal': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-portal-7x8e7xq7',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-presence': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-presence-PyhV2ObR',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-primitive-E348oIyr',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-progress': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-progress-vNULlgsf',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-roving-focus': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-roving-focus-ps0Lm916',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-select': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-select-jSG3kpDQ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-slot': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-slot-v3yln6wZ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-tabs': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-tabs-EC1Lzinf',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-callback-ref': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-callback-ref-bFRdXV56',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-controllable-state': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-controllable-state-83ysLlK1',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-escape-keydown': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-escape-keydown-1T33zIWj',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-layout-effect': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-layout-effect-0RB2wXSN',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-previous': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-previous-CNiccDyC',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-rect': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-rect-emD6q2CK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-size': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-size-9RChZmWI',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-visually-hidden': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-visually-hidden-r11WafA6',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/rect': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.rect-J5JCmmea',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/plugin-commonjs': '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/.plugin-commonjs-pKZCpBSj',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/pluginutils': '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/.pluginutils-ZlU200kC',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rushstack/eslint-patch': '/Users/kaveh/Horizon-bank/banking/node_modules/@rushstack/.eslint-patch-58eJvkSR',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/browser': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.browser-dqsCqpUU',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/cli': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.cli-kfoRWQih',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/core': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.core-4UQrRHEJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/integrations': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.integrations-z9pL1hrx',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/nextjs': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.nextjs-S1Z0dYRO',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/node': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.node-JKGNoZau',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/react': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.react-m5Z8ivIm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/replay': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.replay-kkQNCREI',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/types': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.types-qWe5dLj8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/utils': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.utils-QVnsbg4u',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/vercel-edge': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.vercel-edge-FPJUpbTo',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/webpack-plugin': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.webpack-plugin-A8aoahOH',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/feedback': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/.feedback-97PUNEKw',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/replay-canvas': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/.replay-canvas-UtIlSbfT',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/tracing': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/.tracing-EdOqle5T',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/counter': '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/.counter-tqJDvDb9',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/helpers': '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/.helpers-zGtWzk1C',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/estree': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.estree-44wrfSeK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/node': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.node-LmbcbtGe',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/prop-types': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.prop-types-pdC56VHB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.react-JW67Q7uJ',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react-dom': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.react-dom-OuE9q2MA',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/parser': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.parser-EY2oRTm7',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/scope-manager': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.scope-manager-X7HxXSLV',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/types': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.types-tm2kQnqm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/typescript-estree': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.typescript-estree-bs4Pj3Xm',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/visitor-keys': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.visitor-keys-QXKqUwNB',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@ungap/structured-clone': '/Users/kaveh/Horizon-bank/banking/node_modules/@ungap/.structured-clone-zkTCBih8',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-load-config/node_modules/lilconfig': '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-load-config/node_modules/.lilconfig-j1hHZjJN',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/ansi-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/.ansi-regex-aBpEMr3O',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/strip-ansi': '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/.strip-ansi-YxndW1wK',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/.ansi-regex-kBzZY51l',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-styles': '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/.ansi-styles-615sOuvq',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/strip-ansi': '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/.strip-ansi-YCHnhn2B',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/ansi-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/.ansi-regex-ytdfm057',
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/strip-ansi': '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/.strip-ansi-LnjfESej'
+297 silly reify }
+298 verbose stack Error: ENOTEMPTY: directory not empty, rename '/Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority' -> '/Users/kaveh/Horizon-bank/banking/node_modules/.class-variance-authority-K0NJqf2Z'
+298 verbose stack     at async Object.rename (node:internal/fs/promises:787:10)
+298 verbose stack     at async moveFile (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+298 verbose stack     at async Promise.allSettled (index 19)
+298 verbose stack     at async [reifyPackages] (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:332:11)
+298 verbose stack     at async Arborist.reify (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:137:5)
+298 verbose stack     at async Install.exec (/opt/homebrew/lib/node_modules/npm/lib/commands/install.js:150:5)
+298 verbose stack     at async Npm.exec (/opt/homebrew/lib/node_modules/npm/lib/npm.js:208:9)
+298 verbose stack     at async module.exports (/opt/homebrew/lib/node_modules/npm/lib/cli/entry.js:67:5)
+299 error code ENOTEMPTY
+300 error syscall rename
+301 error path /Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority
+302 error dest /Users/kaveh/Horizon-bank/banking/node_modules/.class-variance-authority-K0NJqf2Z
+303 error errno -66
+304 error ENOTEMPTY: directory not empty, rename '/Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority' -> '/Users/kaveh/Horizon-bank/banking/node_modules/.class-variance-authority-K0NJqf2Z'
+305 silly unfinished npm timer reify 1758371931018
+306 silly unfinished npm timer reify:retireShallow 1758371931155
+307 verbose cwd /Users/kaveh/Horizon-bank/banking
+308 verbose os Darwin 24.6.0
+309 verbose node v24.7.0
+310 verbose npm  v11.5.1
+311 verbose exit -66
+312 verbose code -66
+313 error A complete log of this run can be found in: /Users/kaveh/Horizon-bank/banking/.npm-cache/_logs/2025-09-20T12_38_50_915Z-debug-0.log

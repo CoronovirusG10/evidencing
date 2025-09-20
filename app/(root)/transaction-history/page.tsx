@@ -1,13 +1,16 @@
 import HeaderBox from '@/components/HeaderBox'
 import { Pagination } from '@/components/Pagination';
 import TransactionsTable from '@/components/TransactionsTable';
+import { ManualTransactionSheet } from '@/components/ManualTransactionSheet';
+import { TransactionFilters } from '@/components/TransactionFilters';
 import { getAccount, getAccounts } from '@/lib/actions/bank.actions';
 import { getLoggedInUser } from '@/lib/actions/user.actions';
+import { filterTransactions } from '@/lib/transactions';
 import { formatAmount } from '@/lib/utils';
 import React from 'react'
 
-const TransactionHistory = async ({ searchParams: { id, page }}:SearchParamProps) => {
-  const currentPage = Number(page as string) || 1;
+const TransactionHistory = async ({ searchParams }:SearchParamProps) => {
+  const currentPage = Number(searchParams.page as string) || 1;
   const loggedIn = await getLoggedInUser();
   const accounts = await getAccounts({ 
     userId: loggedIn.$id 
@@ -16,20 +19,38 @@ const TransactionHistory = async ({ searchParams: { id, page }}:SearchParamProps
   if(!accounts) return;
   
   const accountsData = accounts?.data;
-  const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId;
+  const appwriteItemId = (searchParams.id as string) || accountsData[0]?.appwriteItemId;
 
   const account = await getAccount({ appwriteItemId })
 
+const filters = {
+  from: searchParams.from as string | undefined,
+  to: searchParams.to as string | undefined,
+  direction: (searchParams.direction as string | undefined) || 'all',
+};
+
+const filteredTransactions = filterTransactions(account?.transactions || [], {
+  from: filters.from,
+  to: filters.to,
+  direction: filters.direction as 'credit' | 'debit' | 'all',
+});
 
 const rowsPerPage = 10;
-const totalPages = Math.ceil(account?.transactions.length / rowsPerPage);
+const totalPages = Math.ceil(filteredTransactions.length / rowsPerPage) || 1;
 
 const indexOfLastTransaction = currentPage * rowsPerPage;
 const indexOfFirstTransaction = indexOfLastTransaction - rowsPerPage;
 
-const currentTransactions = account?.transactions.slice(
+const currentTransactions = filteredTransactions.slice(
   indexOfFirstTransaction, indexOfLastTransaction
-)
+);
+
+const exportParams = new URLSearchParams({ bankId: appwriteItemId });
+if (filters.from) exportParams.set('from', filters.from);
+if (filters.to) exportParams.set('to', filters.to);
+if (filters.direction && filters.direction !== 'all') exportParams.set('direction', filters.direction);
+
+const exportUrl = `/api/transactions/export?${exportParams.toString()}`;
   return (
     <div className="transactions">
       <div className="transactions-header">
@@ -57,7 +78,20 @@ const currentTransactions = account?.transactions.slice(
           </div>
         </div>
 
+        <TransactionFilters
+          defaultValues={{
+            bankId: appwriteItemId,
+            from: filters.from,
+            to: filters.to,
+            direction: filters.direction,
+          }}
+          exportUrl={exportUrl}
+        />
+
         <section className="flex w-full flex-col gap-6">
+          <div className="flex justify-end">
+            <ManualTransactionSheet accounts={accountsData} defaultBankId={appwriteItemId} />
+          </div>
           <TransactionsTable 
             transactions={currentTransactions}
           />

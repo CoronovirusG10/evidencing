@@ -1,5 +1,6 @@
 import { logoutAccount } from '@/lib/actions/user.actions'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
@@ -29,8 +30,13 @@ const Footer = ({ user, type = 'desktop' }: FooterProps) => {
           </p>
       </div>
 
-      <div className="footer_image" onClick={handleLogOut}>
-        <Image src="icons/logout.svg" fill alt="jsm" />
+      <div className="flex items-center gap-3">
+        <Link href="/legal/disclaimer" className="text-12 font-semibold text-brand-700 hover:text-brand-900">
+          Legal
+        </Link>
+        <div className="footer_image" onClick={handleLogOut}>
+          <Image src="icons/logout.svg" fill alt="jsm" />
+        </div>
       </div>
     </footer>
   )

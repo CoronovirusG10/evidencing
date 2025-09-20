@@ -1,4 +1,5 @@
 import HeaderBox from '@/components/HeaderBox'
+import LegalBanner from '@/components/LegalBanner';
 import RecentTransactions from '@/components/RecentTransactions';
 import RightSidebar from '@/components/RightSidebar';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
@@ -29,6 +30,8 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
             user={loggedIn?.firstName || 'Guest'}
             subtext="Access and manage your account and transactions efficiently."
           />
+
+          <LegalBanner />
 
           <TotalBalanceBox 
             accounts={accountsData}

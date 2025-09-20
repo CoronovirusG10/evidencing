@@ -15,6 +15,11 @@ export const sidebarLinks = [
     label: "Transaction History",
   },
   {
+    imgURL: "/icons/deposit.svg",
+    route: "/statements",
+    label: "Statements",
+  },
+  {
     imgURL: "/icons/money-send.svg",
     route: "/payment-transfer",
     label: "Transfer Funds",
@@ -140,4 +145,19 @@ export const transactionCategoryStyles = {
     textColor: "text-blue-700",
     chipBackgroundColor: "bg-inherit",
   },
+};
+
+export const transactionDirectionStyles: Record<string, { bg: string; text: string }> = {
+  credit: {
+    bg: 'bg-emerald-50 text-emerald-700',
+    text: 'text-emerald-700'
+  },
+  debit: {
+    bg: 'bg-rose-50 text-rose-700',
+    text: 'text-rose-700'
+  },
+  default: {
+    bg: 'bg-brand-50 text-brand-700',
+    text: 'text-brand-700'
+  }
 };

@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { transactionCategoryStyles } from "@/constants"
+import { transactionCategoryStyles, transactionDirectionStyles } from "@/constants"
 import { cn, formatAmount, formatDateTime, getTransactionStatus, removeSpecialCharacters } from "@/lib/utils"
 
 const CategoryBadge = ({ category }: CategoryBadgeProps) => {
@@ -42,18 +42,29 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
       <TableBody>
         {transactions.map((t: Transaction) => {
           const status = getTransactionStatus(new Date(t.date))
-          const amount = formatAmount(t.amount)
+          const amount = formatAmount(Math.abs(t.amount))
 
-          const isDebit = t.type === 'debit';
-          const isCredit = t.type === 'credit';
+          const direction = t.direction || t.type;
+          const isDebit = direction === 'debit' || t.amount < 0;
+          const isCredit = direction === 'credit' || t.amount > 0;
+          const directionStyles = transactionDirectionStyles[direction || 'default'] || transactionDirectionStyles.default;
+          const directionLabel = isCredit ? 'Credit' : isDebit ? 'Debit' : 'Transfer';
 
           return (
             <TableRow key={t.id} className={`${isDebit || amount[0] === '-' ? 'bg-[#FFFBFA]' : 'bg-[#F6FEF9]'} !over:bg-none !border-b-DEFAULT`}>
               <TableCell className="max-w-[250px] pl-2 pr-10">
-                <div className="flex items-center gap-3">
-                  <h1 className="text-14 truncate font-semibold text-[#344054]">
-                    {removeSpecialCharacters(t.name)}
-                  </h1>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2">
+                    <h1 className="text-14 truncate font-semibold text-[#344054]">
+                      {removeSpecialCharacters(t.name)}
+                    </h1>
+                    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-12 font-medium ${directionStyles.bg}`}>
+                      {directionLabel}
+                    </span>
+                  </div>
+                  <p className="text-12 text-gray-500">
+                    {t.paymentChannel || t.channel || 'online'}
+                  </p>
                 </div>
               </TableCell>
 
@@ -62,7 +73,7 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                   'text-[#f04438]'
                   : 'text-[#039855]'
               }`}>
-                {isDebit ? `-${amount}` : isCredit ? amount : amount}
+                {isDebit ? `-${amount}` : amount}
               </TableCell>
 
               <TableCell className="pl-2 pr-10">
@@ -73,12 +84,8 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                 {formatDateTime(new Date(t.date)).dateTime}
               </TableCell>
 
-              <TableCell className="pl-2 pr-10 capitalize min-w-24">
-               {t.paymentChannel}
-              </TableCell>
-
               <TableCell className="pl-2 pr-10 max-md:hidden">
-               <CategoryBadge category={t.category} /> 
+               <CategoryBadge category={t.category || 'General'} /> 
               </TableCell>
             </TableRow>
           )

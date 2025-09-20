@@ -20,6 +20,16 @@ const config = {
     },
     extend: {
       colors: {
+        brand: {
+          25: "#F4F7FB",
+          50: "#E7EEFA",
+          100: "#CEDCF5",
+          300: "#8EAEE4",
+          500: "#2F6BDF",
+          600: "#1F4FB3",
+          700: "#173F8E",
+          900: "#0F295A",
+        },
         fill: {
           1: "rgba(255, 255, 255, 0.10)",
         },
@@ -70,7 +80,8 @@ const config = {
         },
       },
       backgroundImage: {
-        "bank-gradient": "linear-gradient(90deg, #0179FE 0%, #4893FF 100%)",
+        "bank-gradient": "linear-gradient(135deg, #173F8E 0%, #2F6BDF 50%, #61A6FA 100%)",
+        "bank-gradient-soft": "linear-gradient(120deg, rgba(23,63,142,0.08) 0%, rgba(47,107,223,0.08) 100%)",
         "gradient-mesh": "url('/icons/gradient-mesh.svg')",
         "bank-green-gradient":
           "linear-gradient(90deg, #01797A 0%, #489399 100%)",
@@ -81,11 +92,13 @@ const config = {
           "0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06)",
         profile:
           "0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)",
-        creditCard: "8px 10px 16px 0px rgba(0, 0, 0, 0.05)",
+        creditCard: "8px 10px 16px 0px rgba(15, 41, 90, 0.18)",
+        subtle: "0 10px 30px rgba(15, 41, 90, 0.08)",
       },
       fontFamily: {
         inter: "var(--font-inter)",
         "ibm-plex-serif": "var(--font-ibm-plex-serif)",
+        "ibm-plex-sans": "'IBM Plex Sans', var(--font-inter)",
       },
       keyframes: {
         "accordion-down": {

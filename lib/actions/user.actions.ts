@@ -3,12 +3,34 @@
 import { ID, Query } from "node-appwrite";
 import { createAdminClient, createSessionClient } from "../appwrite";
 import { cookies } from "next/headers";
-import { encryptId, extractCustomerIdFromUrl, parseStringify } from "../utils";
-import { CountryCode, ProcessorTokenCreateRequest, ProcessorTokenCreateRequestProcessorEnum, Products } from "plaid";
+import {
+  encryptId,
+  extractCustomerIdFromUrl,
+  parseStringify,
+} from "../utils";
+import {
+  CountryCode,
+  ProcessorTokenCreateRequest,
+  ProcessorTokenCreateRequestProcessorEnum,
+  Products,
+} from "plaid";
 
-import { plaidClient } from '@/lib/plaid';
+import { AUTHORIZED_EMAIL_COOKIE, isEmailAllowed } from "@/lib/auth";
+import { plaidClient } from "@/lib/plaid";
 import { revalidatePath } from "next/cache";
 import { addFundingSource, createDwollaCustomer } from "./dwolla.actions";
+
+type AuthActionSuccess<T> = {
+  success: true;
+  data: T;
+};
+
+type AuthActionFailure = {
+  success: false;
+  error: string;
+};
+
+type AuthActionResult<T> = AuthActionSuccess<T> | AuthActionFailure;
 
 const {
   APPWRITE_DATABASE_ID: DATABASE_ID,
@@ -16,9 +38,29 @@ const {
   APPWRITE_BANK_COLLECTION_ID: BANK_COLLECTION_ID,
 } = process.env;
 
+const COOKIE_OPTIONS = {
+  path: "/",
+  httpOnly: true,
+  sameSite: "strict" as const,
+  secure: true,
+};
+
+const notAuthorizedMessage =
+  "This email isn't authorized to access Horizon. Please contact support.";
+
+const getDatabaseForRead = async () => {
+  try {
+    const { database } = await createSessionClient();
+    return database;
+  } catch (error) {
+    const { database } = await createAdminClient();
+    return database;
+  }
+};
+
 export const getUserInfo = async ({ userId }: getUserInfoProps) => {
   try {
-    const { database } = await createAdminClient();
+    const database = await getDatabaseForRead();
 
     const user = await database.listDocuments(
       DATABASE_ID!,
@@ -32,32 +74,58 @@ export const getUserInfo = async ({ userId }: getUserInfoProps) => {
   }
 }
 
-export const signIn = async ({ email, password }: signInProps) => {
+export const signIn = async (
+  { email, password }: signInProps
+): Promise<AuthActionResult<User>> => {
   try {
+    if (!isEmailAllowed(email)) {
+      return { success: false, error: notAuthorizedMessage };
+    }
+
     const { account } = await createAdminClient();
     const session = await account.createEmailPasswordSession(email, password);
 
-    cookies().set("appwrite-session", session.secret, {
-      path: "/",
-      httpOnly: true,
-      sameSite: "strict",
-      secure: true,
-    });
+    const user = await getUserInfo({ userId: session.userId });
 
-    const user = await getUserInfo({ userId: session.userId }) 
+    if (!user) {
+      await account.deleteSession(session.$id);
+      return {
+        success: false,
+        error: "Unable to locate your profile. Please contact support.",
+      };
+    }
 
-    return parseStringify(user);
+    if (!isEmailAllowed(user.email)) {
+      await account.deleteSession(session.$id);
+      return { success: false, error: notAuthorizedMessage };
+    }
+
+    const cookieStore = cookies();
+    cookieStore.set("appwrite-session", session.secret, COOKIE_OPTIONS);
+    cookieStore.set(AUTHORIZED_EMAIL_COOKIE, user.email, COOKIE_OPTIONS);
+
+    return { success: true, data: parseStringify(user) };
   } catch (error) {
-    console.error('Error', error);
+    console.error("Error", error);
+    return {
+      success: false,
+      error: "Unable to sign in. Please check your credentials and try again.",
+    };
   }
-}
+};
 
-export const signUp = async ({ password, ...userData }: SignUpParams) => {
+export const signUp = async (
+  { password, ...userData }: SignUpParams
+): Promise<AuthActionResult<any>> => {
   const { email, firstName, lastName } = userData;
   
   let newUserAccount;
 
   try {
+    if (!isEmailAllowed(email)) {
+      return { success: false, error: notAuthorizedMessage };
+    }
+
     const { account, database } = await createAdminClient();
 
     newUserAccount = await account.create(
@@ -91,17 +159,17 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
     )
 
     const session = await account.createEmailPasswordSession(email, password);
+    const cookieStore = cookies();
+    cookieStore.set("appwrite-session", session.secret, COOKIE_OPTIONS);
+    cookieStore.set(AUTHORIZED_EMAIL_COOKIE, email, COOKIE_OPTIONS);
 
-    cookies().set("appwrite-session", session.secret, {
-      path: "/",
-      httpOnly: true,
-      sameSite: "strict",
-      secure: true,
-    });
-
-    return parseStringify(newUser);
+    return { success: true, data: parseStringify(newUser) };
   } catch (error) {
     console.error('Error', error);
+    return {
+      success: false,
+      error: 'Unable to sign up. Please review your details and try again.',
+    };
   }
 }
 
@@ -124,6 +192,7 @@ export const logoutAccount = async () => {
     const { account } = await createSessionClient();
 
     cookies().delete('appwrite-session');
+    cookies().delete(AUTHORIZED_EMAIL_COOKIE);
 
     await account.deleteSession('current');
   } catch (error) {
@@ -246,7 +315,7 @@ export const exchangePublicToken = async ({
 
 export const getBanks = async ({ userId }: getBanksProps) => {
   try {
-    const { database } = await createAdminClient();
+    const database = await getDatabaseForRead();
 
     const banks = await database.listDocuments(
       DATABASE_ID!,
@@ -262,7 +331,7 @@ export const getBanks = async ({ userId }: getBanksProps) => {
 
 export const getBank = async ({ documentId }: getBankProps) => {
   try {
-    const { database } = await createAdminClient();
+    const database = await getDatabaseForRead();
 
     const bank = await database.listDocuments(
       DATABASE_ID!,
@@ -278,7 +347,7 @@ export const getBank = async ({ documentId }: getBankProps) => {
 
 export const getBankByAccountId = async ({ accountId }: getBankByAccountIdProps) => {
   try {
-    const { database } = await createAdminClient();
+    const database = await getDatabaseForRead();
 
     const bank = await database.listDocuments(
       DATABASE_ID!,

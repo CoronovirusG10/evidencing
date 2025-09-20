@@ -1,0 +1,1977 @@
+0 verbose cli /opt/homebrew/Cellar/node/24.7.0/bin/node /opt/homebrew/bin/npm
+1 info using npm@11.5.1
+2 info using node@v24.7.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/kaveh/Horizon-bank/banking/.npmrc
+5 silly config load:file:/Users/kaveh/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/Users/kaveh/Horizon-bank/banking/.npm-cache/_logs/2025-09-20T12_35_16_869Z-
+10 verbose logfile /Users/kaveh/Horizon-bank/banking/.npm-cache/_logs/2025-09-20T12_35_16_869Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with ENOTFOUND
+13 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+14 silly idealTree buildDeps
+15 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/acorn' ]
+16 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/aria-hidden' ]
+17 silly reify mark retired [
+17 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array-buffer-byte-length'
+17 silly reify ]
+18 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/array-includes' ]
+19 silly reify mark retired [
+19 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.findlastindex'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flat'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flatmap'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.toreversed'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.tosorted'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/arraybuffer.prototype.slice'
+24 silly reify ]
+25 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/axe-core' ]
+26 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/axios' ]
+27 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/axobject-query' ]
+28 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/brace-expansion' ]
+29 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/braces' ]
+30 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/call-bind' ]
+31 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/caniuse-lite' ]
+32 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/chalk' ]
+33 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/chart.js' ]
+34 silly reify mark retired [
+34 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority'
+34 silly reify ]
+35 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/countup.js' ]
+36 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/cross-spawn' ]
+37 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-buffer' ]
+38 silly reify mark retired [
+38 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-length'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-offset'
+39 silly reify ]
+40 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/debug' ]
+41 silly reify mark retired [
+41 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/decode-uri-component'
+41 silly reify ]
+42 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/detect-node-es' ]
+43 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/dwolla-v2' ]
+44 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/enhanced-resolve' ]
+45 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-abstract' ]
+46 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-define-property' ]
+47 silly reify mark retired [
+47 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-iterator-helpers'
+47 silly reify ]
+48 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-object-atoms' ]
+49 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-set-tostringtag' ]
+50 silly reify mark retired [
+50 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-shim-unscopables'
+50 silly reify ]
+51 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/es-to-primitive' ]
+52 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/eslint' ]
+53 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-config-next' ]
+54 silly reify mark retired [
+54 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-import-resolver-typescript'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-module-utils'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-import'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-jsx-a11y'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-react'
+58 silly reify ]
+59 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/esquery' ]
+60 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/estree-walker' ]
+61 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/fast-glob' ]
+62 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/fastq' ]
+63 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/fill-range' ]
+64 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/filter-obj' ]
+65 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/flatted' ]
+66 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/follow-redirects' ]
+67 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/for-each' ]
+68 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/foreground-child' ]
+69 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/form-data' ]
+70 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/form-urlencoded' ]
+71 silly reify mark retired [
+71 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/function.prototype.name'
+71 silly reify ]
+72 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/get-nonce' ]
+73 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/get-intrinsic' ]
+74 silly reify mark retired [
+74 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-symbol-description'
+74 silly reify ]
+75 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/get-tsconfig' ]
+76 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/glob' ]
+77 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/globalthis' ]
+78 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/gopd' ]
+79 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/has-bigints' ]
+80 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/has-proto' ]
+81 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/has-symbols' ]
+82 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/ignore' ]
+83 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/immediate' ]
+84 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/import-fresh' ]
+85 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/internal-slot' ]
+86 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/invariant' ]
+87 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-array-buffer' ]
+88 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-async-function' ]
+89 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-bigint' ]
+90 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-boolean-object' ]
+91 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-core-module' ]
+92 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-data-view' ]
+93 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-date-object' ]
+94 silly reify mark retired [
+94 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-finalizationregistry'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-generator-function'
+95 silly reify ]
+96 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-number-object' ]
+97 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-reference' ]
+98 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-regex' ]
+99 silly reify mark retired [
+99 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-shared-array-buffer'
+99 silly reify ]
+100 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-stream' ]
+101 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-string' ]
+102 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-symbol' ]
+103 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-typed-array' ]
+104 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakref' ]
+105 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakset' ]
+106 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/iterator.prototype' ]
+107 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/jackspeak' ]
+108 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/jiti' ]
+109 silly reify mark retired [
+109 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/language-subtag-registry'
+109 silly reify ]
+110 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lie' ]
+111 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/localforage' ]
+112 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lodash.snakecase' ]
+113 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lru-cache' ]
+114 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/lucide-react' ]
+115 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/magic-string' ]
+116 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/micromatch' ]
+117 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/minipass' ]
+118 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/ms' ]
+119 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/nanoid' ]
+120 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/next' ]
+121 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/node-appwrite' ]
+122 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/node-fetch' ]
+123 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object-inspect' ]
+124 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.assign' ]
+125 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.entries' ]
+126 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.hasown' ]
+127 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/object.values' ]
+128 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/path-scurry' ]
+129 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/picocolors' ]
+130 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/pirates' ]
+131 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/plaid' ]
+132 silly reify mark retired [
+132 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/possible-typed-array-names'
+132 silly reify ]
+133 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/postcss' ]
+134 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-nested' ]
+135 silly reify mark retired [
+135 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-selector-parser'
+135 silly reify ]
+136 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/progress' ]
+137 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/query-string' ]
+138 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react' ]
+139 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-chartjs-2' ]
+140 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-countup' ]
+141 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-dom' ]
+142 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-hook-form' ]
+143 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-plaid-link' ]
+144 silly reify mark retired [
+144 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll'
+144 silly reify ]
+145 silly reify mark retired [
+145 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll-bar'
+145 silly reify ]
+146 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/react-script-hook' ]
+147 silly reify mark retired [
+147 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-style-singleton'
+147 silly reify ]
+148 silly reify mark retired [
+148 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/reflect.getprototypeof'
+148 silly reify ]
+149 silly reify mark retired [
+149 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regenerator-runtime'
+149 silly reify ]
+150 silly reify mark retired [
+150 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regexp.prototype.flags'
+150 silly reify ]
+151 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/resolve' ]
+152 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/reusify' ]
+153 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/resolve-pkg-maps' ]
+154 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/rollup' ]
+155 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/safe-array-concat' ]
+156 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/safe-regex-test' ]
+157 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/scheduler' ]
+158 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/semver' ]
+159 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/side-channel' ]
+160 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/source-map-js' ]
+161 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/split-on-first' ]
+162 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/stacktrace-parser' ]
+163 silly reify mark retired [
+163 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.matchall'
+163 silly reify ]
+164 silly reify mark retired [
+164 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trim'
+164 silly reify ]
+165 silly reify mark retired [
+165 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trimend'
+165 silly reify ]
+166 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/styled-jsx' ]
+167 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tailwind-merge' ]
+168 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss' ]
+169 silly reify mark retired [
+169 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss-animate'
+169 silly reify ]
+170 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tapable' ]
+171 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tr46' ]
+172 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/ts-api-utils' ]
+173 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/tslib' ]
+174 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-buffer' ]
+175 silly reify mark retired [
+175 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-length'
+175 silly reify ]
+176 silly reify mark retired [
+176 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-offset'
+176 silly reify ]
+177 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-length' ]
+178 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/typescript' ]
+179 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/unbox-primitive' ]
+180 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/undici' ]
+181 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/undici-types' ]
+182 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/use-callback-ref' ]
+183 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/use-sidecar' ]
+184 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/webidl-conversions' ]
+185 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/webpack-sources' ]
+186 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/whatwg-url' ]
+187 silly reify mark retired [
+187 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-boxed-primitive'
+187 silly reify ]
+188 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/which-builtin-type' ]
+189 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/which-typed-array' ]
+190 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/yallist' ]
+191 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/yaml' ]
+192 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/zod' ]
+193 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@babel/runtime' ]
+194 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint/js' ]
+195 silly reify mark retired [
+195 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/eslint-utils'
+195 silly reify ]
+196 silly reify mark retired [
+196 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/regexpp'
+196 silly reify ]
+197 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@fastify/busboy' ]
+198 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/core' ]
+199 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/dom' ]
+200 silly reify mark retired [
+200 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/react-dom'
+200 silly reify ]
+201 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/utils' ]
+202 silly reify mark retired [
+202 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@hookform/resolvers'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@humanwhocodes/config-array'
+203 silly reify ]
+204 silly reify mark retired [
+204 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/gen-mapping'
+204 silly reify ]
+205 silly reify mark retired [
+205 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/set-array'
+205 silly reify ]
+206 silly reify mark retired [
+206 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/sourcemap-codec'
+206 silly reify ]
+207 silly reify mark retired [
+207 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/trace-mapping'
+207 silly reify ]
+208 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@kurkle/color' ]
+209 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@next/env' ]
+210 silly reify mark retired [
+210 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/eslint-plugin-next'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-arm64'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-x64'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-gnu'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-musl'
+214 silly reify ]
+215 silly reify mark retired [
+215 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-gnu'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-musl'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-arm64-msvc'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-ia32-msvc'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-x64-msvc'
+219 silly reify ]
+220 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/number' ]
+221 silly reify mark retired [
+221 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/primitive'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-arrow'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-collection'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-compose-refs'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-context'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dialog'
+226 silly reify ]
+227 silly reify mark retired [
+227 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-direction'
+227 silly reify ]
+228 silly reify mark retired [
+228 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dismissable-layer'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-guards'
+229 silly reify ]
+230 silly reify mark retired [
+230 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-scope'
+230 silly reify ]
+231 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-id' ]
+232 silly reify mark retired [
+232 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-label'
+232 silly reify ]
+233 silly reify mark retired [
+233 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-popper'
+233 silly reify ]
+234 silly reify mark retired [
+234 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-portal'
+234 silly reify ]
+235 silly reify mark retired [
+235 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-presence'
+235 silly reify ]
+236 silly reify mark retired [
+236 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-primitive'
+236 silly reify ]
+237 silly reify mark retired [
+237 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-progress'
+237 silly reify ]
+238 silly reify mark retired [
+238 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-roving-focus'
+238 silly reify ]
+239 silly reify mark retired [
+239 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-select'
+239 silly reify ]
+240 silly reify mark retired [
+240 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-slot'
+240 silly reify ]
+241 silly reify mark retired [
+241 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-tabs'
+241 silly reify ]
+242 silly reify mark retired [
+242 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-callback-ref'
+242 silly reify ]
+243 silly reify mark retired [
+243 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-controllable-state'
+243 silly reify ]
+244 silly reify mark retired [
+244 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-escape-keydown'
+244 silly reify ]
+245 silly reify mark retired [
+245 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-layout-effect'
+245 silly reify ]
+246 silly reify mark retired [
+246 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-previous'
+246 silly reify ]
+247 silly reify mark retired [
+247 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-rect'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-size'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-visually-hidden'
+249 silly reify ]
+250 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/rect' ]
+251 silly reify mark retired [
+251 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/plugin-commonjs'
+251 silly reify ]
+252 silly reify mark retired [
+252 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/pluginutils'
+252 silly reify ]
+253 silly reify mark retired [
+253 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rushstack/eslint-patch'
+253 silly reify ]
+254 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/browser' ]
+255 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/cli' ]
+256 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/core' ]
+257 silly reify mark retired [
+257 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/integrations'
+257 silly reify ]
+258 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/nextjs' ]
+259 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/node' ]
+260 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/react' ]
+261 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/replay' ]
+262 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/types' ]
+263 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/utils' ]
+264 silly reify mark retired [
+264 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/vercel-edge'
+264 silly reify ]
+265 silly reify mark retired [
+265 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/webpack-plugin'
+265 silly reify ]
+266 silly reify mark retired [
+266 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/feedback'
+266 silly reify ]
+267 silly reify mark retired [
+267 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/replay-canvas'
+267 silly reify ]
+268 silly reify mark retired [
+268 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/tracing'
+268 silly reify ]
+269 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/counter' ]
+270 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/helpers' ]
+271 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/estree' ]
+272 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/node' ]
+273 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/prop-types' ]
+274 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react' ]
+275 silly reify mark retired [ '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react-dom' ]
+276 silly reify mark retired [
+276 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/parser'
+276 silly reify ]
+277 silly reify mark retired [
+277 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/scope-manager'
+277 silly reify ]
+278 silly reify mark retired [
+278 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/types'
+278 silly reify ]
+279 silly reify mark retired [
+279 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/typescript-estree'
+279 silly reify ]
+280 silly reify mark retired [
+280 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/visitor-keys'
+280 silly reify ]
+281 silly reify mark retired [
+281 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@ungap/structured-clone'
+281 silly reify ]
+282 silly reify mark retired [
+282 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/cssesc',
+282 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/cssesc'
+282 silly reify ]
+283 silly reify mark retired [
+283 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/js-yaml',
+283 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/js-yaml'
+283 silly reify ]
+284 silly reify mark retired [
+284 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/json5',
+284 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/json5'
+284 silly reify ]
+285 silly reify mark retired [
+285 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/loose-envify',
+285 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/loose-envify'
+285 silly reify ]
+286 silly reify mark retired [
+286 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/mkdirp',
+286 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/mkdirp'
+286 silly reify ]
+287 silly reify mark retired [
+287 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-load-config/node_modules/lilconfig'
+287 silly reify ]
+288 silly reify mark retired [
+288 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/rimraf',
+288 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/rimraf'
+288 silly reify ]
+289 silly reify mark retired [
+289 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/ansi-regex'
+289 silly reify ]
+290 silly reify mark retired [
+290 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/strip-ansi'
+290 silly reify ]
+291 silly reify mark retired [
+291 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/sucrase',
+291 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/sucrase',
+291 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/sucrase-node'
+291 silly reify ]
+292 silly reify mark retired [
+292 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which',
+292 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/node-which'
+292 silly reify ]
+293 silly reify mark retired [
+293 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-regex'
+293 silly reify ]
+294 silly reify mark retired [
+294 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-styles'
+294 silly reify ]
+295 silly reify mark retired [
+295 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/strip-ansi'
+295 silly reify ]
+296 silly reify mark retired [
+296 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/strip-ansi'
+296 silly reify ]
+297 silly reify mark retired [
+297 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/ansi-regex'
+297 silly reify ]
+298 silly reify moves {
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/acorn': '/Users/kaveh/Horizon-bank/banking/node_modules/.acorn-r4VbRSxV',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/aria-hidden': '/Users/kaveh/Horizon-bank/banking/node_modules/.aria-hidden-ffPB0etR',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array-buffer-byte-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.array-buffer-byte-length-00ljXXsP',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array-includes': '/Users/kaveh/Horizon-bank/banking/node_modules/.array-includes-KZ7bIHaq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.findlastindex': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.findlastindex-5ebzy85W',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flat': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.flat-QNwYMrgM',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.flatmap': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.flatmap-mixwhjUf',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.toreversed': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.toreversed-cnHaFlHy',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/array.prototype.tosorted': '/Users/kaveh/Horizon-bank/banking/node_modules/.array.prototype.tosorted-rJikeWOe',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/arraybuffer.prototype.slice': '/Users/kaveh/Horizon-bank/banking/node_modules/.arraybuffer.prototype.slice-LBvVe8XW',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/axe-core': '/Users/kaveh/Horizon-bank/banking/node_modules/.axe-core-I1Z3xq0N',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/axios': '/Users/kaveh/Horizon-bank/banking/node_modules/.axios-Vfnf68Tk',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/axobject-query': '/Users/kaveh/Horizon-bank/banking/node_modules/.axobject-query-7VTzkifw',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/brace-expansion': '/Users/kaveh/Horizon-bank/banking/node_modules/.brace-expansion-Bje2HzB8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/braces': '/Users/kaveh/Horizon-bank/banking/node_modules/.braces-2mZObfxU',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/call-bind': '/Users/kaveh/Horizon-bank/banking/node_modules/.call-bind-9yigQCbD',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/caniuse-lite': '/Users/kaveh/Horizon-bank/banking/node_modules/.caniuse-lite-tl3qVK4S',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/chalk': '/Users/kaveh/Horizon-bank/banking/node_modules/.chalk-JYwPWZJt',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/chart.js': '/Users/kaveh/Horizon-bank/banking/node_modules/.chart.js-1DEO3Jdj',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/class-variance-authority': '/Users/kaveh/Horizon-bank/banking/node_modules/.class-variance-authority-K0NJqf2Z',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/countup.js': '/Users/kaveh/Horizon-bank/banking/node_modules/.countup.js-ZEMvul0P',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/cross-spawn': '/Users/kaveh/Horizon-bank/banking/node_modules/.cross-spawn-9P9g1THB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.data-view-buffer-Da6rfrke',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.data-view-byte-length-PmaGQ8x8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/data-view-byte-offset': '/Users/kaveh/Horizon-bank/banking/node_modules/.data-view-byte-offset-Ad6eGUae',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/debug': '/Users/kaveh/Horizon-bank/banking/node_modules/.debug-sv49LNjp',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/decode-uri-component': '/Users/kaveh/Horizon-bank/banking/node_modules/.decode-uri-component-zW0IkQhx',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/detect-node-es': '/Users/kaveh/Horizon-bank/banking/node_modules/.detect-node-es-y83fFJXM',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/dwolla-v2': '/Users/kaveh/Horizon-bank/banking/node_modules/.dwolla-v2-pvzySFk5',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/enhanced-resolve': '/Users/kaveh/Horizon-bank/banking/node_modules/.enhanced-resolve-k6UyemIg',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-abstract': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-abstract-NGh2LPYP',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-define-property': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-define-property-9Yr38c7x',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-iterator-helpers': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-iterator-helpers-cyUW70xI',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-object-atoms': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-object-atoms-MfDijPKb',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-set-tostringtag': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-set-tostringtag-gWSS1EHY',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-shim-unscopables': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-shim-unscopables-0H4gX8eq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/es-to-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/.es-to-primitive-i7cZxlor',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-bIHnTFPm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-config-next': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-config-next-VqbKcPTO',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-import-resolver-typescript': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-import-resolver-typescript-bcSoiNar',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-module-utils': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-module-utils-AMJ56AHq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-import': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-plugin-import-jrbVR1hw',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-jsx-a11y': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-plugin-jsx-a11y-xOTWTvji',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/eslint-plugin-react': '/Users/kaveh/Horizon-bank/banking/node_modules/.eslint-plugin-react-ccY7FgID',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/esquery': '/Users/kaveh/Horizon-bank/banking/node_modules/.esquery-luM2izkB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/estree-walker': '/Users/kaveh/Horizon-bank/banking/node_modules/.estree-walker-OP5yQWhn',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/fast-glob': '/Users/kaveh/Horizon-bank/banking/node_modules/.fast-glob-CMd8rd4O',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/fastq': '/Users/kaveh/Horizon-bank/banking/node_modules/.fastq-97hBKkdB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/fill-range': '/Users/kaveh/Horizon-bank/banking/node_modules/.fill-range-G0uOs8Pa',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/filter-obj': '/Users/kaveh/Horizon-bank/banking/node_modules/.filter-obj-PyD85EtZ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/flatted': '/Users/kaveh/Horizon-bank/banking/node_modules/.flatted-PeFh3H1Y',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/follow-redirects': '/Users/kaveh/Horizon-bank/banking/node_modules/.follow-redirects-8xwxxEUp',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/for-each': '/Users/kaveh/Horizon-bank/banking/node_modules/.for-each-VpmjMS0R',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/foreground-child': '/Users/kaveh/Horizon-bank/banking/node_modules/.foreground-child-LKLl1fL6',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/form-data': '/Users/kaveh/Horizon-bank/banking/node_modules/.form-data-UF5Imc4v',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/form-urlencoded': '/Users/kaveh/Horizon-bank/banking/node_modules/.form-urlencoded-zVzg6qNx',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/function.prototype.name': '/Users/kaveh/Horizon-bank/banking/node_modules/.function.prototype.name-HJW88ep9',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-nonce': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-nonce-XlDLXHlA',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-intrinsic': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-intrinsic-eNKHi2Zy',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-symbol-description': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-symbol-description-ljMvX2ql',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/get-tsconfig': '/Users/kaveh/Horizon-bank/banking/node_modules/.get-tsconfig-g8Slp7N8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/glob': '/Users/kaveh/Horizon-bank/banking/node_modules/.glob-ZbNj3hOI',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/globalthis': '/Users/kaveh/Horizon-bank/banking/node_modules/.globalthis-I0oV9BXs',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/gopd': '/Users/kaveh/Horizon-bank/banking/node_modules/.gopd-VbCGIRZ6',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/has-bigints': '/Users/kaveh/Horizon-bank/banking/node_modules/.has-bigints-Zjd6vdYJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/has-proto': '/Users/kaveh/Horizon-bank/banking/node_modules/.has-proto-SmbJUjyZ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/has-symbols': '/Users/kaveh/Horizon-bank/banking/node_modules/.has-symbols-CzpqAm9u',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/ignore': '/Users/kaveh/Horizon-bank/banking/node_modules/.ignore-vyuZ1zog',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/immediate': '/Users/kaveh/Horizon-bank/banking/node_modules/.immediate-MkTTn0yn',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/import-fresh': '/Users/kaveh/Horizon-bank/banking/node_modules/.import-fresh-9TDBgdaA',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/internal-slot': '/Users/kaveh/Horizon-bank/banking/node_modules/.internal-slot-Rl3L5soI',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/invariant': '/Users/kaveh/Horizon-bank/banking/node_modules/.invariant-zm5F3uQg',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-array-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-array-buffer-3lMXeNJr',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-async-function': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-async-function-SnsQwhzK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-bigint': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-bigint-VSAwjijx',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-boolean-object': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-boolean-object-H7T89rfZ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-core-module': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-core-module-e8h06ybO',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-data-view': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-data-view-OiuuSXlY',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-date-object': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-date-object-UflmAfDa',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-finalizationregistry': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-finalizationregistry-XV5QZGR7',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-generator-function': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-generator-function-5FNlrckl',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-number-object': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-number-object-7C12jpVm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-reference': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-reference-0hSRlgNu',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-regex-0TW5LsxB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-shared-array-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-shared-array-buffer-pMu1plM7',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-stream': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-stream-APvb6W7K',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-string': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-string-ikDhtlMp',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-symbol': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-symbol-ZtkWDou8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-typed-array': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-typed-array-i9x4HV3G',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakref': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-weakref-SRiQdwha',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/is-weakset': '/Users/kaveh/Horizon-bank/banking/node_modules/.is-weakset-BQNXUWvy',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/iterator.prototype': '/Users/kaveh/Horizon-bank/banking/node_modules/.iterator.prototype-JyVSe7kc',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/jackspeak': '/Users/kaveh/Horizon-bank/banking/node_modules/.jackspeak-RVCOOeIH',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/jiti': '/Users/kaveh/Horizon-bank/banking/node_modules/.jiti-57UT9nQt',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/language-subtag-registry': '/Users/kaveh/Horizon-bank/banking/node_modules/.language-subtag-registry-805FcZoJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lie': '/Users/kaveh/Horizon-bank/banking/node_modules/.lie-WVK5JR5C',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/localforage': '/Users/kaveh/Horizon-bank/banking/node_modules/.localforage-jSZHzo4C',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lodash.snakecase': '/Users/kaveh/Horizon-bank/banking/node_modules/.lodash.snakecase-oynGMaDC',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lru-cache': '/Users/kaveh/Horizon-bank/banking/node_modules/.lru-cache-eSY9mthm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/lucide-react': '/Users/kaveh/Horizon-bank/banking/node_modules/.lucide-react-RfyDwpCT',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/magic-string': '/Users/kaveh/Horizon-bank/banking/node_modules/.magic-string-zBoSZnhw',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/micromatch': '/Users/kaveh/Horizon-bank/banking/node_modules/.micromatch-9IYxHsW1',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/minipass': '/Users/kaveh/Horizon-bank/banking/node_modules/.minipass-Rc2xnsy8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/ms': '/Users/kaveh/Horizon-bank/banking/node_modules/.ms-Lpiui9jH',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/nanoid': '/Users/kaveh/Horizon-bank/banking/node_modules/.nanoid-9GEKbd4c',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/next': '/Users/kaveh/Horizon-bank/banking/node_modules/.next-Gxs82bCN',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/node-appwrite': '/Users/kaveh/Horizon-bank/banking/node_modules/.node-appwrite-pmN4XQOB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/node-fetch': '/Users/kaveh/Horizon-bank/banking/node_modules/.node-fetch-xj414PQF',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object-inspect': '/Users/kaveh/Horizon-bank/banking/node_modules/.object-inspect-7ZuxNY71',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.assign': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.assign-j5D4dvrw',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.entries': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.entries-QYv4KEPl',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.hasown': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.hasown-E0mfEYh9',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/object.values': '/Users/kaveh/Horizon-bank/banking/node_modules/.object.values-CuExrHGe',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/path-scurry': '/Users/kaveh/Horizon-bank/banking/node_modules/.path-scurry-sUJfp9Lb',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/picocolors': '/Users/kaveh/Horizon-bank/banking/node_modules/.picocolors-7K91iwnh',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/pirates': '/Users/kaveh/Horizon-bank/banking/node_modules/.pirates-bPyWV7UZ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/plaid': '/Users/kaveh/Horizon-bank/banking/node_modules/.plaid-91I9ZbIm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/possible-typed-array-names': '/Users/kaveh/Horizon-bank/banking/node_modules/.possible-typed-array-names-4i7lwne1',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss': '/Users/kaveh/Horizon-bank/banking/node_modules/.postcss-SyceBlLK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-nested': '/Users/kaveh/Horizon-bank/banking/node_modules/.postcss-nested-kGTfy3ys',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-selector-parser': '/Users/kaveh/Horizon-bank/banking/node_modules/.postcss-selector-parser-9Yq5KiLt',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/progress': '/Users/kaveh/Horizon-bank/banking/node_modules/.progress-ai52fkGn',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/query-string': '/Users/kaveh/Horizon-bank/banking/node_modules/.query-string-TbRyzGIz',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-KlwRcVjg',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-chartjs-2': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-chartjs-2-V0kH4WED',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-countup': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-countup-XQe47NSt',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-dom': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-dom-515oiehN',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-hook-form': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-hook-form-ZaIlnxdF',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-plaid-link': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-plaid-link-jUGa1GE6',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-remove-scroll-ZHNltyT6',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-remove-scroll-bar': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-remove-scroll-bar-UfScmLKl',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-script-hook': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-script-hook-jnxpS0ba',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/react-style-singleton': '/Users/kaveh/Horizon-bank/banking/node_modules/.react-style-singleton-MzipAfnN',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/reflect.getprototypeof': '/Users/kaveh/Horizon-bank/banking/node_modules/.reflect.getprototypeof-rj6sNTcW',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regenerator-runtime': '/Users/kaveh/Horizon-bank/banking/node_modules/.regenerator-runtime-EBOTReq6',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/regexp.prototype.flags': '/Users/kaveh/Horizon-bank/banking/node_modules/.regexp.prototype.flags-4FmFlXcS',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/resolve': '/Users/kaveh/Horizon-bank/banking/node_modules/.resolve-Iqqxqsf5',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/reusify': '/Users/kaveh/Horizon-bank/banking/node_modules/.reusify-VsO7Yd58',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/resolve-pkg-maps': '/Users/kaveh/Horizon-bank/banking/node_modules/.resolve-pkg-maps-8o2iwOtY',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/rollup': '/Users/kaveh/Horizon-bank/banking/node_modules/.rollup-xvonztGS',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/safe-array-concat': '/Users/kaveh/Horizon-bank/banking/node_modules/.safe-array-concat-HoedaFhS',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/safe-regex-test': '/Users/kaveh/Horizon-bank/banking/node_modules/.safe-regex-test-KeV5tsB3',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/scheduler': '/Users/kaveh/Horizon-bank/banking/node_modules/.scheduler-ViNBqxeE',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/semver': '/Users/kaveh/Horizon-bank/banking/node_modules/.semver-vXsUMJep',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/side-channel': '/Users/kaveh/Horizon-bank/banking/node_modules/.side-channel-4XsFUuxn',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/source-map-js': '/Users/kaveh/Horizon-bank/banking/node_modules/.source-map-js-aHRIyuKM',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/split-on-first': '/Users/kaveh/Horizon-bank/banking/node_modules/.split-on-first-IGZzrT5i',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/stacktrace-parser': '/Users/kaveh/Horizon-bank/banking/node_modules/.stacktrace-parser-PvLZ0f7V',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.matchall': '/Users/kaveh/Horizon-bank/banking/node_modules/.string.prototype.matchall-lWBnnuoj',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trim': '/Users/kaveh/Horizon-bank/banking/node_modules/.string.prototype.trim-OLUDNJr2',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string.prototype.trimend': '/Users/kaveh/Horizon-bank/banking/node_modules/.string.prototype.trimend-ktfbHYmF',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/styled-jsx': '/Users/kaveh/Horizon-bank/banking/node_modules/.styled-jsx-5WLRvknM',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwind-merge': '/Users/kaveh/Horizon-bank/banking/node_modules/.tailwind-merge-osFPcHum',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss': '/Users/kaveh/Horizon-bank/banking/node_modules/.tailwindcss-o7mACMfV',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tailwindcss-animate': '/Users/kaveh/Horizon-bank/banking/node_modules/.tailwindcss-animate-DQkYU7Kn',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tapable': '/Users/kaveh/Horizon-bank/banking/node_modules/.tapable-Ww8SLGEh',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tr46': '/Users/kaveh/Horizon-bank/banking/node_modules/.tr46-hreA6Tfq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/ts-api-utils': '/Users/kaveh/Horizon-bank/banking/node_modules/.ts-api-utils-577P6tJT',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/tslib': '/Users/kaveh/Horizon-bank/banking/node_modules/.tslib-AqGmlbdK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-buffer': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-buffer-nzJcRWor',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-byte-length-pJYXnjlo',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-byte-offset': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-byte-offset-s7axxWSe',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typed-array-length': '/Users/kaveh/Horizon-bank/banking/node_modules/.typed-array-length-vWqocq41',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/typescript': '/Users/kaveh/Horizon-bank/banking/node_modules/.typescript-vrd9Ub3e',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/unbox-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/.unbox-primitive-m6BDzIlE',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/undici': '/Users/kaveh/Horizon-bank/banking/node_modules/.undici-XY11yndr',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/undici-types': '/Users/kaveh/Horizon-bank/banking/node_modules/.undici-types-9JrUAvRb',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/use-callback-ref': '/Users/kaveh/Horizon-bank/banking/node_modules/.use-callback-ref-5oNPzzok',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/use-sidecar': '/Users/kaveh/Horizon-bank/banking/node_modules/.use-sidecar-RSzbqIBo',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/webidl-conversions': '/Users/kaveh/Horizon-bank/banking/node_modules/.webidl-conversions-eep7gVG3',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/webpack-sources': '/Users/kaveh/Horizon-bank/banking/node_modules/.webpack-sources-S52T4X9w',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/whatwg-url': '/Users/kaveh/Horizon-bank/banking/node_modules/.whatwg-url-UhDE9uVf',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-boxed-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-boxed-primitive-gIihDFDw',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-builtin-type': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-builtin-type-Krumsy6U',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which-typed-array': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-typed-array-PpbdQaRG',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/yallist': '/Users/kaveh/Horizon-bank/banking/node_modules/.yallist-TzzK8X1g',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/yaml': '/Users/kaveh/Horizon-bank/banking/node_modules/.yaml-LUmTWV7a',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/zod': '/Users/kaveh/Horizon-bank/banking/node_modules/.zod-QnVjRSlz',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@babel/runtime': '/Users/kaveh/Horizon-bank/banking/node_modules/@babel/.runtime-TpEIatqS',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint/js': '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint/.js-7Xp6kUnq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/eslint-utils': '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/.eslint-utils-1gseGsS0',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/regexpp': '/Users/kaveh/Horizon-bank/banking/node_modules/@eslint-community/.regexpp-tb0LZyMR',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@fastify/busboy': '/Users/kaveh/Horizon-bank/banking/node_modules/@fastify/.busboy-P15WsHmd',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/core': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.core-NlFAqwA2',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/dom': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.dom-PFC4tXA7',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/react-dom': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.react-dom-ugsOQkUe',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/utils': '/Users/kaveh/Horizon-bank/banking/node_modules/@floating-ui/.utils-Bb0HNuwR',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@hookform/resolvers': '/Users/kaveh/Horizon-bank/banking/node_modules/@hookform/.resolvers-YZRcBztG',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@humanwhocodes/config-array': '/Users/kaveh/Horizon-bank/banking/node_modules/@humanwhocodes/.config-array-ymBNYKJ5',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/gen-mapping': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.gen-mapping-OrTdAGkg',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/set-array': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.set-array-831afeWN',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/sourcemap-codec': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.sourcemap-codec-oJXf8SI8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/trace-mapping': '/Users/kaveh/Horizon-bank/banking/node_modules/@jridgewell/.trace-mapping-aaqACxCx',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@kurkle/color': '/Users/kaveh/Horizon-bank/banking/node_modules/@kurkle/.color-etW8Nb1K',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/env': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.env-C1H3TTjJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/eslint-plugin-next': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.eslint-plugin-next-CkSzCcqr',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-arm64': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-darwin-arm64-8WBTvaWM',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-x64': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-darwin-x64-k96ivQwb',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-gnu': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-arm64-gnu-DNwCarQA',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-musl': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-arm64-musl-TXaqpuHS',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-gnu': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-x64-gnu-X9IWRiNJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-musl': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-linux-x64-musl-JJyq38uj',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-arm64-msvc': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-win32-arm64-msvc-2zTrYQvH',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-ia32-msvc': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-win32-ia32-msvc-sGFTGaHK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-x64-msvc': '/Users/kaveh/Horizon-bank/banking/node_modules/@next/.swc-win32-x64-msvc-JZxadZMq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/number': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.number-kVWki1iu',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.primitive-xvHTpiRJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-arrow': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-arrow-XuLCAieE',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-collection': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-collection-V0pd5wSS',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-compose-refs': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-compose-refs-9XWDpveT',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-context': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-context-omjd79x0',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dialog': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-dialog-Gmy6aeEH',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-direction': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-direction-HIBcMhg4',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-dismissable-layer': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-dismissable-layer-Ta6codAO',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-guards': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-focus-guards-yLU1vDj1',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-focus-scope': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-focus-scope-wAmEuGPA',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-id': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-id-9uCrDDEV',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-label': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-label-p4WEKki5',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-popper': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-popper-rNeCiSqU',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-portal': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-portal-7x8e7xq7',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-presence': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-presence-PyhV2ObR',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-primitive': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-primitive-E348oIyr',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-progress': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-progress-vNULlgsf',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-roving-focus': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-roving-focus-ps0Lm916',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-select': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-select-jSG3kpDQ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-slot': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-slot-v3yln6wZ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-tabs': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-tabs-EC1Lzinf',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-callback-ref': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-callback-ref-bFRdXV56',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-controllable-state': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-controllable-state-83ysLlK1',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-escape-keydown': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-escape-keydown-1T33zIWj',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-layout-effect': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-layout-effect-0RB2wXSN',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-previous': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-previous-CNiccDyC',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-rect': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-rect-emD6q2CK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-use-size': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-use-size-9RChZmWI',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/react-visually-hidden': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.react-visually-hidden-r11WafA6',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/rect': '/Users/kaveh/Horizon-bank/banking/node_modules/@radix-ui/.rect-J5JCmmea',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/plugin-commonjs': '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/.plugin-commonjs-pKZCpBSj',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/pluginutils': '/Users/kaveh/Horizon-bank/banking/node_modules/@rollup/.pluginutils-ZlU200kC',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@rushstack/eslint-patch': '/Users/kaveh/Horizon-bank/banking/node_modules/@rushstack/.eslint-patch-58eJvkSR',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/browser': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.browser-dqsCqpUU',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/cli': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.cli-kfoRWQih',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/core': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.core-4UQrRHEJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/integrations': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.integrations-z9pL1hrx',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/nextjs': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.nextjs-S1Z0dYRO',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/node': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.node-JKGNoZau',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/react': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.react-m5Z8ivIm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/replay': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.replay-kkQNCREI',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/types': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.types-qWe5dLj8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/utils': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.utils-QVnsbg4u',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/vercel-edge': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.vercel-edge-FPJUpbTo',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/webpack-plugin': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry/.webpack-plugin-A8aoahOH',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/feedback': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/.feedback-97PUNEKw',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/replay-canvas': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/.replay-canvas-UtIlSbfT',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/tracing': '/Users/kaveh/Horizon-bank/banking/node_modules/@sentry-internal/.tracing-EdOqle5T',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/counter': '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/.counter-tqJDvDb9',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/helpers': '/Users/kaveh/Horizon-bank/banking/node_modules/@swc/.helpers-zGtWzk1C',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/estree': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.estree-44wrfSeK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/node': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.node-LmbcbtGe',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/prop-types': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.prop-types-pdC56VHB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.react-JW67Q7uJ',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@types/react-dom': '/Users/kaveh/Horizon-bank/banking/node_modules/@types/.react-dom-OuE9q2MA',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/parser': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.parser-EY2oRTm7',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/scope-manager': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.scope-manager-X7HxXSLV',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/types': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.types-tm2kQnqm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/typescript-estree': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.typescript-estree-bs4Pj3Xm',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/visitor-keys': '/Users/kaveh/Horizon-bank/banking/node_modules/@typescript-eslint/.visitor-keys-QXKqUwNB',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@ungap/structured-clone': '/Users/kaveh/Horizon-bank/banking/node_modules/@ungap/.structured-clone-zkTCBih8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/cssesc': '/Users/kaveh/Horizon-bank/banking/node_modules/.cssesc-nD6joUsO',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/cssesc': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.cssesc-F3kz2zSG',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/js-yaml': '/Users/kaveh/Horizon-bank/banking/node_modules/.js-yaml-wrBC1c9U',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/js-yaml': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.js-yaml-Zcr6YPfd',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/json5': '/Users/kaveh/Horizon-bank/banking/node_modules/.json5-8qluNC3a',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/json5': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.json5-wzl2p5vA',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/loose-envify': '/Users/kaveh/Horizon-bank/banking/node_modules/.loose-envify-U4IsOwwK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/loose-envify': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.loose-envify-hupEUWzG',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/mkdirp': '/Users/kaveh/Horizon-bank/banking/node_modules/.mkdirp-pvEhg2C8',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/mkdirp': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.mkdirp-swOeD7zD',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-load-config/node_modules/lilconfig': '/Users/kaveh/Horizon-bank/banking/node_modules/postcss-load-config/node_modules/.lilconfig-j1hHZjJN',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/rimraf': '/Users/kaveh/Horizon-bank/banking/node_modules/.rimraf-UHeKGwx0',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/rimraf': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.rimraf-Lh21GxAy',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/ansi-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/.ansi-regex-aBpEMr3O',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/strip-ansi': '/Users/kaveh/Horizon-bank/banking/node_modules/string-width/node_modules/.strip-ansi-YxndW1wK',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/sucrase': '/Users/kaveh/Horizon-bank/banking/node_modules/.sucrase-rmBk9kTt',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/sucrase': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.sucrase-AQvPmLwj',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/sucrase-node': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.sucrase-node-RIhvVYRn',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/which': '/Users/kaveh/Horizon-bank/banking/node_modules/.which-3A3Bj5Ci',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/node-which': '/Users/kaveh/Horizon-bank/banking/node_modules/.bin/.node-which-JzgZAa8m',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/.ansi-regex-kBzZY51l',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/ansi-styles': '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/.ansi-styles-615sOuvq',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/strip-ansi': '/Users/kaveh/Horizon-bank/banking/node_modules/wrap-ansi/node_modules/.strip-ansi-YCHnhn2B',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/strip-ansi': '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/.strip-ansi-LnjfESej',
+298 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/ansi-regex': '/Users/kaveh/Horizon-bank/banking/node_modules/@isaacs/cliui/node_modules/.ansi-regex-ytdfm057'
+298 silly reify }
+299 silly audit bulk request {
+299 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+299 silly audit   '@babel/runtime': [ '7.24.4' ],
+299 silly audit   '@eslint-community/eslint-utils': [ '4.4.0' ],
+299 silly audit   '@eslint-community/regexpp': [ '4.10.0' ],
+299 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+299 silly audit   '@eslint/js': [ '8.57.0' ],
+299 silly audit   '@fastify/busboy': [ '2.1.1' ],
+299 silly audit   '@floating-ui/core': [ '1.6.1' ],
+299 silly audit   '@floating-ui/dom': [ '1.6.4' ],
+299 silly audit   '@floating-ui/react-dom': [ '2.0.9' ],
+299 silly audit   '@floating-ui/utils': [ '0.2.2' ],
+299 silly audit   '@hookform/resolvers': [ '3.3.4' ],
+299 silly audit   '@humanwhocodes/config-array': [ '0.11.14' ],
+299 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+299 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+299 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+299 silly audit   'ansi-regex': [ '6.0.1', '5.0.1' ],
+299 silly audit   'strip-ansi': [ '7.1.0', '6.0.1' ],
+299 silly audit   '@jridgewell/gen-mapping': [ '0.3.5' ],
+299 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+299 silly audit   '@jridgewell/set-array': [ '1.2.1' ],
+299 silly audit   '@jridgewell/sourcemap-codec': [ '1.4.15' ],
+299 silly audit   '@jridgewell/trace-mapping': [ '0.3.25' ],
+299 silly audit   '@kurkle/color': [ '0.3.2' ],
+299 silly audit   '@next/env': [ '14.2.3' ],
+299 silly audit   '@next/eslint-plugin-next': [ '14.2.3' ],
+299 silly audit   'brace-expansion': [ '2.0.1', '1.1.11' ],
+299 silly audit   glob: [ '10.3.10', '8.1.0', '7.2.3', '10.3.12' ],
+299 silly audit   minimatch: [ '9.0.4', '9.0.3', '5.1.6', '3.1.2' ],
+299 silly audit   '@next/swc-darwin-arm64': [ '14.2.3' ],
+299 silly audit   '@next/swc-darwin-x64': [ '14.2.3' ],
+299 silly audit   '@next/swc-linux-arm64-gnu': [ '14.2.3' ],
+299 silly audit   '@next/swc-linux-arm64-musl': [ '14.2.3' ],
+299 silly audit   '@next/swc-linux-x64-gnu': [ '14.2.3' ],
+299 silly audit   '@next/swc-linux-x64-musl': [ '14.2.3' ],
+299 silly audit   '@next/swc-win32-arm64-msvc': [ '14.2.3' ],
+299 silly audit   '@next/swc-win32-ia32-msvc': [ '14.2.3' ],
+299 silly audit   '@next/swc-win32-x64-msvc': [ '14.2.3' ],
+299 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+299 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+299 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+299 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+299 silly audit   '@radix-ui/number': [ '1.0.1' ],
+299 silly audit   '@radix-ui/primitive': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-arrow': [ '1.0.3' ],
+299 silly audit   '@radix-ui/react-collection': [ '1.0.3' ],
+299 silly audit   '@radix-ui/react-compose-refs': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-context': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-dialog': [ '1.0.5' ],
+299 silly audit   '@radix-ui/react-direction': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-dismissable-layer': [ '1.0.5' ],
+299 silly audit   '@radix-ui/react-focus-guards': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-focus-scope': [ '1.0.4' ],
+299 silly audit   '@radix-ui/react-id': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-label': [ '2.0.2' ],
+299 silly audit   '@radix-ui/react-popper': [ '1.1.3' ],
+299 silly audit   '@radix-ui/react-portal': [ '1.0.4' ],
+299 silly audit   '@radix-ui/react-presence': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-primitive': [ '1.0.3' ],
+299 silly audit   '@radix-ui/react-progress': [ '1.0.3' ],
+299 silly audit   '@radix-ui/react-roving-focus': [ '1.0.4' ],
+299 silly audit   '@radix-ui/react-select': [ '2.0.0' ],
+299 silly audit   '@radix-ui/react-slot': [ '1.0.2' ],
+299 silly audit   '@radix-ui/react-tabs': [ '1.0.4' ],
+299 silly audit   '@radix-ui/react-use-callback-ref': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-use-controllable-state': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-use-escape-keydown': [ '1.0.3' ],
+299 silly audit   '@radix-ui/react-use-layout-effect': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-use-previous': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-use-rect': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-use-size': [ '1.0.1' ],
+299 silly audit   '@radix-ui/react-visually-hidden': [ '1.0.3' ],
+299 silly audit   '@radix-ui/rect': [ '1.0.1' ],
+299 silly audit   '@rollup/plugin-commonjs': [ '24.0.0' ],
+299 silly audit   '@rollup/pluginutils': [ '5.1.0' ],
+299 silly audit   '@rushstack/eslint-patch': [ '1.10.2' ],
+299 silly audit   '@sentry-internal/feedback': [ '7.112.2' ],
+299 silly audit   '@sentry-internal/replay-canvas': [ '7.112.2' ],
+299 silly audit   '@sentry-internal/tracing': [ '7.112.2' ],
+299 silly audit   '@sentry/browser': [ '7.112.2' ],
+299 silly audit   '@sentry/cli': [ '1.77.3' ],
+299 silly audit   '@sentry/core': [ '7.112.2' ],
+299 silly audit   '@sentry/integrations': [ '7.112.2' ],
+299 silly audit   '@sentry/nextjs': [ '7.112.2' ],
+299 silly audit   '@sentry/node': [ '7.112.2' ],
+299 silly audit   '@sentry/react': [ '7.112.2' ],
+299 silly audit   '@sentry/replay': [ '7.112.2' ],
+299 silly audit   '@sentry/types': [ '7.112.2' ],
+299 silly audit   '@sentry/utils': [ '7.112.2' ],
+299 silly audit   '@sentry/vercel-edge': [ '7.112.2' ],
+299 silly audit   '@sentry/webpack-plugin': [ '1.21.0' ],
+299 silly audit   '@swc/counter': [ '0.1.3' ],
+299 silly audit   '@swc/helpers': [ '0.5.5' ],
+299 silly audit   '@types/estree': [ '1.0.5' ],
+299 silly audit   '@types/json5': [ '0.0.29' ],
+299 silly audit   '@types/node': [ '20.12.7' ],
+299 silly audit   '@types/prop-types': [ '15.7.12' ],
+299 silly audit   '@types/react': [ '18.3.1' ],
+299 silly audit   '@types/react-dom': [ '18.3.0' ],
+299 silly audit   '@typescript-eslint/parser': [ '7.2.0' ],
+299 silly audit   '@typescript-eslint/scope-manager': [ '7.2.0' ],
+299 silly audit   '@typescript-eslint/types': [ '7.2.0' ],
+299 silly audit   '@typescript-eslint/typescript-estree': [ '7.2.0' ],
+299 silly audit   '@typescript-eslint/visitor-keys': [ '7.2.0' ],
+299 silly audit   '@ungap/structured-clone': [ '1.2.0' ],
+299 silly audit   acorn: [ '8.11.3' ],
+299 silly audit   'acorn-jsx': [ '5.3.2' ],
+299 silly audit   'agent-base': [ '6.0.2' ],
+299 silly audit   ajv: [ '6.12.6' ],
+299 silly audit   'ansi-styles': [ '4.3.0', '6.2.1' ],
+299 silly audit   'any-promise': [ '1.3.0' ],
+299 silly audit   anymatch: [ '3.1.3' ],
+299 silly audit   arg: [ '5.0.2' ],
+299 silly audit   argparse: [ '2.0.1' ],
+299 silly audit   'aria-hidden': [ '1.2.4' ],
+299 silly audit   'aria-query': [ '5.3.0' ],
+299 silly audit   'array-buffer-byte-length': [ '1.0.1' ],
+299 silly audit   'array-includes': [ '3.1.8' ],
+299 silly audit   'array-union': [ '2.1.0' ],
+299 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+299 silly audit   'array.prototype.findlastindex': [ '1.2.5' ],
+299 silly audit   'array.prototype.flat': [ '1.3.2' ],
+299 silly audit   'array.prototype.flatmap': [ '1.3.2' ],
+299 silly audit   'array.prototype.toreversed': [ '1.1.2' ],
+299 silly audit   'array.prototype.tosorted': [ '1.1.3' ],
+299 silly audit   'arraybuffer.prototype.slice': [ '1.0.3' ],
+299 silly audit   'ast-types-flow': [ '0.0.8' ],
+299 silly audit   asynckit: [ '0.4.0' ],
+299 silly audit   'available-typed-arrays': [ '1.0.7' ],
+299 silly audit   'axe-core': [ '4.7.0' ],
+299 silly audit   axios: [ '1.6.8' ],
+299 silly audit   'axobject-query': [ '3.2.1' ],
+299 silly audit   'balanced-match': [ '1.0.2' ],
+299 silly audit   'binary-extensions': [ '2.3.0' ],
+299 silly audit   bluebird: [ '3.7.2' ],
+299 silly audit   braces: [ '3.0.2' ],
+299 silly audit   busboy: [ '1.6.0' ],
+299 silly audit   'call-bind': [ '1.0.7' ],
+299 silly audit   callsites: [ '3.1.0' ],
+299 silly audit   'camelcase-css': [ '2.0.1' ],
+299 silly audit   'caniuse-lite': [ '1.0.30001614' ],
+299 silly audit   chalk: [ '3.0.0', '4.1.2' ],
+299 silly audit   'chart.js': [ '4.4.2' ],
+299 silly audit   chokidar: [ '3.6.0' ],
+299 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+299 silly audit   'class-variance-authority': [ '0.7.0' ],
+299 silly audit   clsx: [ '2.0.0', '2.1.1' ],
+299 silly audit   'client-only': [ '0.0.1' ],
+299 silly audit   'color-convert': [ '2.0.1' ],
+299 silly audit   'color-name': [ '1.1.4' ],
+299 silly audit   'combined-stream': [ '1.0.8' ],
+299 silly audit   commander: [ '4.1.1' ],
+299 silly audit   commondir: [ '1.0.1' ],
+299 silly audit   'concat-map': [ '0.0.1' ],
+299 silly audit   'countup.js': [ '2.8.0' ],
+299 silly audit   'cross-spawn': [ '7.0.3' ],
+299 silly audit   cssesc: [ '3.0.0' ],
+299 silly audit   csstype: [ '3.1.3' ],
+299 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+299 silly audit   'data-view-buffer': [ '1.0.1' ],
+299 silly audit   'data-view-byte-length': [ '1.0.1' ],
+299 silly audit   'data-view-byte-offset': [ '1.0.0' ],
+299 silly audit   debug: [ '4.3.4', '3.2.7' ],
+299 silly audit   'decode-uri-component': [ '0.4.1' ],
+299 silly audit   'deep-is': [ '0.1.4' ],
+299 silly audit   'define-data-property': [ '1.1.4' ],
+299 silly audit   'define-properties': [ '1.2.1' ],
+299 silly audit   'delayed-stream': [ '1.0.0' ],
+299 silly audit   dequal: [ '2.0.3' ],
+299 silly audit   'detect-node-es': [ '1.1.0' ],
+299 silly audit   didyoumean: [ '1.2.2' ],
+299 silly audit   'dir-glob': [ '3.0.1' ],
+299 silly audit   dlv: [ '1.1.3' ],
+299 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+299 silly audit   'dwolla-v2': [ '3.4.0' ],
+299 silly audit   eastasianwidth: [ '0.2.0' ],
+299 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+299 silly audit   'enhanced-resolve': [ '5.16.0' ],
+299 silly audit   'es-abstract': [ '1.23.3' ],
+299 silly audit   'es-define-property': [ '1.0.0' ],
+299 silly audit   'es-errors': [ '1.3.0' ],
+299 silly audit   'es-iterator-helpers': [ '1.0.19' ],
+299 silly audit   'es-object-atoms': [ '1.0.0' ],
+299 silly audit   'es-set-tostringtag': [ '2.0.3' ],
+299 silly audit   'es-shim-unscopables': [ '1.0.2' ],
+299 silly audit   'es-to-primitive': [ '1.2.1' ],
+299 silly audit   'escape-string-regexp': [ '4.0.0' ],
+299 silly audit   eslint: [ '8.57.0' ],
+299 silly audit   'eslint-config-next': [ '14.2.3' ],
+299 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+299 silly audit   'eslint-import-resolver-typescript': [ '3.6.1' ],
+299 silly audit   'eslint-module-utils': [ '2.8.1' ],
+299 silly audit   'eslint-plugin-import': [ '2.29.1' ],
+299 silly audit   semver: [ '6.3.1', '7.6.0' ],
+299 silly audit   'eslint-plugin-jsx-a11y': [ '6.8.0' ],
+299 silly audit   'eslint-plugin-react': [ '7.34.1' ],
+299 silly audit   'eslint-plugin-react-hooks': [ '4.6.2' ],
+299 silly audit   resolve: [ '2.0.0-next.5', '1.22.8' ],
+299 silly audit   'eslint-scope': [ '7.2.2' ],
+299 silly audit   'eslint-visitor-keys': [ '3.4.3' ],
+299 silly audit   espree: [ '9.6.1' ],
+299 silly audit   esquery: [ '1.5.0' ],
+299 silly audit   esrecurse: [ '4.3.0' ],
+299 silly audit   estraverse: [ '5.3.0' ],
+299 silly audit   'estree-walker': [ '2.0.2' ],
+299 silly audit   esutils: [ '2.0.3' ],
+299 silly audit   'fast-deep-equal': [ '3.1.3' ],
+299 silly audit   'fast-glob': [ '3.3.2' ],
+299 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+299 silly audit   'fast-levenshtein': [ '2.0.6' ],
+299 silly audit   fastq: [ '1.17.1' ],
+299 silly audit   'file-entry-cache': [ '6.0.1' ],
+299 silly audit   'fill-range': [ '7.0.1' ],
+299 silly audit   'filter-obj': [ '5.1.0' ],
+299 silly audit   'find-up': [ '5.0.0' ],
+299 silly audit   'flat-cache': [ '3.2.0' ],
+299 silly audit   flatted: [ '3.3.1' ],
+299 silly audit   'follow-redirects': [ '1.15.6' ],
+299 silly audit   'for-each': [ '0.3.3' ],
+299 silly audit   'foreground-child': [ '3.1.1' ],
+299 silly audit   'form-data': [ '4.0.0' ],
+299 silly audit   'form-urlencoded': [ '4.5.1' ],
+299 silly audit   'fs.realpath': [ '1.0.0' ],
+299 silly audit   fsevents: [ '2.3.3' ],
+299 silly audit   'function-bind': [ '1.1.2' ],
+299 silly audit   'function.prototype.name': [ '1.1.6' ],
+299 silly audit   'functions-have-names': [ '1.2.3' ],
+299 silly audit   'get-intrinsic': [ '1.2.4' ],
+299 silly audit   'get-nonce': [ '1.0.1' ],
+299 silly audit   'get-symbol-description': [ '1.0.2' ],
+299 silly audit   'get-tsconfig': [ '4.7.3' ],
+299 silly audit   globals: [ '13.24.0' ],
+299 silly audit   globalthis: [ '1.0.3' ],
+299 silly audit   globby: [ '11.1.0' ],
+299 silly audit   gopd: [ '1.0.1' ],
+299 silly audit   'graceful-fs': [ '4.2.11' ],
+299 silly audit   graphemer: [ '1.4.0' ],
+299 silly audit   'has-bigints': [ '1.0.2' ],
+299 silly audit   'has-flag': [ '4.0.0' ],
+299 silly audit   'has-property-descriptors': [ '1.0.2' ],
+299 silly audit   'has-proto': [ '1.0.3' ],
+299 silly audit   'has-symbols': [ '1.0.3' ],
+299 silly audit   'has-tostringtag': [ '1.0.2' ],
+299 silly audit   hasown: [ '2.0.2' ],
+299 silly audit   'hoist-non-react-statics': [ '3.3.2' ],
+299 silly audit   'https-proxy-agent': [ '5.0.1' ],
+299 silly audit   ignore: [ '5.3.1' ],
+299 silly audit   immediate: [ '3.0.6' ],
+299 silly audit   'import-fresh': [ '3.3.0' ],
+299 silly audit   imurmurhash: [ '0.1.4' ],
+299 silly audit   inflight: [ '1.0.6' ],
+299 silly audit   inherits: [ '2.0.4' ],
+299 silly audit   'internal-slot': [ '1.0.7' ],
+299 silly audit   invariant: [ '2.2.4' ],
+299 silly audit   'is-array-buffer': [ '3.0.4' ],
+299 silly audit   'is-async-function': [ '2.0.0' ],
+299 silly audit   'is-bigint': [ '1.0.4' ],
+299 silly audit   'is-binary-path': [ '2.1.0' ],
+299 silly audit   'is-boolean-object': [ '1.1.2' ],
+299 silly audit   'is-callable': [ '1.2.7' ],
+299 silly audit   'is-core-module': [ '2.13.1' ],
+299 silly audit   'is-data-view': [ '1.0.1' ],
+299 silly audit   'is-date-object': [ '1.0.5' ],
+299 silly audit   'is-extglob': [ '2.1.1' ],
+299 silly audit   'is-finalizationregistry': [ '1.0.2' ],
+299 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+299 silly audit   'is-generator-function': [ '1.0.10' ],
+299 silly audit   'is-glob': [ '4.0.3' ],
+299 silly audit   'is-map': [ '2.0.3' ],
+299 silly audit   'is-negative-zero': [ '2.0.3' ],
+299 silly audit   'is-number': [ '7.0.0' ],
+299 silly audit   'is-number-object': [ '1.0.7' ],
+299 silly audit   'is-path-inside': [ '3.0.3' ],
+299 silly audit   'is-reference': [ '1.2.1' ],
+299 silly audit   'is-regex': [ '1.1.4' ],
+299 silly audit   'is-set': [ '2.0.3' ],
+299 silly audit   'is-shared-array-buffer': [ '1.0.3' ],
+299 silly audit   'is-stream': [ '1.1.0' ],
+299 silly audit   'is-string': [ '1.0.7' ],
+299 silly audit   'is-symbol': [ '1.0.4' ],
+299 silly audit   'is-typed-array': [ '1.1.13' ],
+299 silly audit   'is-weakmap': [ '2.0.2' ],
+299 silly audit   'is-weakref': [ '1.0.2' ],
+299 silly audit   'is-weakset': [ '2.0.3' ],
+299 silly audit   isarray: [ '2.0.5' ],
+299 silly audit   isexe: [ '2.0.0' ],
+299 silly audit   'iterator.prototype': [ '1.1.2' ],
+299 silly audit   jackspeak: [ '2.3.6' ],
+299 silly audit   jiti: [ '1.21.0' ],
+299 silly audit   'js-tokens': [ '4.0.0' ],
+299 silly audit   'js-yaml': [ '4.1.0' ],
+299 silly audit   'json-buffer': [ '3.0.1' ],
+299 silly audit   'json-schema-traverse': [ '0.4.1' ],
+299 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+299 silly audit   json5: [ '1.0.2' ],
+299 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+299 silly audit   keyv: [ '4.5.4' ],
+299 silly audit   'language-subtag-registry': [ '0.3.22' ],
+299 silly audit   'language-tags': [ '1.0.9' ],
+299 silly audit   levn: [ '0.4.1' ],
+299 silly audit   lie: [ '3.1.1' ],
+299 silly audit   lilconfig: [ '2.1.0', '3.1.1' ],
+299 silly audit   'lines-and-columns': [ '1.2.4' ],
+299 silly audit   localforage: [ '1.10.0' ],
+299 silly audit   'locate-path': [ '6.0.0' ],
+299 silly audit   'lodash.merge': [ '4.6.2' ],
+299 silly audit   'lodash.snakecase': [ '4.1.1' ],
+299 silly audit   'loose-envify': [ '1.4.0' ],
+299 silly audit   'lru-cache': [ '6.0.0', '10.2.2' ],
+299 silly audit   'lucide-react': [ '0.374.0' ],
+299 silly audit   'magic-string': [ '0.27.0' ],
+299 silly audit   merge2: [ '1.4.1' ],
+299 silly audit   micromatch: [ '4.0.5' ],
+299 silly audit   'mime-db': [ '1.52.0' ],
+299 silly audit   'mime-types': [ '2.1.35' ],
+299 silly audit   minimist: [ '1.2.8' ],
+299 silly audit   minipass: [ '7.0.4' ],
+299 silly audit   mkdirp: [ '0.5.6' ],
+299 silly audit   ms: [ '2.1.2' ],
+299 silly audit   mz: [ '2.7.0' ],
+299 silly audit   nanoid: [ '3.3.7' ],
+299 silly audit   'natural-compare': [ '1.4.0' ],
+299 silly audit   next: [ '14.2.3' ],
+299 silly audit   postcss: [ '8.4.31', '8.4.38' ],
+299 silly audit   'node-appwrite': [ '12.0.1' ],
+299 silly audit   'node-fetch': [ '2.7.0' ],
+299 silly audit   'normalize-path': [ '3.0.0' ],
+299 silly audit   'object-assign': [ '4.1.1' ],
+299 silly audit   'object-hash': [ '3.0.0' ],
+299 silly audit   'object-inspect': [ '1.13.1' ],
+299 silly audit   'object-keys': [ '1.1.1' ],
+299 silly audit   'object.assign': [ '4.1.5' ],
+299 silly audit   'object.entries': [ '1.1.8' ],
+299 silly audit   'object.fromentries': [ '2.0.8' ],
+299 silly audit   'object.groupby': [ '1.0.3' ],
+299 silly audit   'object.hasown': [ '1.1.4' ],
+299 silly audit   'object.values': [ '1.2.0' ],
+299 silly audit   once: [ '1.4.0' ],
+299 silly audit   optionator: [ '0.9.4' ],
+299 silly audit   'p-limit': [ '3.1.0' ],
+299 silly audit   'p-locate': [ '5.0.0' ],
+299 silly audit   'parent-module': [ '1.0.1' ],
+299 silly audit   'path-exists': [ '4.0.0' ],
+299 silly audit   'path-is-absolute': [ '1.0.1' ],
+299 silly audit   'path-key': [ '3.1.1' ],
+299 silly audit   'path-parse': [ '1.0.7' ],
+299 silly audit   'path-scurry': [ '1.10.2' ],
+299 silly audit   'path-type': [ '4.0.0' ],
+299 silly audit   picocolors: [ '1.0.0' ],
+299 silly audit   picomatch: [ '2.3.1' ],
+299 silly audit   pify: [ '2.3.0' ],
+299 silly audit   pirates: [ '4.0.6' ],
+299 silly audit   plaid: [ '23.0.0' ],
+299 silly audit   'possible-typed-array-names': [ '1.0.0' ],
+299 silly audit   'postcss-import': [ '15.1.0' ],
+299 silly audit   'postcss-js': [ '4.0.1' ],
+299 silly audit   'postcss-load-config': [ '4.0.2' ],
+299 silly audit   'postcss-nested': [ '6.0.1' ],
+299 silly audit   'postcss-selector-parser': [ '6.0.16' ],
+299 silly audit   'postcss-value-parser': [ '4.2.0' ],
+299 silly audit   'prelude-ls': [ '1.2.1' ],
+299 silly audit   progress: [ '2.0.3' ],
+299 silly audit   'prop-types': [ '15.8.1' ],
+299 silly audit   'proxy-from-env': [ '1.1.0' ],
+299 silly audit   punycode: [ '2.3.1' ],
+299 silly audit   'query-string': [ '9.0.0' ],
+299 silly audit   'queue-microtask': [ '1.2.3' ],
+299 silly audit   react: [ '18.3.1' ],
+299 silly audit   'react-chartjs-2': [ '5.2.0' ],
+299 silly audit   'react-countup': [ '6.5.3' ],
+299 silly audit   'react-dom': [ '18.3.1' ],
+299 silly audit   'react-hook-form': [ '7.51.3' ],
+299 silly audit   'react-is': [ '16.13.1' ],
+299 silly audit   'react-plaid-link': [ '3.5.1' ],
+299 silly audit   'react-remove-scroll': [ '2.5.5' ],
+299 silly audit   'react-remove-scroll-bar': [ '2.3.6' ],
+299 silly audit   'react-script-hook': [ '1.7.2' ],
+299 silly audit   'react-style-singleton': [ '2.2.1' ],
+299 silly audit   'read-cache': [ '1.0.0' ],
+299 silly audit   readdirp: [ '3.6.0' ],
+299 silly audit   'reflect.getprototypeof': [ '1.0.6' ],
+299 silly audit   'regenerator-runtime': [ '0.14.1' ],
+299 silly audit   'regexp.prototype.flags': [ '1.5.2' ],
+299 silly audit   'resolve-from': [ '4.0.0' ],
+299 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+299 silly audit   reusify: [ '1.0.4' ],
+299 silly audit   rimraf: [ '3.0.2' ],
+299 silly audit   rollup: [ '2.78.0' ],
+299 silly audit   'run-parallel': [ '1.2.0' ],
+299 silly audit   'safe-array-concat': [ '1.1.2' ],
+299 silly audit   'safe-regex-test': [ '1.0.3' ],
+299 silly audit   scheduler: [ '0.23.2' ],
+299 silly audit   'set-function-length': [ '1.2.2' ],
+299 silly audit   'set-function-name': [ '2.0.2' ],
+299 silly audit   'shebang-command': [ '2.0.0' ],
+299 silly audit   'shebang-regex': [ '3.0.0' ],
+299 silly audit   'side-channel': [ '1.0.6' ],
+299 silly audit   'signal-exit': [ '4.1.0' ],
+299 silly audit   slash: [ '3.0.0' ],
+299 silly audit   'source-map-js': [ '1.2.0' ],
+299 silly audit   'split-on-first': [ '3.0.0' ],
+299 silly audit   'stacktrace-parser': [ '0.1.10' ],
+299 silly audit   'type-fest': [ '0.7.1', '0.20.2' ],
+299 silly audit   streamsearch: [ '1.1.0' ],
+299 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+299 silly audit   'string.prototype.matchall': [ '4.0.11' ],
+299 silly audit   'string.prototype.trim': [ '1.2.9' ],
+299 silly audit   'string.prototype.trimend': [ '1.0.8' ],
+299 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+299 silly audit   'strip-bom': [ '3.0.0' ],
+299 silly audit   'strip-json-comments': [ '3.1.1' ],
+299 silly audit   'styled-jsx': [ '5.1.1' ],
+299 silly audit   sucrase: [ '3.35.0' ],
+299 silly audit   'supports-color': [ '7.2.0' ],
+299 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+299 silly audit   'tailwind-merge': [ '2.3.0' ],
+299 silly audit   tailwindcss: [ '3.4.3' ],
+299 silly audit   'tailwindcss-animate': [ '1.0.7' ],
+299 silly audit   tapable: [ '2.2.1' ],
+299 silly audit   'text-table': [ '0.2.0' ],
+299 silly audit   thenify: [ '3.3.1' ],
+299 silly audit   'thenify-all': [ '1.6.0' ],
+299 silly audit   'to-regex-range': [ '5.0.1' ],
+299 silly audit   tr46: [ '0.0.3' ],
+299 silly audit   'ts-api-utils': [ '1.3.0' ],
+299 silly audit   'ts-interface-checker': [ '0.1.13' ],
+299 silly audit   'tsconfig-paths': [ '3.15.0' ],
+299 silly audit   tslib: [ '2.6.2' ],
+299 silly audit   'type-check': [ '0.4.0' ],
+299 silly audit   'typed-array-buffer': [ '1.0.2' ],
+299 silly audit   'typed-array-byte-length': [ '1.0.1' ],
+299 silly audit   'typed-array-byte-offset': [ '1.0.2' ],
+299 silly audit   'typed-array-length': [ '1.0.6' ],
+299 silly audit   typescript: [ '5.4.5' ],
+299 silly audit   'unbox-primitive': [ '1.0.2' ],
+299 silly audit   undici: [ '5.28.4' ],
+299 silly audit   'undici-types': [ '5.26.5' ],
+299 silly audit   'uri-js': [ '4.4.1' ],
+299 silly audit   'use-callback-ref': [ '1.3.2' ],
+299 silly audit   'use-sidecar': [ '1.1.2' ],
+299 silly audit   'util-deprecate': [ '1.0.2' ],
+299 silly audit   'webidl-conversions': [ '3.0.1' ],
+299 silly audit   'webpack-sources': [ '3.2.3' ],
+299 silly audit   'whatwg-url': [ '5.0.0' ],
+299 silly audit   which: [ '2.0.2' ],
+299 silly audit   'which-boxed-primitive': [ '1.0.2' ],
+299 silly audit   'which-builtin-type': [ '1.1.3' ],
+299 silly audit   'which-collection': [ '1.0.2' ],
+299 silly audit   'which-typed-array': [ '1.1.15' ],
+299 silly audit   'word-wrap': [ '1.2.5' ],
+299 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+299 silly audit   wrappy: [ '1.0.2' ],
+299 silly audit   yallist: [ '4.0.0' ],
+299 silly audit   yaml: [ '2.4.2' ],
+299 silly audit   'yocto-queue': [ '0.1.0' ],
+299 silly audit   zod: [ '3.23.4' ]
+299 silly audit }
+300 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-x64-msvc
+301 silly reify mark deleted [
+301 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-x64-msvc'
+301 silly reify ]
+302 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-ia32-msvc
+303 silly reify mark deleted [
+303 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-ia32-msvc'
+303 silly reify ]
+304 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-arm64-msvc
+305 silly reify mark deleted [
+305 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-win32-arm64-msvc'
+305 silly reify ]
+306 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-musl
+307 silly reify mark deleted [
+307 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-musl'
+307 silly reify ]
+308 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-gnu
+309 silly reify mark deleted [
+309 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-x64-gnu'
+309 silly reify ]
+310 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-musl
+311 silly reify mark deleted [
+311 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-musl'
+311 silly reify ]
+312 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-gnu
+313 silly reify mark deleted [
+313 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-linux-arm64-gnu'
+313 silly reify ]
+314 verbose reify failed optional dependency /Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-x64
+315 silly reify mark deleted [
+315 silly reify   '/Users/kaveh/Horizon-bank/banking/node_modules/@next/swc-darwin-x64'
+315 silly reify ]
+316 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/advisories/bulk failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+316 verbose audit error     at ClientRequest.<anonymous> (/opt/homebrew/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+316 verbose audit error     at ClientRequest.emit (node:events:508:28)
+316 verbose audit error     at emitErrorEvent (node:_http_client:107:11)
+316 verbose audit error     at _destroy (node:_http_client:954:9)
+316 verbose audit error     at onSocketNT (node:_http_client:974:5)
+316 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+316 verbose audit error   code: 'ENOTFOUND',
+316 verbose audit error   errno: 'ENOTFOUND',
+316 verbose audit error   syscall: 'getaddrinfo',
+316 verbose audit error   hostname: 'registry.npmjs.org',
+316 verbose audit error   type: 'system'
+316 verbose audit error }
+317 silly audit error undefined
+318 silly audit report null
+319 http cache sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz 0ms (cache hit)
+320 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 0ms (cache hit)
+321 http cache mkdirp@https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz 0ms (cache hit)
+322 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+323 http cache json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz 0ms (cache hit)
+324 http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz 0ms (cache hit)
+325 http cache cssesc@https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz 0ms (cache hit)
+326 http cache rimraf@https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 0ms (cache hit)
+327 http cache @ungap/structured-clone@https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz 0ms (cache hit)
+328 http cache @typescript-eslint/typescript-estree@https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz 0ms (cache hit)
+329 http cache @typescript-eslint/visitor-keys@https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz 0ms (cache hit)
+330 http cache @typescript-eslint/parser@https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz 0ms (cache hit)
+331 http cache @typescript-eslint/types@https://registry.npmjs.org/@typescript-eslint/types/-/types-7.2.0.tgz 0ms (cache hit)
+332 http cache @typescript-eslint/scope-manager@https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz 0ms (cache hit)
+333 http cache @types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.0.tgz 0ms (cache hit)
+334 http cache @types/react@https://registry.npmjs.org/@types/react/-/react-18.3.1.tgz 0ms (cache hit)
+335 http cache @types/node@https://registry.npmjs.org/@types/node/-/node-20.12.7.tgz 0ms (cache hit)
+336 http cache @types/prop-types@https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.12.tgz 0ms (cache hit)
+337 http cache @types/estree@https://registry.npmjs.org/@types/estree/-/estree-1.0.5.tgz 0ms (cache hit)
+338 http cache @swc/counter@https://registry.npmjs.org/@swc/counter/-/counter-0.1.3.tgz 0ms (cache hit)
+339 http cache @swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.5.tgz 0ms (cache hit)
+340 http cache @sentry-internal/feedback@https://registry.npmjs.org/@sentry-internal/feedback/-/feedback-7.112.2.tgz 0ms (cache hit)
+341 http cache @sentry-internal/tracing@https://registry.npmjs.org/@sentry-internal/tracing/-/tracing-7.112.2.tgz 0ms (cache hit)
+342 http cache @sentry-internal/replay-canvas@https://registry.npmjs.org/@sentry-internal/replay-canvas/-/replay-canvas-7.112.2.tgz 0ms (cache hit)
+343 http cache @sentry/webpack-plugin@https://registry.npmjs.org/@sentry/webpack-plugin/-/webpack-plugin-1.21.0.tgz 0ms (cache hit)
+344 http cache @sentry/vercel-edge@https://registry.npmjs.org/@sentry/vercel-edge/-/vercel-edge-7.112.2.tgz 0ms (cache hit)
+345 http cache @sentry/utils@https://registry.npmjs.org/@sentry/utils/-/utils-7.112.2.tgz 0ms (cache hit)
+346 http cache @sentry/replay@https://registry.npmjs.org/@sentry/replay/-/replay-7.112.2.tgz 0ms (cache hit)
+347 http cache @sentry/react@https://registry.npmjs.org/@sentry/react/-/react-7.112.2.tgz 0ms (cache hit)
+348 http cache @sentry/types@https://registry.npmjs.org/@sentry/types/-/types-7.112.2.tgz 0ms (cache hit)
+349 http cache @sentry/core@https://registry.npmjs.org/@sentry/core/-/core-7.112.2.tgz 0ms (cache hit)
+350 http cache @sentry/node@https://registry.npmjs.org/@sentry/node/-/node-7.112.2.tgz 0ms (cache hit)
+351 http cache @sentry/nextjs@https://registry.npmjs.org/@sentry/nextjs/-/nextjs-7.112.2.tgz 0ms (cache hit)
+352 http cache @sentry/integrations@https://registry.npmjs.org/@sentry/integrations/-/integrations-7.112.2.tgz 0ms (cache hit)
+353 http cache @rushstack/eslint-patch@https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.10.2.tgz 0ms (cache hit)
+354 http cache @sentry/browser@https://registry.npmjs.org/@sentry/browser/-/browser-7.112.2.tgz 0ms (cache hit)
+355 http cache @sentry/cli@https://registry.npmjs.org/@sentry/cli/-/cli-1.77.3.tgz 0ms (cache hit)
+356 http cache @rollup/pluginutils@https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-5.1.0.tgz 0ms (cache hit)
+357 http cache @radix-ui/rect@https://registry.npmjs.org/@radix-ui/rect/-/rect-1.0.1.tgz 0ms (cache hit)
+358 http cache @radix-ui/react-use-previous@https://registry.npmjs.org/@radix-ui/react-use-previous/-/react-use-previous-1.0.1.tgz 0ms (cache hit)
+359 http cache @rollup/plugin-commonjs@https://registry.npmjs.org/@rollup/plugin-commonjs/-/plugin-commonjs-24.0.0.tgz 0ms (cache hit)
+360 http cache @radix-ui/react-visually-hidden@https://registry.npmjs.org/@radix-ui/react-visually-hidden/-/react-visually-hidden-1.0.3.tgz 0ms (cache hit)
+361 http cache @radix-ui/react-use-size@https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.0.1.tgz 0ms (cache hit)
+362 http cache @radix-ui/react-use-layout-effect@https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.0.1.tgz 0ms (cache hit)
+363 http cache @radix-ui/react-use-rect@https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.0.1.tgz 0ms (cache hit)
+364 http cache @radix-ui/react-use-escape-keydown@https://registry.npmjs.org/@radix-ui/react-use-escape-keydown/-/react-use-escape-keydown-1.0.3.tgz 0ms (cache hit)
+365 http cache @radix-ui/react-use-callback-ref@https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.0.1.tgz 0ms (cache hit)
+366 http cache @radix-ui/react-use-controllable-state@https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.0.1.tgz 0ms (cache hit)
+367 http cache @radix-ui/react-tabs@https://registry.npmjs.org/@radix-ui/react-tabs/-/react-tabs-1.0.4.tgz 0ms (cache hit)
+368 http cache @radix-ui/react-slot@https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.0.2.tgz 0ms (cache hit)
+369 http cache @radix-ui/react-progress@https://registry.npmjs.org/@radix-ui/react-progress/-/react-progress-1.0.3.tgz 0ms (cache hit)
+370 http cache @radix-ui/react-select@https://registry.npmjs.org/@radix-ui/react-select/-/react-select-2.0.0.tgz 0ms (cache hit)
+371 http cache @radix-ui/react-primitive@https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-1.0.3.tgz 0ms (cache hit)
+372 http cache @radix-ui/react-roving-focus@https://registry.npmjs.org/@radix-ui/react-roving-focus/-/react-roving-focus-1.0.4.tgz 0ms (cache hit)
+373 http cache @radix-ui/react-label@https://registry.npmjs.org/@radix-ui/react-label/-/react-label-2.0.2.tgz 0ms (cache hit)
+374 http cache @radix-ui/react-popper@https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.1.3.tgz 0ms (cache hit)
+375 http cache @radix-ui/react-portal@https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.0.4.tgz 0ms (cache hit)
+376 http cache @radix-ui/react-focus-scope@https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.0.4.tgz 0ms (cache hit)
+377 http cache @radix-ui/react-presence@https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.0.1.tgz 0ms (cache hit)
+378 http cache @radix-ui/react-id@https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.0.1.tgz 0ms (cache hit)
+379 http cache @radix-ui/react-focus-guards@https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.0.1.tgz 0ms (cache hit)
+380 http cache @radix-ui/react-direction@https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.0.1.tgz 0ms (cache hit)
+381 http cache @radix-ui/react-dismissable-layer@https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.0.5.tgz 0ms (cache hit)
+382 http cache @radix-ui/react-context@https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.0.1.tgz 0ms (cache hit)
+383 http cache @radix-ui/react-compose-refs@https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.0.1.tgz 0ms (cache hit)
+384 http cache @radix-ui/react-dialog@https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.0.5.tgz 0ms (cache hit)
+385 http cache @radix-ui/react-collection@https://registry.npmjs.org/@radix-ui/react-collection/-/react-collection-1.0.3.tgz 0ms (cache hit)
+386 http cache @radix-ui/primitive@https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.0.1.tgz 0ms (cache hit)
+387 http cache @radix-ui/number@https://registry.npmjs.org/@radix-ui/number/-/number-1.0.1.tgz 0ms (cache hit)
+388 http cache @radix-ui/react-arrow@https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.0.3.tgz 0ms (cache hit)
+389 http cache @next/swc-darwin-arm64@https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.3.tgz 0ms (cache hit)
+390 http cache @jridgewell/trace-mapping@https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.25.tgz 0ms (cache hit)
+391 http cache @kurkle/color@https://registry.npmjs.org/@kurkle/color/-/color-0.3.2.tgz 0ms (cache hit)
+392 http cache @next/env@https://registry.npmjs.org/@next/env/-/env-14.2.3.tgz 0ms (cache hit)
+393 http cache @next/eslint-plugin-next@https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.3.tgz 0ms (cache hit)
+394 http cache @jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz 0ms (cache hit)
+395 http cache @jridgewell/set-array@https://registry.npmjs.org/@jridgewell/set-array/-/set-array-1.2.1.tgz 0ms (cache hit)
+396 http cache @humanwhocodes/config-array@https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.14.tgz 0ms (cache hit)
+397 http cache @hookform/resolvers@https://registry.npmjs.org/@hookform/resolvers/-/resolvers-3.3.4.tgz 0ms (cache hit)
+398 http cache @floating-ui/core@https://registry.npmjs.org/@floating-ui/core/-/core-1.6.1.tgz 0ms (cache hit)
+399 http cache @floating-ui/utils@https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.2.tgz 0ms (cache hit)
+400 http cache @jridgewell/gen-mapping@https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.5.tgz 0ms (cache hit)
+401 http cache @floating-ui/react-dom@https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.0.9.tgz 0ms (cache hit)
+402 http cache @floating-ui/dom@https://registry.npmjs.org/@floating-ui/dom/-/dom-1.6.4.tgz 0ms (cache hit)
+403 http cache @fastify/busboy@https://registry.npmjs.org/@fastify/busboy/-/busboy-2.1.1.tgz 0ms (cache hit)
+404 http cache @eslint/js@https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz 0ms (cache hit)
+405 http cache @eslint-community/eslint-utils@https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz 0ms (cache hit)
+406 http cache zod@https://registry.npmjs.org/zod/-/zod-3.23.4.tgz 0ms (cache hit)
+407 http cache @eslint-community/regexpp@https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.10.0.tgz 0ms (cache hit)
+408 http cache yaml@https://registry.npmjs.org/yaml/-/yaml-2.4.2.tgz 0ms (cache hit)
+409 http cache @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.4.tgz 0ms (cache hit)
+410 http cache which-typed-array@https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.15.tgz 0ms (cache hit)
+411 http cache yallist@https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 0ms (cache hit)
+412 http cache which-boxed-primitive@https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz 0ms (cache hit)
+413 http cache which-builtin-type@https://registry.npmjs.org/which-builtin-type/-/which-builtin-type-1.1.3.tgz 0ms (cache hit)
+414 http cache whatwg-url@https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz 0ms (cache hit)
+415 http cache webidl-conversions@https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz 0ms (cache hit)
+416 http cache use-sidecar@https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.2.tgz 0ms (cache hit)
+417 http cache webpack-sources@https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz 0ms (cache hit)
+418 http cache use-callback-ref@https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.2.tgz 0ms (cache hit)
+419 http cache undici-types@https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz 0ms (cache hit)
+420 http cache unbox-primitive@https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz 0ms (cache hit)
+421 http cache undici@https://registry.npmjs.org/undici/-/undici-5.28.4.tgz 0ms (cache hit)
+422 http cache typed-array-length@https://registry.npmjs.org/typed-array-length/-/typed-array-length-1.0.6.tgz 0ms (cache hit)
+423 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz 0ms (cache hit)
+424 http cache typed-array-byte-offset@https://registry.npmjs.org/typed-array-byte-offset/-/typed-array-byte-offset-1.0.2.tgz 0ms (cache hit)
+425 http cache typed-array-buffer@https://registry.npmjs.org/typed-array-buffer/-/typed-array-buffer-1.0.2.tgz 0ms (cache hit)
+426 http cache ts-api-utils@https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.3.0.tgz 0ms (cache hit)
+427 http cache tslib@https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz 0ms (cache hit)
+428 http cache tr46@https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz 0ms (cache hit)
+429 http cache tapable@https://registry.npmjs.org/tapable/-/tapable-2.2.1.tgz 0ms (cache hit)
+430 http cache tailwindcss-animate@https://registry.npmjs.org/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz 0ms (cache hit)
+431 http cache typed-array-byte-length@https://registry.npmjs.org/typed-array-byte-length/-/typed-array-byte-length-1.0.1.tgz 0ms (cache hit)
+432 http cache tailwind-merge@https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-2.3.0.tgz 0ms (cache hit)
+433 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.3.tgz 0ms (cache hit)
+434 http cache string.prototype.trimend@https://registry.npmjs.org/string.prototype.trimend/-/string.prototype.trimend-1.0.8.tgz 0ms (cache hit)
+435 http cache string.prototype.trim@https://registry.npmjs.org/string.prototype.trim/-/string.prototype.trim-1.2.9.tgz 0ms (cache hit)
+436 http cache styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.1.tgz 0ms (cache hit)
+437 http cache string.prototype.matchall@https://registry.npmjs.org/string.prototype.matchall/-/string.prototype.matchall-4.0.11.tgz 0ms (cache hit)
+438 http cache stacktrace-parser@https://registry.npmjs.org/stacktrace-parser/-/stacktrace-parser-0.1.10.tgz 0ms (cache hit)
+439 http cache source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.0.tgz 0ms (cache hit)
+440 http cache split-on-first@https://registry.npmjs.org/split-on-first/-/split-on-first-3.0.0.tgz 0ms (cache hit)
+441 http cache side-channel@https://registry.npmjs.org/side-channel/-/side-channel-1.0.6.tgz 0ms (cache hit)
+442 http cache semver@https://registry.npmjs.org/semver/-/semver-7.6.0.tgz 0ms (cache hit)
+443 http cache scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz 0ms (cache hit)
+444 http cache safe-array-concat@https://registry.npmjs.org/safe-array-concat/-/safe-array-concat-1.1.2.tgz 0ms (cache hit)
+445 http cache rollup@https://registry.npmjs.org/rollup/-/rollup-2.78.0.tgz 0ms (cache hit)
+446 http cache resolve-pkg-maps@https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz 0ms (cache hit)
+447 http cache reusify@https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz 0ms (cache hit)
+448 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.8.tgz 0ms (cache hit)
+449 http cache safe-regex-test@https://registry.npmjs.org/safe-regex-test/-/safe-regex-test-1.0.3.tgz 0ms (cache hit)
+450 http cache regenerator-runtime@https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz 0ms (cache hit)
+451 http cache react-style-singleton@https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz 0ms (cache hit)
+452 http cache regexp.prototype.flags@https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.5.2.tgz 0ms (cache hit)
+453 http cache reflect.getprototypeof@https://registry.npmjs.org/reflect.getprototypeof/-/reflect.getprototypeof-1.0.6.tgz 0ms (cache hit)
+454 http cache react-remove-scroll@https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.5.5.tgz 0ms (cache hit)
+455 http cache react-remove-scroll-bar@https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.6.tgz 0ms (cache hit)
+456 http cache react-script-hook@https://registry.npmjs.org/react-script-hook/-/react-script-hook-1.7.2.tgz 0ms (cache hit)
+457 http cache react-plaid-link@https://registry.npmjs.org/react-plaid-link/-/react-plaid-link-3.5.1.tgz 0ms (cache hit)
+458 http cache react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz 0ms (cache hit)
+459 http cache react-hook-form@https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.51.3.tgz 0ms (cache hit)
+460 http cache react-countup@https://registry.npmjs.org/react-countup/-/react-countup-6.5.3.tgz 0ms (cache hit)
+461 http cache react-chartjs-2@https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-5.2.0.tgz 0ms (cache hit)
+462 http cache postcss-selector-parser@https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.0.16.tgz 0ms (cache hit)
+463 http cache query-string@https://registry.npmjs.org/query-string/-/query-string-9.0.0.tgz 0ms (cache hit)
+464 http cache react@https://registry.npmjs.org/react/-/react-18.3.1.tgz 0ms (cache hit)
+465 http cache progress@https://registry.npmjs.org/progress/-/progress-2.0.3.tgz 0ms (cache hit)
+466 http cache postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.38.tgz 0ms (cache hit)
+467 http cache postcss-nested@https://registry.npmjs.org/postcss-nested/-/postcss-nested-6.0.1.tgz 0ms (cache hit)
+468 http cache possible-typed-array-names@https://registry.npmjs.org/possible-typed-array-names/-/possible-typed-array-names-1.0.0.tgz 0ms (cache hit)
+469 http cache plaid@https://registry.npmjs.org/plaid/-/plaid-23.0.0.tgz 0ms (cache hit)
+470 http cache pirates@https://registry.npmjs.org/pirates/-/pirates-4.0.6.tgz 0ms (cache hit)
+471 http cache path-scurry@https://registry.npmjs.org/path-scurry/-/path-scurry-1.10.2.tgz 0ms (cache hit)
+472 http cache picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz 0ms (cache hit)
+473 http cache object.hasown@https://registry.npmjs.org/object.hasown/-/object.hasown-1.1.4.tgz 0ms (cache hit)
+474 http cache object.entries@https://registry.npmjs.org/object.entries/-/object.entries-1.1.8.tgz 0ms (cache hit)
+475 http cache object.values@https://registry.npmjs.org/object.values/-/object.values-1.2.0.tgz 0ms (cache hit)
+476 http cache object-inspect@https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.1.tgz 0ms (cache hit)
+477 http cache object.assign@https://registry.npmjs.org/object.assign/-/object.assign-4.1.5.tgz 0ms (cache hit)
+478 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz 0ms (cache hit)
+479 http cache node-appwrite@https://registry.npmjs.org/node-appwrite/-/node-appwrite-12.0.1.tgz 0ms (cache hit)
+480 http cache ms@https://registry.npmjs.org/ms/-/ms-2.1.2.tgz 0ms (cache hit)
+481 http cache next@https://registry.npmjs.org/next/-/next-14.2.3.tgz 0ms (cache hit)
+482 http cache minipass@https://registry.npmjs.org/minipass/-/minipass-7.0.4.tgz 0ms (cache hit)
+483 http cache node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+484 http cache micromatch@https://registry.npmjs.org/micromatch/-/micromatch-4.0.5.tgz 0ms (cache hit)
+485 http cache magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.27.0.tgz 0ms (cache hit)
+486 http cache lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-0.374.0.tgz 0ms (cache hit)
+487 http cache lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz 0ms (cache hit)
+488 http cache lodash.snakecase@https://registry.npmjs.org/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz 0ms (cache hit)
+489 http cache localforage@https://registry.npmjs.org/localforage/-/localforage-1.10.0.tgz 0ms (cache hit)
+490 http cache lie@https://registry.npmjs.org/lie/-/lie-3.1.1.tgz 0ms (cache hit)
+491 http cache language-subtag-registry@https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.22.tgz 0ms (cache hit)
+492 http cache jackspeak@https://registry.npmjs.org/jackspeak/-/jackspeak-2.3.6.tgz 0ms (cache hit)
+493 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.0.tgz 0ms (cache hit)
+494 http cache is-weakset@https://registry.npmjs.org/is-weakset/-/is-weakset-2.0.3.tgz 0ms (cache hit)
+495 http cache is-symbol@https://registry.npmjs.org/is-symbol/-/is-symbol-1.0.4.tgz 0ms (cache hit)
+496 http cache iterator.prototype@https://registry.npmjs.org/iterator.prototype/-/iterator.prototype-1.1.2.tgz 0ms (cache hit)
+497 http cache is-weakref@https://registry.npmjs.org/is-weakref/-/is-weakref-1.0.2.tgz 0ms (cache hit)
+498 http cache is-stream@https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz 0ms (cache hit)
+499 http cache is-typed-array@https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.13.tgz 0ms (cache hit)
+500 http cache is-string@https://registry.npmjs.org/is-string/-/is-string-1.0.7.tgz 0ms (cache hit)
+501 http cache is-shared-array-buffer@https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.3.tgz 0ms (cache hit)
+502 http cache is-regex@https://registry.npmjs.org/is-regex/-/is-regex-1.1.4.tgz 0ms (cache hit)
+503 http cache is-reference@https://registry.npmjs.org/is-reference/-/is-reference-1.2.1.tgz 0ms (cache hit)
+504 http cache is-number-object@https://registry.npmjs.org/is-number-object/-/is-number-object-1.0.7.tgz 0ms (cache hit)
+505 http cache is-generator-function@https://registry.npmjs.org/is-generator-function/-/is-generator-function-1.0.10.tgz 0ms (cache hit)
+506 http cache is-finalizationregistry@https://registry.npmjs.org/is-finalizationregistry/-/is-finalizationregistry-1.0.2.tgz 0ms (cache hit)
+507 http cache is-date-object@https://registry.npmjs.org/is-date-object/-/is-date-object-1.0.5.tgz 0ms (cache hit)
+508 http cache is-data-view@https://registry.npmjs.org/is-data-view/-/is-data-view-1.0.1.tgz 0ms (cache hit)
+509 http cache is-core-module@https://registry.npmjs.org/is-core-module/-/is-core-module-2.13.1.tgz 0ms (cache hit)
+510 http cache is-boolean-object@https://registry.npmjs.org/is-boolean-object/-/is-boolean-object-1.1.2.tgz 0ms (cache hit)
+511 http cache is-bigint@https://registry.npmjs.org/is-bigint/-/is-bigint-1.0.4.tgz 0ms (cache hit)
+512 http cache is-array-buffer@https://registry.npmjs.org/is-array-buffer/-/is-array-buffer-3.0.4.tgz 0ms (cache hit)
+513 http cache is-async-function@https://registry.npmjs.org/is-async-function/-/is-async-function-2.0.0.tgz 0ms (cache hit)
+514 http cache invariant@https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz 0ms (cache hit)
+515 http cache immediate@https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz 0ms (cache hit)
+516 http cache internal-slot@https://registry.npmjs.org/internal-slot/-/internal-slot-1.0.7.tgz 0ms (cache hit)
+517 http cache ignore@https://registry.npmjs.org/ignore/-/ignore-5.3.1.tgz 0ms (cache hit)
+518 http cache has-proto@https://registry.npmjs.org/has-proto/-/has-proto-1.0.3.tgz 0ms (cache hit)
+519 http cache has-symbols@https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tgz 0ms (cache hit)
+520 http cache globalthis@https://registry.npmjs.org/globalthis/-/globalthis-1.0.3.tgz 0ms (cache hit)
+521 http cache gopd@https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz 0ms (cache hit)
+522 http cache has-bigints@https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.2.tgz 0ms (cache hit)
+523 http cache get-tsconfig@https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.7.3.tgz 0ms (cache hit)
+524 http cache import-fresh@https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz 0ms (cache hit)
+525 http cache get-nonce@https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz 0ms (cache hit)
+526 http cache glob@https://registry.npmjs.org/glob/-/glob-8.1.0.tgz 0ms (cache hit)
+527 http cache get-symbol-description@https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.0.2.tgz 0ms (cache hit)
+528 http cache get-intrinsic@https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.2.4.tgz 0ms (cache hit)
+529 http cache function.prototype.name@https://registry.npmjs.org/function.prototype.name/-/function.prototype.name-1.1.6.tgz 0ms (cache hit)
+530 http cache form-urlencoded@https://registry.npmjs.org/form-urlencoded/-/form-urlencoded-4.5.1.tgz 0ms (cache hit)
+531 http cache form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.0.tgz 0ms (cache hit)
+532 http cache foreground-child@https://registry.npmjs.org/foreground-child/-/foreground-child-3.1.1.tgz 0ms (cache hit)
+533 http cache for-each@https://registry.npmjs.org/for-each/-/for-each-0.3.3.tgz 0ms (cache hit)
+534 http cache follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz 0ms (cache hit)
+535 http cache filter-obj@https://registry.npmjs.org/filter-obj/-/filter-obj-5.1.0.tgz 0ms (cache hit)
+536 http cache flatted@https://registry.npmjs.org/flatted/-/flatted-3.3.1.tgz 0ms (cache hit)
+537 http cache fill-range@https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz 0ms (cache hit)
+538 http cache eslint-plugin-react@https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.34.1.tgz 0ms (cache hit)
+539 http cache eslint-plugin-jsx-a11y@https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.8.0.tgz 0ms (cache hit)
+540 http cache fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.2.tgz 0ms (cache hit)
+541 http cache fastq@https://registry.npmjs.org/fastq/-/fastq-1.17.1.tgz 0ms (cache hit)
+542 http cache esquery@https://registry.npmjs.org/esquery/-/esquery-1.5.0.tgz 0ms (cache hit)
+543 http cache estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz 0ms (cache hit)
+544 http cache eslint-module-utils@https://registry.npmjs.org/eslint-module-utils/-/eslint-module-utils-2.8.1.tgz 0ms (cache hit)
+545 http cache eslint-import-resolver-typescript@https://registry.npmjs.org/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-3.6.1.tgz 0ms (cache hit)
+546 http cache eslint-plugin-import@https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.29.1.tgz 0ms (cache hit)
+547 http cache eslint-config-next@https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-14.2.3.tgz 0ms (cache hit)
+548 http cache eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz 0ms (cache hit)
+549 http cache es-shim-unscopables@https://registry.npmjs.org/es-shim-unscopables/-/es-shim-unscopables-1.0.2.tgz 0ms (cache hit)
+550 http cache es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.0.3.tgz 0ms (cache hit)
+551 http cache es-define-property@https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.0.tgz 0ms (cache hit)
+552 http cache es-iterator-helpers@https://registry.npmjs.org/es-iterator-helpers/-/es-iterator-helpers-1.0.19.tgz 0ms (cache hit)
+553 http cache es-to-primitive@https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.2.1.tgz 0ms (cache hit)
+554 http cache es-abstract@https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.3.tgz 0ms (cache hit)
+555 http cache enhanced-resolve@https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.16.0.tgz 0ms (cache hit)
+556 http cache dwolla-v2@https://registry.npmjs.org/dwolla-v2/-/dwolla-v2-3.4.0.tgz 0ms (cache hit)
+557 http cache detect-node-es@https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz 0ms (cache hit)
+558 http cache decode-uri-component@https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.4.1.tgz 0ms (cache hit)
+559 http cache debug@https://registry.npmjs.org/debug/-/debug-4.3.4.tgz 0ms (cache hit)
+560 http cache data-view-byte-offset@https://registry.npmjs.org/data-view-byte-offset/-/data-view-byte-offset-1.0.0.tgz 0ms (cache hit)
+561 http cache data-view-buffer@https://registry.npmjs.org/data-view-buffer/-/data-view-buffer-1.0.1.tgz 0ms (cache hit)
+562 http cache es-object-atoms@https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.0.0.tgz 0ms (cache hit)
+563 http cache cross-spawn@https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz 0ms (cache hit)
+564 http cache countup.js@https://registry.npmjs.org/countup.js/-/countup.js-2.8.0.tgz 0ms (cache hit)
+565 http cache class-variance-authority@https://registry.npmjs.org/class-variance-authority/-/class-variance-authority-0.7.0.tgz 0ms (cache hit)
+566 http cache chart.js@https://registry.npmjs.org/chart.js/-/chart.js-4.4.2.tgz 0ms (cache hit)
+567 http cache chalk@https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz 0ms (cache hit)
+568 http cache call-bind@https://registry.npmjs.org/call-bind/-/call-bind-1.0.7.tgz 0ms (cache hit)
+569 http cache caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001614.tgz 0ms (cache hit)
+570 http cache braces@https://registry.npmjs.org/braces/-/braces-3.0.2.tgz 0ms (cache hit)
+571 http cache axobject-query@https://registry.npmjs.org/axobject-query/-/axobject-query-3.2.1.tgz 0ms (cache hit)
+572 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz 0ms (cache hit)
+573 http cache axios@https://registry.npmjs.org/axios/-/axios-1.6.8.tgz 0ms (cache hit)
+574 http cache data-view-byte-length@https://registry.npmjs.org/data-view-byte-length/-/data-view-byte-length-1.0.1.tgz 0ms (cache hit)
+575 http cache array.prototype.tosorted@https://registry.npmjs.org/array.prototype.tosorted/-/array.prototype.tosorted-1.1.3.tgz 0ms (cache hit)
+576 http cache arraybuffer.prototype.slice@https://registry.npmjs.org/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.3.tgz 0ms (cache hit)
+577 http cache array.prototype.toreversed@https://registry.npmjs.org/array.prototype.toreversed/-/array.prototype.toreversed-1.1.2.tgz 0ms (cache hit)
+578 http cache axe-core@https://registry.npmjs.org/axe-core/-/axe-core-4.7.0.tgz 0ms (cache hit)
+579 http cache array.prototype.flatmap@https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.2.tgz 0ms (cache hit)
+580 http cache array.prototype.findlastindex@https://registry.npmjs.org/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.5.tgz 0ms (cache hit)
+581 http cache array.prototype.flat@https://registry.npmjs.org/array.prototype.flat/-/array.prototype.flat-1.3.2.tgz 0ms (cache hit)
+582 http cache array-includes@https://registry.npmjs.org/array-includes/-/array-includes-3.1.8.tgz 0ms (cache hit)
+583 http cache array-buffer-byte-length@https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.1.tgz 0ms (cache hit)
+584 http cache aria-hidden@https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.4.tgz 0ms (cache hit)
+585 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.11.3.tgz 0ms (cache hit)
+586 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz 0ms (cache hit)
+587 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz 0ms (cache hit)
+588 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz 0ms (cache hit)
+589 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz 0ms (cache hit)
+590 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz 0ms (cache hit)
+591 http cache glob@https://registry.npmjs.org/glob/-/glob-10.3.12.tgz 0ms (cache hit)
+592 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz 0ms (cache hit)
+593 http cache minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.4.tgz 0ms (cache hit)
+594 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz 0ms (cache hit)
+595 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz 0ms (cache hit)
+596 http cache lilconfig@https://registry.npmjs.org/lilconfig/-/lilconfig-3.1.1.tgz 0ms (cache hit)
+597 http cache minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz 0ms (cache hit)
+598 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz 0ms (cache hit)
+599 http cache glob@https://registry.npmjs.org/glob/-/glob-10.3.10.tgz 0ms (cache hit)
+600 http cache minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.4.tgz 0ms (cache hit)
+601 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz 0ms (cache hit)
+602 http cache type-fest@https://registry.npmjs.org/type-fest/-/type-fest-0.7.1.tgz 0ms (cache hit)
+603 http cache lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-10.2.2.tgz 0ms (cache hit)
+604 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+605 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.5.tgz 0ms (cache hit)
+606 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz 0ms (cache hit)
+607 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+608 http cache clsx@https://registry.npmjs.org/clsx/-/clsx-2.0.0.tgz 0ms (cache hit)
+609 silly tarball no local data for sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz. Extracting by manifest.
+610 silly tarball no local data for which@https://registry.npmjs.org/which/-/which-2.0.2.tgz. Extracting by manifest.
+611 silly tarball no local data for mkdirp@https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz. Extracting by manifest.
+612 silly tarball no local data for loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+613 silly tarball no local data for json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz. Extracting by manifest.
+614 silly tarball no local data for js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz. Extracting by manifest.
+615 silly tarball no local data for cssesc@https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz. Extracting by manifest.
+616 silly tarball no local data for rimraf@https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz. Extracting by manifest.
+617 silly tarball no local data for @ungap/structured-clone@https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz. Extracting by manifest.
+618 silly tarball no local data for @typescript-eslint/typescript-estree@https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz. Extracting by manifest.
+619 silly tarball no local data for @typescript-eslint/visitor-keys@https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz. Extracting by manifest.
+620 silly tarball no local data for @typescript-eslint/parser@https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz. Extracting by manifest.
+621 silly tarball no local data for @typescript-eslint/types@https://registry.npmjs.org/@typescript-eslint/types/-/types-7.2.0.tgz. Extracting by manifest.
+622 silly tarball no local data for @typescript-eslint/scope-manager@https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz. Extracting by manifest.
+623 silly tarball no local data for @types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.0.tgz. Extracting by manifest.
+624 silly tarball no local data for @types/react@https://registry.npmjs.org/@types/react/-/react-18.3.1.tgz. Extracting by manifest.
+625 silly tarball no local data for @types/node@https://registry.npmjs.org/@types/node/-/node-20.12.7.tgz. Extracting by manifest.
+626 silly tarball no local data for @types/prop-types@https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.12.tgz. Extracting by manifest.
+627 silly tarball no local data for @types/estree@https://registry.npmjs.org/@types/estree/-/estree-1.0.5.tgz. Extracting by manifest.
+628 silly tarball no local data for @swc/counter@https://registry.npmjs.org/@swc/counter/-/counter-0.1.3.tgz. Extracting by manifest.
+629 silly tarball no local data for @swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.5.tgz. Extracting by manifest.
+630 silly tarball no local data for @sentry-internal/feedback@https://registry.npmjs.org/@sentry-internal/feedback/-/feedback-7.112.2.tgz. Extracting by manifest.
+631 silly tarball no local data for @sentry-internal/tracing@https://registry.npmjs.org/@sentry-internal/tracing/-/tracing-7.112.2.tgz. Extracting by manifest.
+632 silly tarball no local data for @sentry-internal/replay-canvas@https://registry.npmjs.org/@sentry-internal/replay-canvas/-/replay-canvas-7.112.2.tgz. Extracting by manifest.
+633 silly tarball no local data for @sentry/webpack-plugin@https://registry.npmjs.org/@sentry/webpack-plugin/-/webpack-plugin-1.21.0.tgz. Extracting by manifest.
+634 silly tarball no local data for @sentry/vercel-edge@https://registry.npmjs.org/@sentry/vercel-edge/-/vercel-edge-7.112.2.tgz. Extracting by manifest.
+635 silly tarball no local data for @sentry/utils@https://registry.npmjs.org/@sentry/utils/-/utils-7.112.2.tgz. Extracting by manifest.
+636 silly tarball no local data for @sentry/replay@https://registry.npmjs.org/@sentry/replay/-/replay-7.112.2.tgz. Extracting by manifest.
+637 silly tarball no local data for @sentry/react@https://registry.npmjs.org/@sentry/react/-/react-7.112.2.tgz. Extracting by manifest.
+638 silly tarball no local data for @sentry/types@https://registry.npmjs.org/@sentry/types/-/types-7.112.2.tgz. Extracting by manifest.
+639 silly tarball no local data for @sentry/core@https://registry.npmjs.org/@sentry/core/-/core-7.112.2.tgz. Extracting by manifest.
+640 silly tarball no local data for @sentry/node@https://registry.npmjs.org/@sentry/node/-/node-7.112.2.tgz. Extracting by manifest.
+641 silly tarball no local data for @sentry/nextjs@https://registry.npmjs.org/@sentry/nextjs/-/nextjs-7.112.2.tgz. Extracting by manifest.
+642 silly tarball no local data for @sentry/integrations@https://registry.npmjs.org/@sentry/integrations/-/integrations-7.112.2.tgz. Extracting by manifest.
+643 silly tarball no local data for @rushstack/eslint-patch@https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.10.2.tgz. Extracting by manifest.
+644 silly tarball no local data for @sentry/browser@https://registry.npmjs.org/@sentry/browser/-/browser-7.112.2.tgz. Extracting by manifest.
+645 silly tarball no local data for @sentry/cli@https://registry.npmjs.org/@sentry/cli/-/cli-1.77.3.tgz. Extracting by manifest.
+646 silly tarball no local data for @rollup/pluginutils@https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-5.1.0.tgz. Extracting by manifest.
+647 silly tarball no local data for @radix-ui/rect@https://registry.npmjs.org/@radix-ui/rect/-/rect-1.0.1.tgz. Extracting by manifest.
+648 silly tarball no local data for @radix-ui/react-use-previous@https://registry.npmjs.org/@radix-ui/react-use-previous/-/react-use-previous-1.0.1.tgz. Extracting by manifest.
+649 silly tarball no local data for @rollup/plugin-commonjs@https://registry.npmjs.org/@rollup/plugin-commonjs/-/plugin-commonjs-24.0.0.tgz. Extracting by manifest.
+650 silly tarball no local data for @radix-ui/react-visually-hidden@https://registry.npmjs.org/@radix-ui/react-visually-hidden/-/react-visually-hidden-1.0.3.tgz. Extracting by manifest.
+651 silly tarball no local data for @radix-ui/react-use-size@https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.0.1.tgz. Extracting by manifest.
+652 silly tarball no local data for @radix-ui/react-use-layout-effect@https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.0.1.tgz. Extracting by manifest.
+653 silly tarball no local data for @radix-ui/react-use-rect@https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.0.1.tgz. Extracting by manifest.
+654 silly tarball no local data for @radix-ui/react-use-escape-keydown@https://registry.npmjs.org/@radix-ui/react-use-escape-keydown/-/react-use-escape-keydown-1.0.3.tgz. Extracting by manifest.
+655 silly tarball no local data for @radix-ui/react-use-callback-ref@https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.0.1.tgz. Extracting by manifest.
+656 silly tarball no local data for @radix-ui/react-use-controllable-state@https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.0.1.tgz. Extracting by manifest.
+657 silly tarball no local data for @radix-ui/react-tabs@https://registry.npmjs.org/@radix-ui/react-tabs/-/react-tabs-1.0.4.tgz. Extracting by manifest.
+658 silly tarball no local data for @radix-ui/react-slot@https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.0.2.tgz. Extracting by manifest.
+659 silly tarball no local data for @radix-ui/react-progress@https://registry.npmjs.org/@radix-ui/react-progress/-/react-progress-1.0.3.tgz. Extracting by manifest.
+660 silly tarball no local data for @radix-ui/react-select@https://registry.npmjs.org/@radix-ui/react-select/-/react-select-2.0.0.tgz. Extracting by manifest.
+661 silly tarball no local data for @radix-ui/react-primitive@https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-1.0.3.tgz. Extracting by manifest.
+662 silly tarball no local data for @radix-ui/react-roving-focus@https://registry.npmjs.org/@radix-ui/react-roving-focus/-/react-roving-focus-1.0.4.tgz. Extracting by manifest.
+663 silly tarball no local data for @radix-ui/react-label@https://registry.npmjs.org/@radix-ui/react-label/-/react-label-2.0.2.tgz. Extracting by manifest.
+664 silly tarball no local data for @radix-ui/react-popper@https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.1.3.tgz. Extracting by manifest.
+665 silly tarball no local data for @radix-ui/react-portal@https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.0.4.tgz. Extracting by manifest.
+666 silly tarball no local data for @radix-ui/react-focus-scope@https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.0.4.tgz. Extracting by manifest.
+667 silly tarball no local data for @radix-ui/react-presence@https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.0.1.tgz. Extracting by manifest.
+668 silly tarball no local data for @radix-ui/react-id@https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.0.1.tgz. Extracting by manifest.
+669 silly tarball no local data for @radix-ui/react-focus-guards@https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.0.1.tgz. Extracting by manifest.
+670 silly tarball no local data for @radix-ui/react-direction@https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.0.1.tgz. Extracting by manifest.
+671 silly tarball no local data for @radix-ui/react-dismissable-layer@https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.0.5.tgz. Extracting by manifest.
+672 silly tarball no local data for @radix-ui/react-context@https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.0.1.tgz. Extracting by manifest.
+673 silly tarball no local data for @radix-ui/react-compose-refs@https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.0.1.tgz. Extracting by manifest.
+674 silly tarball no local data for @radix-ui/react-dialog@https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.0.5.tgz. Extracting by manifest.
+675 silly tarball no local data for @radix-ui/react-collection@https://registry.npmjs.org/@radix-ui/react-collection/-/react-collection-1.0.3.tgz. Extracting by manifest.
+676 silly tarball no local data for @radix-ui/primitive@https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.0.1.tgz. Extracting by manifest.
+677 silly tarball no local data for @radix-ui/number@https://registry.npmjs.org/@radix-ui/number/-/number-1.0.1.tgz. Extracting by manifest.
+678 silly tarball no local data for @radix-ui/react-arrow@https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.0.3.tgz. Extracting by manifest.
+679 silly tarball no local data for @next/swc-darwin-arm64@https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.3.tgz. Extracting by manifest.
+680 silly tarball no local data for @jridgewell/trace-mapping@https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.25.tgz. Extracting by manifest.
+681 silly tarball no local data for @kurkle/color@https://registry.npmjs.org/@kurkle/color/-/color-0.3.2.tgz. Extracting by manifest.
+682 silly tarball no local data for @next/env@https://registry.npmjs.org/@next/env/-/env-14.2.3.tgz. Extracting by manifest.
+683 silly tarball no local data for @next/eslint-plugin-next@https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.3.tgz. Extracting by manifest.
+684 silly tarball no local data for @jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz. Extracting by manifest.
+685 silly tarball no local data for @jridgewell/set-array@https://registry.npmjs.org/@jridgewell/set-array/-/set-array-1.2.1.tgz. Extracting by manifest.
+686 silly tarball no local data for @humanwhocodes/config-array@https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.14.tgz. Extracting by manifest.
+687 silly tarball no local data for @hookform/resolvers@https://registry.npmjs.org/@hookform/resolvers/-/resolvers-3.3.4.tgz. Extracting by manifest.
+688 silly tarball no local data for @floating-ui/core@https://registry.npmjs.org/@floating-ui/core/-/core-1.6.1.tgz. Extracting by manifest.
+689 silly tarball no local data for @floating-ui/utils@https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.2.tgz. Extracting by manifest.
+690 silly tarball no local data for @jridgewell/gen-mapping@https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.5.tgz. Extracting by manifest.
+691 silly tarball no local data for @floating-ui/react-dom@https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.0.9.tgz. Extracting by manifest.
+692 silly tarball no local data for @floating-ui/dom@https://registry.npmjs.org/@floating-ui/dom/-/dom-1.6.4.tgz. Extracting by manifest.
+693 silly tarball no local data for @fastify/busboy@https://registry.npmjs.org/@fastify/busboy/-/busboy-2.1.1.tgz. Extracting by manifest.
+694 silly tarball no local data for @eslint/js@https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz. Extracting by manifest.
+695 silly tarball no local data for @eslint-community/eslint-utils@https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz. Extracting by manifest.
+696 silly tarball no local data for zod@https://registry.npmjs.org/zod/-/zod-3.23.4.tgz. Extracting by manifest.
+697 silly tarball no local data for @eslint-community/regexpp@https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.10.0.tgz. Extracting by manifest.
+698 silly tarball no local data for yaml@https://registry.npmjs.org/yaml/-/yaml-2.4.2.tgz. Extracting by manifest.
+699 silly tarball no local data for @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.4.tgz. Extracting by manifest.
+700 silly tarball no local data for which-typed-array@https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.15.tgz. Extracting by manifest.
+701 silly tarball no local data for yallist@https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz. Extracting by manifest.
+702 silly tarball no local data for which-boxed-primitive@https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz. Extracting by manifest.
+703 silly tarball no local data for which-builtin-type@https://registry.npmjs.org/which-builtin-type/-/which-builtin-type-1.1.3.tgz. Extracting by manifest.
+704 silly tarball no local data for whatwg-url@https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz. Extracting by manifest.
+705 silly tarball no local data for webidl-conversions@https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz. Extracting by manifest.
+706 silly tarball no local data for use-sidecar@https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.2.tgz. Extracting by manifest.
+707 silly tarball no local data for webpack-sources@https://registry.npmjs.org/webpack-sources/-/webpack-sources-3.2.3.tgz. Extracting by manifest.
+708 silly tarball no local data for use-callback-ref@https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.2.tgz. Extracting by manifest.
+709 silly tarball no local data for undici-types@https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz. Extracting by manifest.
+710 silly tarball no local data for unbox-primitive@https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz. Extracting by manifest.
+711 silly tarball no local data for undici@https://registry.npmjs.org/undici/-/undici-5.28.4.tgz. Extracting by manifest.
+712 silly tarball no local data for typed-array-length@https://registry.npmjs.org/typed-array-length/-/typed-array-length-1.0.6.tgz. Extracting by manifest.
+713 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz. Extracting by manifest.
+714 silly tarball no local data for typed-array-byte-offset@https://registry.npmjs.org/typed-array-byte-offset/-/typed-array-byte-offset-1.0.2.tgz. Extracting by manifest.
+715 silly tarball no local data for typed-array-buffer@https://registry.npmjs.org/typed-array-buffer/-/typed-array-buffer-1.0.2.tgz. Extracting by manifest.
+716 silly tarball no local data for ts-api-utils@https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.3.0.tgz. Extracting by manifest.
+717 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz. Extracting by manifest.
+718 silly tarball no local data for tr46@https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz. Extracting by manifest.
+719 silly tarball no local data for tapable@https://registry.npmjs.org/tapable/-/tapable-2.2.1.tgz. Extracting by manifest.
+720 silly tarball no local data for tailwindcss-animate@https://registry.npmjs.org/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz. Extracting by manifest.
+721 silly tarball no local data for typed-array-byte-length@https://registry.npmjs.org/typed-array-byte-length/-/typed-array-byte-length-1.0.1.tgz. Extracting by manifest.
+722 silly tarball no local data for tailwind-merge@https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-2.3.0.tgz. Extracting by manifest.
+723 silly tarball no local data for tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.3.tgz. Extracting by manifest.
+724 silly tarball no local data for string.prototype.trimend@https://registry.npmjs.org/string.prototype.trimend/-/string.prototype.trimend-1.0.8.tgz. Extracting by manifest.
+725 silly tarball no local data for string.prototype.trim@https://registry.npmjs.org/string.prototype.trim/-/string.prototype.trim-1.2.9.tgz. Extracting by manifest.
+726 silly tarball no local data for styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.1.tgz. Extracting by manifest.
+727 silly tarball no local data for string.prototype.matchall@https://registry.npmjs.org/string.prototype.matchall/-/string.prototype.matchall-4.0.11.tgz. Extracting by manifest.
+728 silly tarball no local data for stacktrace-parser@https://registry.npmjs.org/stacktrace-parser/-/stacktrace-parser-0.1.10.tgz. Extracting by manifest.
+729 silly tarball no local data for source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.0.tgz. Extracting by manifest.
+730 silly tarball no local data for split-on-first@https://registry.npmjs.org/split-on-first/-/split-on-first-3.0.0.tgz. Extracting by manifest.
+731 silly tarball no local data for side-channel@https://registry.npmjs.org/side-channel/-/side-channel-1.0.6.tgz. Extracting by manifest.
+732 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.6.0.tgz. Extracting by manifest.
+733 silly tarball no local data for scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz. Extracting by manifest.
+734 silly tarball no local data for safe-array-concat@https://registry.npmjs.org/safe-array-concat/-/safe-array-concat-1.1.2.tgz. Extracting by manifest.
+735 silly tarball no local data for rollup@https://registry.npmjs.org/rollup/-/rollup-2.78.0.tgz. Extracting by manifest.
+736 silly tarball no local data for resolve-pkg-maps@https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz. Extracting by manifest.
+737 silly tarball no local data for reusify@https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz. Extracting by manifest.
+738 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.8.tgz. Extracting by manifest.
+739 silly tarball no local data for safe-regex-test@https://registry.npmjs.org/safe-regex-test/-/safe-regex-test-1.0.3.tgz. Extracting by manifest.
+740 silly tarball no local data for regenerator-runtime@https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz. Extracting by manifest.
+741 silly tarball no local data for react-style-singleton@https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz. Extracting by manifest.
+742 silly tarball no local data for regexp.prototype.flags@https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.5.2.tgz. Extracting by manifest.
+743 silly tarball no local data for reflect.getprototypeof@https://registry.npmjs.org/reflect.getprototypeof/-/reflect.getprototypeof-1.0.6.tgz. Extracting by manifest.
+744 silly tarball no local data for react-remove-scroll@https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.5.5.tgz. Extracting by manifest.
+745 silly tarball no local data for react-remove-scroll-bar@https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.6.tgz. Extracting by manifest.
+746 silly tarball no local data for react-script-hook@https://registry.npmjs.org/react-script-hook/-/react-script-hook-1.7.2.tgz. Extracting by manifest.
+747 silly tarball no local data for react-plaid-link@https://registry.npmjs.org/react-plaid-link/-/react-plaid-link-3.5.1.tgz. Extracting by manifest.
+748 silly tarball no local data for react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz. Extracting by manifest.
+749 silly tarball no local data for react-hook-form@https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.51.3.tgz. Extracting by manifest.
+750 silly tarball no local data for react-countup@https://registry.npmjs.org/react-countup/-/react-countup-6.5.3.tgz. Extracting by manifest.
+751 silly tarball no local data for react-chartjs-2@https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-5.2.0.tgz. Extracting by manifest.
+752 silly tarball no local data for postcss-selector-parser@https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.0.16.tgz. Extracting by manifest.
+753 silly tarball no local data for query-string@https://registry.npmjs.org/query-string/-/query-string-9.0.0.tgz. Extracting by manifest.
+754 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-18.3.1.tgz. Extracting by manifest.
+755 silly tarball no local data for progress@https://registry.npmjs.org/progress/-/progress-2.0.3.tgz. Extracting by manifest.
+756 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.38.tgz. Extracting by manifest.
+757 silly tarball no local data for postcss-nested@https://registry.npmjs.org/postcss-nested/-/postcss-nested-6.0.1.tgz. Extracting by manifest.
+758 silly tarball no local data for possible-typed-array-names@https://registry.npmjs.org/possible-typed-array-names/-/possible-typed-array-names-1.0.0.tgz. Extracting by manifest.
+759 silly tarball no local data for plaid@https://registry.npmjs.org/plaid/-/plaid-23.0.0.tgz. Extracting by manifest.
+760 silly tarball no local data for pirates@https://registry.npmjs.org/pirates/-/pirates-4.0.6.tgz. Extracting by manifest.
+761 silly tarball no local data for path-scurry@https://registry.npmjs.org/path-scurry/-/path-scurry-1.10.2.tgz. Extracting by manifest.
+762 silly tarball no local data for picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz. Extracting by manifest.
+763 silly tarball no local data for object.hasown@https://registry.npmjs.org/object.hasown/-/object.hasown-1.1.4.tgz. Extracting by manifest.
+764 silly tarball no local data for object.entries@https://registry.npmjs.org/object.entries/-/object.entries-1.1.8.tgz. Extracting by manifest.
+765 silly tarball no local data for object.values@https://registry.npmjs.org/object.values/-/object.values-1.2.0.tgz. Extracting by manifest.
+766 silly tarball no local data for object-inspect@https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.1.tgz. Extracting by manifest.
+767 silly tarball no local data for object.assign@https://registry.npmjs.org/object.assign/-/object.assign-4.1.5.tgz. Extracting by manifest.
+768 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz. Extracting by manifest.
+769 silly tarball no local data for node-appwrite@https://registry.npmjs.org/node-appwrite/-/node-appwrite-12.0.1.tgz. Extracting by manifest.
+770 silly tarball no local data for ms@https://registry.npmjs.org/ms/-/ms-2.1.2.tgz. Extracting by manifest.
+771 silly tarball no local data for next@https://registry.npmjs.org/next/-/next-14.2.3.tgz. Extracting by manifest.
+772 silly tarball no local data for minipass@https://registry.npmjs.org/minipass/-/minipass-7.0.4.tgz. Extracting by manifest.
+773 silly tarball no local data for node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz. Extracting by manifest.
+774 silly tarball no local data for micromatch@https://registry.npmjs.org/micromatch/-/micromatch-4.0.5.tgz. Extracting by manifest.
+775 silly tarball no local data for magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.27.0.tgz. Extracting by manifest.
+776 silly tarball no local data for lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-0.374.0.tgz. Extracting by manifest.
+777 silly tarball no local data for lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz. Extracting by manifest.
+778 silly tarball no local data for lodash.snakecase@https://registry.npmjs.org/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz. Extracting by manifest.
+779 silly tarball no local data for localforage@https://registry.npmjs.org/localforage/-/localforage-1.10.0.tgz. Extracting by manifest.
+780 silly tarball no local data for lie@https://registry.npmjs.org/lie/-/lie-3.1.1.tgz. Extracting by manifest.
+781 silly tarball no local data for language-subtag-registry@https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.22.tgz. Extracting by manifest.
+782 silly tarball no local data for jackspeak@https://registry.npmjs.org/jackspeak/-/jackspeak-2.3.6.tgz. Extracting by manifest.
+783 silly tarball no local data for jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.0.tgz. Extracting by manifest.
+784 silly tarball no local data for is-weakset@https://registry.npmjs.org/is-weakset/-/is-weakset-2.0.3.tgz. Extracting by manifest.
+785 silly tarball no local data for is-symbol@https://registry.npmjs.org/is-symbol/-/is-symbol-1.0.4.tgz. Extracting by manifest.
+786 silly tarball no local data for iterator.prototype@https://registry.npmjs.org/iterator.prototype/-/iterator.prototype-1.1.2.tgz. Extracting by manifest.
+787 silly tarball no local data for is-weakref@https://registry.npmjs.org/is-weakref/-/is-weakref-1.0.2.tgz. Extracting by manifest.
+788 silly tarball no local data for is-stream@https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz. Extracting by manifest.
+789 silly tarball no local data for is-typed-array@https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.13.tgz. Extracting by manifest.
+790 silly tarball no local data for is-string@https://registry.npmjs.org/is-string/-/is-string-1.0.7.tgz. Extracting by manifest.
+791 silly tarball no local data for is-shared-array-buffer@https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.3.tgz. Extracting by manifest.
+792 silly tarball no local data for is-regex@https://registry.npmjs.org/is-regex/-/is-regex-1.1.4.tgz. Extracting by manifest.
+793 silly tarball no local data for is-reference@https://registry.npmjs.org/is-reference/-/is-reference-1.2.1.tgz. Extracting by manifest.
+794 silly tarball no local data for is-number-object@https://registry.npmjs.org/is-number-object/-/is-number-object-1.0.7.tgz. Extracting by manifest.
+795 silly tarball no local data for is-generator-function@https://registry.npmjs.org/is-generator-function/-/is-generator-function-1.0.10.tgz. Extracting by manifest.
+796 silly tarball no local data for is-finalizationregistry@https://registry.npmjs.org/is-finalizationregistry/-/is-finalizationregistry-1.0.2.tgz. Extracting by manifest.
+797 silly tarball no local data for is-date-object@https://registry.npmjs.org/is-date-object/-/is-date-object-1.0.5.tgz. Extracting by manifest.
+798 silly tarball no local data for is-data-view@https://registry.npmjs.org/is-data-view/-/is-data-view-1.0.1.tgz. Extracting by manifest.
+799 silly tarball no local data for is-core-module@https://registry.npmjs.org/is-core-module/-/is-core-module-2.13.1.tgz. Extracting by manifest.
+800 silly tarball no local data for is-boolean-object@https://registry.npmjs.org/is-boolean-object/-/is-boolean-object-1.1.2.tgz. Extracting by manifest.
+801 silly tarball no local data for is-bigint@https://registry.npmjs.org/is-bigint/-/is-bigint-1.0.4.tgz. Extracting by manifest.
+802 silly tarball no local data for is-array-buffer@https://registry.npmjs.org/is-array-buffer/-/is-array-buffer-3.0.4.tgz. Extracting by manifest.
+803 silly tarball no local data for is-async-function@https://registry.npmjs.org/is-async-function/-/is-async-function-2.0.0.tgz. Extracting by manifest.
+804 silly tarball no local data for invariant@https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz. Extracting by manifest.
+805 silly tarball no local data for immediate@https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz. Extracting by manifest.
+806 silly tarball no local data for internal-slot@https://registry.npmjs.org/internal-slot/-/internal-slot-1.0.7.tgz. Extracting by manifest.
+807 silly tarball no local data for ignore@https://registry.npmjs.org/ignore/-/ignore-5.3.1.tgz. Extracting by manifest.
+808 silly tarball no local data for has-proto@https://registry.npmjs.org/has-proto/-/has-proto-1.0.3.tgz. Extracting by manifest.
+809 silly tarball no local data for has-symbols@https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tgz. Extracting by manifest.
+810 silly tarball no local data for globalthis@https://registry.npmjs.org/globalthis/-/globalthis-1.0.3.tgz. Extracting by manifest.
+811 silly tarball no local data for gopd@https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz. Extracting by manifest.
+812 silly tarball no local data for has-bigints@https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.2.tgz. Extracting by manifest.
+813 silly tarball no local data for get-tsconfig@https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.7.3.tgz. Extracting by manifest.
+814 silly tarball no local data for import-fresh@https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz. Extracting by manifest.
+815 silly tarball no local data for get-nonce@https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz. Extracting by manifest.
+816 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-8.1.0.tgz. Extracting by manifest.
+817 silly tarball no local data for get-symbol-description@https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.0.2.tgz. Extracting by manifest.
+818 silly tarball no local data for get-intrinsic@https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.2.4.tgz. Extracting by manifest.
+819 silly tarball no local data for function.prototype.name@https://registry.npmjs.org/function.prototype.name/-/function.prototype.name-1.1.6.tgz. Extracting by manifest.
+820 silly tarball no local data for form-urlencoded@https://registry.npmjs.org/form-urlencoded/-/form-urlencoded-4.5.1.tgz. Extracting by manifest.
+821 silly tarball no local data for form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.0.tgz. Extracting by manifest.
+822 silly tarball no local data for foreground-child@https://registry.npmjs.org/foreground-child/-/foreground-child-3.1.1.tgz. Extracting by manifest.
+823 silly tarball no local data for for-each@https://registry.npmjs.org/for-each/-/for-each-0.3.3.tgz. Extracting by manifest.
+824 silly tarball no local data for follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz. Extracting by manifest.
+825 silly tarball no local data for filter-obj@https://registry.npmjs.org/filter-obj/-/filter-obj-5.1.0.tgz. Extracting by manifest.
+826 silly tarball no local data for flatted@https://registry.npmjs.org/flatted/-/flatted-3.3.1.tgz. Extracting by manifest.
+827 silly tarball no local data for fill-range@https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz. Extracting by manifest.
+828 silly tarball no local data for eslint-plugin-react@https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.34.1.tgz. Extracting by manifest.
+829 silly tarball no local data for eslint-plugin-jsx-a11y@https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.8.0.tgz. Extracting by manifest.
+830 silly tarball no local data for fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.2.tgz. Extracting by manifest.
+831 silly tarball no local data for fastq@https://registry.npmjs.org/fastq/-/fastq-1.17.1.tgz. Extracting by manifest.
+832 silly tarball no local data for esquery@https://registry.npmjs.org/esquery/-/esquery-1.5.0.tgz. Extracting by manifest.
+833 silly tarball no local data for estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz. Extracting by manifest.
+834 silly tarball no local data for eslint-module-utils@https://registry.npmjs.org/eslint-module-utils/-/eslint-module-utils-2.8.1.tgz. Extracting by manifest.
+835 silly tarball no local data for eslint-import-resolver-typescript@https://registry.npmjs.org/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-3.6.1.tgz. Extracting by manifest.
+836 silly tarball no local data for eslint-plugin-import@https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.29.1.tgz. Extracting by manifest.
+837 silly tarball no local data for eslint-config-next@https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-14.2.3.tgz. Extracting by manifest.
+838 silly tarball no local data for eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz. Extracting by manifest.
+839 silly tarball no local data for es-shim-unscopables@https://registry.npmjs.org/es-shim-unscopables/-/es-shim-unscopables-1.0.2.tgz. Extracting by manifest.
+840 silly tarball no local data for es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.0.3.tgz. Extracting by manifest.
+841 silly tarball no local data for es-define-property@https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.0.tgz. Extracting by manifest.
+842 silly tarball no local data for es-iterator-helpers@https://registry.npmjs.org/es-iterator-helpers/-/es-iterator-helpers-1.0.19.tgz. Extracting by manifest.
+843 silly tarball no local data for es-to-primitive@https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.2.1.tgz. Extracting by manifest.
+844 silly tarball no local data for es-abstract@https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.3.tgz. Extracting by manifest.
+845 silly tarball no local data for enhanced-resolve@https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.16.0.tgz. Extracting by manifest.
+846 silly tarball no local data for dwolla-v2@https://registry.npmjs.org/dwolla-v2/-/dwolla-v2-3.4.0.tgz. Extracting by manifest.
+847 silly tarball no local data for detect-node-es@https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz. Extracting by manifest.
+848 silly tarball no local data for decode-uri-component@https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.4.1.tgz. Extracting by manifest.
+849 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-4.3.4.tgz. Extracting by manifest.
+850 silly tarball no local data for data-view-byte-offset@https://registry.npmjs.org/data-view-byte-offset/-/data-view-byte-offset-1.0.0.tgz. Extracting by manifest.
+851 silly tarball no local data for data-view-buffer@https://registry.npmjs.org/data-view-buffer/-/data-view-buffer-1.0.1.tgz. Extracting by manifest.
+852 silly tarball no local data for es-object-atoms@https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.0.0.tgz. Extracting by manifest.
+853 silly tarball no local data for cross-spawn@https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz. Extracting by manifest.
+854 silly tarball no local data for countup.js@https://registry.npmjs.org/countup.js/-/countup.js-2.8.0.tgz. Extracting by manifest.
+855 silly tarball no local data for class-variance-authority@https://registry.npmjs.org/class-variance-authority/-/class-variance-authority-0.7.0.tgz. Extracting by manifest.
+856 silly tarball no local data for chart.js@https://registry.npmjs.org/chart.js/-/chart.js-4.4.2.tgz. Extracting by manifest.
+857 silly tarball no local data for chalk@https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz. Extracting by manifest.
+858 silly tarball no local data for call-bind@https://registry.npmjs.org/call-bind/-/call-bind-1.0.7.tgz. Extracting by manifest.
+859 silly tarball no local data for caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001614.tgz. Extracting by manifest.
+860 silly tarball no local data for braces@https://registry.npmjs.org/braces/-/braces-3.0.2.tgz. Extracting by manifest.
+861 silly tarball no local data for axobject-query@https://registry.npmjs.org/axobject-query/-/axobject-query-3.2.1.tgz. Extracting by manifest.
+862 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz. Extracting by manifest.
+863 silly tarball no local data for axios@https://registry.npmjs.org/axios/-/axios-1.6.8.tgz. Extracting by manifest.
+864 silly tarball no local data for data-view-byte-length@https://registry.npmjs.org/data-view-byte-length/-/data-view-byte-length-1.0.1.tgz. Extracting by manifest.
+865 silly tarball no local data for array.prototype.tosorted@https://registry.npmjs.org/array.prototype.tosorted/-/array.prototype.tosorted-1.1.3.tgz. Extracting by manifest.
+866 silly tarball no local data for arraybuffer.prototype.slice@https://registry.npmjs.org/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.3.tgz. Extracting by manifest.
+867 silly tarball no local data for array.prototype.toreversed@https://registry.npmjs.org/array.prototype.toreversed/-/array.prototype.toreversed-1.1.2.tgz. Extracting by manifest.
+868 silly tarball no local data for axe-core@https://registry.npmjs.org/axe-core/-/axe-core-4.7.0.tgz. Extracting by manifest.
+869 silly tarball no local data for array.prototype.flatmap@https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.2.tgz. Extracting by manifest.
+870 silly tarball no local data for array.prototype.findlastindex@https://registry.npmjs.org/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.5.tgz. Extracting by manifest.
+871 silly tarball no local data for array.prototype.flat@https://registry.npmjs.org/array.prototype.flat/-/array.prototype.flat-1.3.2.tgz. Extracting by manifest.
+872 silly tarball no local data for array-includes@https://registry.npmjs.org/array-includes/-/array-includes-3.1.8.tgz. Extracting by manifest.
+873 silly tarball no local data for array-buffer-byte-length@https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.1.tgz. Extracting by manifest.
+874 silly tarball no local data for aria-hidden@https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.4.tgz. Extracting by manifest.
+875 silly tarball no local data for acorn@https://registry.npmjs.org/acorn/-/acorn-8.11.3.tgz. Extracting by manifest.
+876 silly tarball no local data for strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz. Extracting by manifest.
+877 silly tarball no local data for ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz. Extracting by manifest.
+878 silly tarball no local data for strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz. Extracting by manifest.
+879 silly tarball no local data for ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz. Extracting by manifest.
+880 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz. Extracting by manifest.
+881 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-10.3.12.tgz. Extracting by manifest.
+882 silly tarball no local data for strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz. Extracting by manifest.
+883 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.4.tgz. Extracting by manifest.
+884 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz. Extracting by manifest.
+885 silly tarball no local data for ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz. Extracting by manifest.
+886 silly tarball no local data for lilconfig@https://registry.npmjs.org/lilconfig/-/lilconfig-3.1.1.tgz. Extracting by manifest.
+887 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz. Extracting by manifest.
+888 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz. Extracting by manifest.
+889 silly tarball no local data for glob@https://registry.npmjs.org/glob/-/glob-10.3.10.tgz. Extracting by manifest.
+890 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.4.tgz. Extracting by manifest.
+891 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz. Extracting by manifest.
+892 silly tarball no local data for type-fest@https://registry.npmjs.org/type-fest/-/type-fest-0.7.1.tgz. Extracting by manifest.
+893 silly tarball no local data for lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-10.2.2.tgz. Extracting by manifest.
+894 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz. Extracting by manifest.
+895 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.5.tgz. Extracting by manifest.
+896 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz. Extracting by manifest.
+897 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz. Extracting by manifest.
+898 silly tarball no local data for clsx@https://registry.npmjs.org/clsx/-/clsx-2.0.0.tgz. Extracting by manifest.
+899 http fetch GET https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz attempt 1 failed with ENOTFOUND
+900 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 1 failed with ENOTFOUND
+901 http fetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz attempt 1 failed with ENOTFOUND
+902 http fetch GET https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz attempt 1 failed with ENOTFOUND
+903 http fetch GET https://registry.npmjs.org/json5/-/json5-1.0.2.tgz attempt 1 failed with ENOTFOUND
+904 http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz attempt 1 failed with ENOTFOUND
+905 http fetch GET https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz attempt 1 failed with ENOTFOUND
+906 http fetch GET https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz attempt 1 failed with ENOTFOUND
+907 http fetch GET https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz attempt 1 failed with ENOTFOUND
+908 http fetch GET https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz attempt 1 failed with ENOTFOUND
+909 http fetch GET https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz attempt 1 failed with ENOTFOUND
+910 http fetch GET https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz attempt 1 failed with ENOTFOUND
+911 http fetch GET https://registry.npmjs.org/@typescript-eslint/types/-/types-7.2.0.tgz attempt 1 failed with ENOTFOUND
+912 http fetch GET https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz attempt 1 failed with ENOTFOUND
+913 http fetch GET https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.0.tgz attempt 1 failed with ENOTFOUND
+914 http fetch GET https://registry.npmjs.org/npm attempt 2 failed with ENOTFOUND
+915 http fetch GET https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz attempt 2 failed with ENOTFOUND
+916 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 2 failed with ENOTFOUND
+917 http fetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz attempt 2 failed with ENOTFOUND
+918 http fetch GET https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz attempt 2 failed with ENOTFOUND
+919 http fetch GET https://registry.npmjs.org/json5/-/json5-1.0.2.tgz attempt 2 failed with ENOTFOUND
+920 http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz attempt 2 failed with ENOTFOUND
+921 http fetch GET https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz attempt 2 failed with ENOTFOUND
+922 http fetch GET https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz attempt 2 failed with ENOTFOUND
+923 http fetch GET https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz attempt 2 failed with ENOTFOUND
+924 http fetch GET https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz attempt 2 failed with ENOTFOUND
+925 http fetch GET https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz attempt 2 failed with ENOTFOUND
+926 http fetch GET https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz attempt 2 failed with ENOTFOUND
+927 http fetch GET https://registry.npmjs.org/@typescript-eslint/types/-/types-7.2.0.tgz attempt 2 failed with ENOTFOUND
+928 http fetch GET https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz attempt 2 failed with ENOTFOUND
+929 http fetch GET https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.0.tgz attempt 2 failed with ENOTFOUND
+930 http fetch GET https://registry.npmjs.org/npm attempt 3 failed with ENOTFOUND
+931 http fetch GET https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz attempt 3 failed with ENOTFOUND
+932 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 3 failed with ENOTFOUND
+933 http fetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz attempt 3 failed with ENOTFOUND
+934 http fetch GET https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz attempt 3 failed with ENOTFOUND
+935 http fetch GET https://registry.npmjs.org/json5/-/json5-1.0.2.tgz attempt 3 failed with ENOTFOUND
+936 http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz attempt 3 failed with ENOTFOUND
+937 http fetch GET https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz attempt 3 failed with ENOTFOUND
+938 http fetch GET https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz attempt 3 failed with ENOTFOUND
+939 http fetch GET https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz attempt 3 failed with ENOTFOUND
+940 http fetch GET https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz attempt 3 failed with ENOTFOUND
+941 http fetch GET https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz attempt 3 failed with ENOTFOUND
+942 http fetch GET https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz attempt 3 failed with ENOTFOUND
+943 http fetch GET https://registry.npmjs.org/@typescript-eslint/types/-/types-7.2.0.tgz attempt 3 failed with ENOTFOUND
+944 http fetch GET https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz attempt 3 failed with ENOTFOUND
+945 http fetch GET https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.0.tgz attempt 3 failed with ENOTFOUND
+946 verbose cwd /Users/kaveh/Horizon-bank/banking
+947 verbose os Darwin 24.6.0
+948 verbose node v24.7.0
+949 verbose npm  v11.5.1
+950 error Exit handler never called!
+951 error This is an error with npm itself. Please report this error at:
+952 error   <https://github.com/npm/cli/issues>
+953 verbose exit 1
+954 verbose code 1
+955 error A complete log of this run can be found in: /Users/kaveh/Horizon-bank/banking/.npm-cache/_logs/2025-09-20T12_35_16_869Z-debug-0.log
