@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Services - Horizon Bank</title>
+    <meta name="description" content="Discover Horizon Bank's comprehensive range of banking services for individuals and businesses.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: #1e3a8a;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1e3a8a;
+            border: 2px solid #1e3a8a;
+        }
+
+        .btn-outline:hover {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Tabs */
+        .services-tabs {
+            padding: 40px 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 2rem;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Service Categories */
+        .service-category {
+            padding: 80px 0;
+            display: none;
+        }
+
+        .service-category.active {
+            display: block;
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features i {
+            color: #10b981;
+            font-size: 0.9rem;
+        }
+
+        /* Special Offers */
+        .offers-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .offer-header {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .offer-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .offer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .offer-content {
+            padding: 2rem;
+        }
+
+        .offer-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-details {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-details li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .offer-details i {
+            color: #f59e0b;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .btn-white:hover {
+            background: #f8fafc;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>Horizon Bank</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/services" class="active">Services</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="/internet-banking" class="btn btn-primary">
+                        <i class="fas fa-laptop"></i>
+                        Internet Banking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Our Banking Services</h1>
+                <p class="page-subtitle">Comprehensive financial solutions tailored to your personal and business needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Tabs -->
+    <section class="services-tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <button class="tab-btn active" onclick="showService('personal')">
+                    <i class="fas fa-user"></i>
+                    Personal Banking
+                </button>
+                <button class="tab-btn" onclick="showService('business')">
+                    <i class="fas fa-briefcase"></i>
+                    Business Banking
+                </button>
+                <button class="tab-btn" onclick="showService('corporate')">
+                    <i class="fas fa-building"></i>
+                    Corporate Banking
+                </button>
+                <button class="tab-btn" onclick="showService('islamic')">
+                    <i class="fas fa-moon"></i>
+                    Islamic Banking
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Banking -->
+    <section id="personal" class="service-category active">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="section-title">Personal Banking Solutions</h2>
+                <p class="section-subtitle">Empowering your financial journey with innovative products and personalized service</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Savings Accounts</h3>
+                    <p>Build your future with our high-yield savings accounts designed to help you reach your financial goals faster.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Competitive interest rates up to 4.5% p.a.</li>
+                        <li><i class="fas fa-check"></i> No minimum balance requirement</li>
+                        <li><i class="fas fa-check"></i> Free debit card and e-statements</li>
+                        <li><i class="fas fa-check"></i> 24/7 online and mobile banking</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Open Account</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Current Accounts</h3>
+                    <p>Manage your daily banking needs with our feature-rich current accounts offering maximum convenience.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Unlimited free transactions</li>
+                        <li><i class="fas fa-check"></i> Free checkbook facility</li>
+                        <li><i class="fas fa-check"></i> Overdraft protection available</li>
+                        <li><i class="fas fa-check"></i> Premium banking privileges</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Loans</h3>
+                    <p>Turn your dream home into reality with our flexible mortgage solutions and competitive rates.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Up to 80% financing</li>
+                        <li><i class="fas fa-check"></i> Tenure up to 25 years</li>
+                        <li><i class="fas fa-check"></i> Quick approval process</li>
+                        <li><i class="fas fa-check"></i> No prepayment penalties</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Apply Now</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Auto Finance</h3>
+                    <p>Drive your dream car with our hassle-free auto financing options and attractive interest rates.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 100% financing available</li>
+                        <li><i class="fas fa-check"></i> Competitive interest rates</li>
+                        <li><i class="fas fa-check"></i> Flexible repayment terms</li>
+                        <li><i class="fas fa-check"></i> Insurance packages included</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Get Quote</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Credit Cards</h3>
+                    <p>Experience the freedom of cashless transactions with our range of reward-packed credit cards.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cashback up to 5%</li>
+                        <li><i class="fas fa-check"></i> Travel miles and rewards</li>
+                        <li><i class="fas fa-check"></i> Zero annual fee options</li>
+                        <li><i class="fas fa-check"></i> Global acceptance</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Apply Online</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investment Services</h3>
+                    <p>Grow your wealth with our comprehensive investment solutions and expert financial advisory.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Mutual funds and ETFs</li>
+                        <li><i class="fas fa-check"></i> Portfolio management</li>
+                        <li><i class="fas fa-check"></i> Retirement planning</li>
+                        <li><i class="fas fa-check"></i> Wealth advisory services</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Start Investing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Banking -->
+    <section id="business" class="service-category">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="section-title">Business Banking Solutions</h2>
+                <p class="section-subtitle">Empowering businesses with comprehensive financial tools for growth and success</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Business Accounts</h3>
+                    <p>Streamline your business operations with our tailored account solutions for SMEs and enterprises.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Multiple currency accounts</li>
+                        <li><i class="fas fa-check"></i> Bulk payment processing</li>
+                        <li><i class="fas fa-check"></i> Cash management services</li>
+                        <li><i class="fas fa-check"></i> Dedicated relationship manager</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Open Account</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Loans</h3>
+                    <p>Fuel your business growth with flexible financing solutions tailored to your specific needs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Working capital finance</li>
+                        <li><i class="fas fa-check"></i> Equipment financing</li>
+                        <li><i class="fas fa-check"></i> Trade finance solutions</li>
+                        <li><i class="fas fa-check"></i> Quick disbursement</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Apply Now</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h3>POS Solutions</h3>
+                    <p>Accept payments seamlessly with our advanced point-of-sale solutions for retail businesses.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Smart POS terminals</li>
+                        <li><i class="fas fa-check"></i> Mobile payment acceptance</li>
+                        <li><i class="fas fa-check"></i> E-commerce integration</li>
+                        <li><i class="fas fa-check"></i> Real-time reporting</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Banking -->
+    <section id="corporate" class="service-category">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="section-title">Corporate Banking Excellence</h2>
+                <p class="section-subtitle">Strategic financial partnerships for large enterprises and institutions</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Corporate Finance</h3>
+                    <p>Comprehensive financing solutions for large-scale projects and corporate expansions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Syndicated loans</li>
+                        <li><i class="fas fa-check"></i> Project financing</li>
+                        <li><i class="fas fa-check"></i> Acquisition finance</li>
+                        <li><i class="fas fa-check"></i> Structured finance solutions</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Contact Us</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Trade Services</h3>
+                    <p>Facilitate international trade with our comprehensive trade finance and services.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Letters of credit</li>
+                        <li><i class="fas fa-check"></i> Bank guarantees</li>
+                        <li><i class="fas fa-check"></i> Documentary collections</li>
+                        <li><i class="fas fa-check"></i> Supply chain finance</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Treasury Services</h3>
+                    <p>Optimize your cash flow and manage financial risks with our treasury solutions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Foreign exchange</li>
+                        <li><i class="fas fa-check"></i> Interest rate hedging</li>
+                        <li><i class="fas fa-check"></i> Liquidity management</li>
+                        <li><i class="fas fa-check"></i> Investment products</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Explore Options</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Islamic Banking -->
+    <section id="islamic" class="service-category">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="section-title">Islamic Banking Services</h2>
+                <p class="section-subtitle">Sharia-compliant banking solutions for your financial needs</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>Islamic Accounts</h3>
+                    <p>Sharia-compliant accounts offering ethical banking aligned with Islamic principles.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Mudarabah savings accounts</li>
+                        <li><i class="fas fa-check"></i> Qard current accounts</li>
+                        <li><i class="fas fa-check"></i> Profit sharing mechanism</li>
+                        <li><i class="fas fa-check"></i> Sharia board certified</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Open Account</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Islamic Home Finance</h3>
+                    <p>Own your dream home through our Sharia-compliant home financing solutions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Ijarah financing</li>
+                        <li><i class="fas fa-check"></i> Murabaha financing</li>
+                        <li><i class="fas fa-check"></i> Diminishing Musharakah</li>
+                        <li><i class="fas fa-check"></i> Competitive pricing</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Apply Now</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Islamic Investments</h3>
+                    <p>Grow your wealth ethically with our Sharia-compliant investment products.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Sukuk bonds</li>
+                        <li><i class="fas fa-check"></i> Islamic mutual funds</li>
+                        <li><i class="fas fa-check"></i> Sharia equity funds</li>
+                        <li><i class="fas fa-check"></i> Ethical screening</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Start Investing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers-section">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="section-title">Special Offers</h2>
+                <p class="section-subtitle">Exclusive deals and promotions for our valued customers</p>
+            </div>
+
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <div class="offer-tag">Limited Time</div>
+                        <div class="offer-title">Zero Processing Fee</div>
+                    </div>
+                    <div class="offer-content">
+                        <p class="offer-description">Get personal loans with zero processing fee for applications submitted this month.</p>
+                        <ul class="offer-details">
+                            <li><i class="fas fa-star"></i> Valid until month end</li>
+                            <li><i class="fas fa-star"></i> Loans up to AED 500,000</li>
+                            <li><i class="fas fa-star"></i> Quick approval</li>
+                        </ul>
+                        <a href="/contact" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <div class="offer-tag">Exclusive</div>
+                        <div class="offer-title">5% Cashback</div>
+                    </div>
+                    <div class="offer-content">
+                        <p class="offer-description">Earn 5% cashback on all dining and entertainment purchases with our Platinum credit card.</p>
+                        <ul class="offer-details">
+                            <li><i class="fas fa-star"></i> No cashback limit</li>
+                            <li><i class="fas fa-star"></i> Airport lounge access</li>
+                            <li><i class="fas fa-star"></i> Travel insurance included</li>
+                        </ul>
+                        <a href="/contact" class="btn btn-primary">Get Card</a>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <div class="offer-tag">New Customer</div>
+                        <div class="offer-title">Welcome Bonus</div>
+                    </div>
+                    <div class="offer-content">
+                        <p class="offer-description">Open a new savings account and get AED 500 welcome bonus when you maintain AED 10,000 for 3 months.</p>
+                        <ul class="offer-details">
+                            <li><i class="fas fa-star"></i> Free debit card</li>
+                            <li><i class="fas fa-star"></i> No minimum balance</li>
+                            <li><i class="fas fa-star"></i> Mobile banking included</li>
+                        </ul>
+                        <a href="/contact" class="btn btn-primary">Open Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">Our banking experts are here to help you choose the right solutions</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-white btn-lg">
+                    <i class="fas fa-phone"></i>
+                    Contact Us
+                </a>
+                <a href="/internet-banking" class="btn btn-outline btn-lg" style="color: white; border-color: white;">
+                    <i class="fas fa-laptop"></i>
+                    Online Banking
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-university"></i>
+                        <span>Horizon Bank</span>
+                    </div>
+                    <p>Your trusted banking partner providing innovative financial solutions with exceptional service and cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/internet-banking">Internet Banking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#personal">Personal Banking</a></li>
+                        <li><a href="#business">Business Banking</a></li>
+                        <li><a href="#corporate">Corporate Banking</a></li>
+                        <li><a href="#islamic">Islamic Banking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@horizonbank.ae</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Horizon Bank. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/security">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showService(category) {
+            // Hide all categories
+            document.querySelectorAll('.service-category').forEach(cat => {
+                cat.classList.remove('active');
+            });
+
+            // Remove active from all tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected category
+            document.getElementById(category).classList.add('active');
+
+            // Add active to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

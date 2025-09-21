@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Horizon Bank</title>
+    <meta name="description" content="Learn about Horizon Bank's history, mission, and commitment to banking excellence in the UAE.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: #1e3a8a;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Content */
+        .about-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .lead-text {
+            font-size: 1.2rem;
+            color: #6b7280;
+            line-height: 1.8;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image i {
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .value-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .leader-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .leader-avatar i {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .leader-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-title {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .leader-bio {
+            color: #4b5563;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>Horizon Bank</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about" class="active">About</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="/internet-banking" class="btn btn-primary">
+                        <i class="fas fa-laptop"></i>
+                        Internet Banking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">About Horizon Bank</h1>
+                <p class="page-subtitle">Building lasting relationships through innovative banking solutions and exceptional service since 1985</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-intro">
+                <h2 class="section-title">Pioneering Banking Excellence in the UAE</h2>
+                <p class="lead-text">For nearly four decades, Horizon Bank has been at the forefront of banking innovation in the United Arab Emirates, providing comprehensive financial solutions to individuals, businesses, and institutions across the region.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Our Story</h3>
+                    <p>Established in 1985, Horizon Bank began as a vision to create a financial institution that would bridge traditional banking values with modern innovation. From our humble beginnings with a single branch in Dubai, we have grown to become one of the UAE's most trusted banking partners.</p>
+                    <p>Today, we operate over 50 branches across the Emirates, serving more than 2 million customers with a comprehensive range of banking products and services. Our commitment to excellence has earned us numerous awards and recognitions in the banking industry.</p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-building"></i>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="about-content">
+                    <h3>Our Mission</h3>
+                    <p>To be the most trusted banking partner in the UAE by delivering innovative financial solutions that empower our customers to achieve their goals and aspirations. We strive to create value for all stakeholders while contributing to the economic growth and prosperity of the communities we serve.</p>
+                    <p>We believe in building long-term relationships based on trust, transparency, and mutual success. Our customer-centric approach ensures that every interaction adds value and exceeds expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="about-intro">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="lead-text">The principles that guide everything we do</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Trust & Integrity</h3>
+                    <p>We maintain the highest standards of ethics and transparency in all our operations, ensuring our customers' trust is never compromised.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously evolve our products and services, leveraging cutting-edge technology to deliver superior banking experiences.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Customer Focus</h3>
+                    <p>Our customers are at the heart of everything we do. We listen, understand, and deliver solutions that exceed expectations.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We pursue excellence in every aspect of our business, from service delivery to operational efficiency and risk management.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Social Responsibility</h3>
+                    <p>We are committed to sustainable banking practices and actively contribute to the social and economic development of our communities.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Professional Growth</h3>
+                    <p>We invest in our people, fostering a culture of continuous learning and professional development to build industry leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Branches Nationwide</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">38</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Digital Banking</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">A+</div>
+                    <div class="stat-label">Credit Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Industry Awards</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="about-intro">
+                <h2 class="section-title">Leadership Team</h2>
+                <p class="lead-text">Meet the visionaries leading Horizon Bank into the future</p>
+            </div>
+
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="leader-name">Ahmad Al Rashid</div>
+                    <div class="leader-title">Chief Executive Officer</div>
+                    <div class="leader-bio">With over 25 years of banking experience, Ahmad leads our strategic vision and drives innovation across all business lines.</div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="leader-name">Sarah Mitchell</div>
+                    <div class="leader-title">Chief Financial Officer</div>
+                    <div class="leader-bio">Sarah oversees financial planning, risk management, and ensures sustainable growth while maintaining fiscal responsibility.</div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="leader-name">Mohammed Hassan</div>
+                    <div class="leader-title">Chief Technology Officer</div>
+                    <div class="leader-bio">Mohammed spearheads our digital transformation initiatives, ensuring we remain at the forefront of banking technology.</div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="leader-name">Fatima Al Maktoum</div>
+                    <div class="leader-title">Chief Operating Officer</div>
+                    <div class="leader-bio">Fatima ensures operational excellence across all branches and departments, optimizing processes for superior customer service.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-university"></i>
+                        <span>Horizon Bank</span>
+                    </div>
+                    <p>Your trusted banking partner providing innovative financial solutions with exceptional service and cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/internet-banking">Internet Banking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="/services/personal">Personal Banking</a></li>
+                        <li><a href="/services/business">Business Banking</a></li>
+                        <li><a href="/services/investment">Investments</a></li>
+                        <li><a href="/services/cards">Cards & Payments</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@horizonbank.ae</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Horizon Bank. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/security">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

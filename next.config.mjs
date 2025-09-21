@@ -1,6 +1,7 @@
 import {withSentryConfig} from '@sentry/nextjs';
 
-const basePath = '/internet-banking';
+const basePath = process.env.NODE_ENV === 'production' ? '/internet-banking' : '';
+const assetPrefix = basePath || undefined;
 
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -46,6 +47,7 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath,
+  assetPrefix,
   trailingSlash: false,
   output: 'standalone',
   typescript: {
@@ -54,13 +56,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-
-  // Configure for hosting in /internet-banking/ subdirectory in production
-  basePath: process.env.NODE_ENV === 'production' ? '/internet-banking' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/internet-banking' : '',
-
-  // Ensure standalone output for Azure deployment
-  output: 'standalone',
 
   async redirects() {
     return [

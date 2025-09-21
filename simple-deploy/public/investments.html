@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Services - Horizon Bank</title>
+    <meta name="description" content="Grow your wealth with Horizon Bank's comprehensive investment solutions, portfolio management, and financial advisory services.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: #1e3a8a;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1e3a8a;
+            border: 2px solid #1e3a8a;
+        }
+
+        .btn-outline:hover {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Investment Categories */
+        .investment-categories {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .category-card p {
+            color: #6b7280;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .category-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .category-features li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-features i {
+            color: #10b981;
+            font-size: 0.9rem;
+        }
+
+        /* Investment Products */
+        .investment-products {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .product-type {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-features i {
+            color: #10b981;
+        }
+
+        .performance-metrics {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        /* Wealth Management */
+        .wealth-management {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .wealth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .wealth-content h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .wealth-content p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .wealth-services {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .wealth-services li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .wealth-services li:last-child {
+            border-bottom: none;
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-icon i {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .service-details h4 {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-details p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .wealth-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wealth-image i {
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Risk Calculator */
+        .risk-calculator {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .calculator-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .risk-form {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .form-input, .form-select {
+            padding: 0.875rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .risk-result {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .risk-level {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .risk-description {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        .recommended-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .recommended-product {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .btn-white:hover {
+            background: #f8fafc;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .wealth-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .main-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>Horizon Bank</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/investments" class="active">Investments</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="/internet-banking" class="btn btn-primary">
+                        <i class="fas fa-laptop"></i>
+                        Internet Banking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Investment Services</h1>
+                <p class="page-subtitle">Build your wealth with our comprehensive investment solutions and expert financial advisory</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Categories -->
+    <section class="investment-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Solutions</h2>
+                <p class="section-subtitle">Diversified investment options to help you achieve your financial goals</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Mutual Funds</h3>
+                    <p>Professionally managed diversified portfolios designed to optimize returns while managing risk across various asset classes.</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> Equity, debt, and hybrid funds</li>
+                        <li><i class="fas fa-check"></i> Professional fund management</li>
+                        <li><i class="fas fa-check"></i> SIP and lump sum options</li>
+                        <li><i class="fas fa-check"></i> Tax-efficient investing</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Start Investing</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Fixed Deposits</h3>
+                    <p>Secure your capital with guaranteed returns through our competitive fixed deposit schemes with flexible tenure options.</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> Competitive interest rates up to 6.5% p.a.</li>
+                        <li><i class="fas fa-check"></i> Flexible tenure from 7 days to 10 years</li>
+                        <li><i class="fas fa-check"></i> Auto-renewal options</li>
+                        <li><i class="fas fa-check"></i> Loan against deposits</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Open FD</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Bonds</h3>
+                    <p>Invest in high-quality corporate bonds offering steady income with lower risk compared to equity investments.</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> AAA to AA rated corporate bonds</li>
+                        <li><i class="fas fa-check"></i> Regular income through coupons</li>
+                        <li><i class="fas fa-check"></i> Government and corporate options</li>
+                        <li><i class="fas fa-check"></i> Capital protection strategies</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Explore Bonds</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>International Funds</h3>
+                    <p>Diversify globally with our international investment options providing exposure to global markets and currencies.</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> US, European, and Asian markets</li>
+                        <li><i class="fas fa-check"></i> Currency hedged options</li>
+                        <li><i class="fas fa-check"></i> Sector-specific funds</li>
+                        <li><i class="fas fa-check"></i> Global diversification benefits</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Go Global</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Insurance Products</h3>
+                    <p>Protect your family's future while building wealth through our comprehensive insurance and investment solutions.</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> Term and whole life insurance</li>
+                        <li><i class="fas fa-check"></i> Unit-linked insurance plans (ULIP)</li>
+                        <li><i class="fas fa-check"></i> Retirement planning solutions</li>
+                        <li><i class="fas fa-check"></i> Child education plans</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Protect & Invest</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Alternative Investments</h3>
+                    <p>Explore sophisticated investment opportunities including precious metals, REITs, and structured products.</p>
+                    <ul class="category-features">
+                        <li><i class="fas fa-check"></i> Gold and silver investments</li>
+                        <li><i class="fas fa-check"></i> Real Estate Investment Trusts</li>
+                        <li><i class="fas fa-check"></i> Structured products</li>
+                        <li><i class="fas fa-check"></i> Private equity opportunities</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Explore Options</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Products -->
+    <section class="investment-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Investment Products</h2>
+                <p class="section-subtitle">Handpicked investment opportunities with strong performance track records</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-type">Equity Fund</div>
+                        <div class="product-name">Horizon Growth Fund</div>
+                    </div>
+                    <div class="product-content">
+                        <p class="product-description">A diversified equity fund focusing on large-cap stocks with strong growth potential and consistent dividend yields.</p>
+
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">1-Year Return</span>
+                                <span class="metric-value">+18.5%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">3-Year Return (Ann.)</span>
+                                <span class="metric-value">+15.2%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Risk Level</span>
+                                <span class="metric-value">Moderate-High</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Minimum Investment</span>
+                                <span class="metric-value">AED 1,000</span>
+                            </div>
+                        </div>
+
+                        <ul class="product-features">
+                            <li><i class="fas fa-star"></i> Top 50 UAE companies</li>
+                            <li><i class="fas fa-star"></i> Quarterly dividends</li>
+                            <li><i class="fas fa-star"></i> SIP available from AED 500</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-primary">Invest Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-type">Balanced Fund</div>
+                        <div class="product-name">Horizon Balanced Portfolio</div>
+                    </div>
+                    <div class="product-content">
+                        <p class="product-description">A balanced approach combining equity and debt instruments for steady growth with reduced volatility.</p>
+
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">1-Year Return</span>
+                                <span class="metric-value">+12.8%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">3-Year Return (Ann.)</span>
+                                <span class="metric-value">+11.5%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Risk Level</span>
+                                <span class="metric-value">Moderate</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Minimum Investment</span>
+                                <span class="metric-value">AED 2,000</span>
+                            </div>
+                        </div>
+
+                        <ul class="product-features">
+                            <li><i class="fas fa-star"></i> 60% equity, 40% bonds</li>
+                            <li><i class="fas fa-star"></i> Professional rebalancing</li>
+                            <li><i class="fas fa-star"></i> Monthly income option</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-primary">Invest Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-type">Islamic Fund</div>
+                        <div class="product-name">Horizon Shariah Fund</div>
+                    </div>
+                    <div class="product-content">
+                        <p class="product-description">Sharia-compliant investment fund focusing on halal businesses and ethical investment principles.</p>
+
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">1-Year Return</span>
+                                <span class="metric-value">+16.2%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">3-Year Return (Ann.)</span>
+                                <span class="metric-value">+13.8%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Risk Level</span>
+                                <span class="metric-value">Moderate</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Minimum Investment</span>
+                                <span class="metric-value">AED 1,500</span>
+                            </div>
+                        </div>
+
+                        <ul class="product-features">
+                            <li><i class="fas fa-star"></i> Sharia board certified</li>
+                            <li><i class="fas fa-star"></i> Ethical screening process</li>
+                            <li><i class="fas fa-star"></i> Profit-sharing mechanism</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-primary">Invest Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wealth Management -->
+    <section class="wealth-management">
+        <div class="container">
+            <div class="wealth-grid">
+                <div class="wealth-content">
+                    <h3>Personal Wealth Management</h3>
+                    <p>Our dedicated wealth management team provides personalized investment solutions tailored to your unique financial goals and risk tolerance.</p>
+                    <p>With over 20 years of combined experience, our certified financial advisors help high-net-worth individuals and families build, preserve, and transfer wealth across generations.</p>
+
+                    <div class="wealth-services">
+                        <div class="wealth-service">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="service-details">
+                                <h4>Portfolio Management</h4>
+                                <p>Customized investment portfolios aligned with your risk profile and goals</p>
+                            </div>
+                        </div>
+
+                        <div class="wealth-service">
+                            <div class="service-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="service-details">
+                                <h4>Financial Planning</h4>
+                                <p>Comprehensive financial planning for retirement, education, and estate</p>
+                            </div>
+                        </div>
+
+                        <div class="wealth-service">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="service-details">
+                                <h4>Risk Management</h4>
+                                <p>Insurance and hedging strategies to protect your wealth</p>
+                            </div>
+                        </div>
+
+                        <div class="wealth-service">
+                            <div class="service-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="service-details">
+                                <h4>Estate Planning</h4>
+                                <p>Wealth transfer strategies and succession planning services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/contact" class="btn btn-primary">
+                        <i class="fas fa-user-tie"></i>
+                        Schedule Consultation
+                    </a>
+                </div>
+
+                <div class="wealth-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Calculator -->
+    <section class="risk-calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Risk Calculator</h2>
+                <p class="section-subtitle">Determine your risk profile and get personalized investment recommendations</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                <form class="risk-form" id="riskForm" onsubmit="calculateRisk(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Age</label>
+                            <select class="form-select" name="age" required>
+                                <option value="">Select your age group</option>
+                                <option value="1">18-25 years</option>
+                                <option value="2">26-35 years</option>
+                                <option value="3">36-45 years</option>
+                                <option value="4">46-55 years</option>
+                                <option value="5">56+ years</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Investment Horizon</label>
+                            <select class="form-select" name="horizon" required>
+                                <option value="">Select investment period</option>
+                                <option value="1">Less than 1 year</option>
+                                <option value="2">1-3 years</option>
+                                <option value="3">3-5 years</option>
+                                <option value="4">5-10 years</option>
+                                <option value="5">More than 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Monthly Income (AED)</label>
+                            <select class="form-select" name="income" required>
+                                <option value="">Select income range</option>
+                                <option value="1">Below 5,000</option>
+                                <option value="2">5,000 - 15,000</option>
+                                <option value="3">15,000 - 30,000</option>
+                                <option value="4">30,000 - 50,000</option>
+                                <option value="5">Above 50,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Investment Experience</label>
+                            <select class="form-select" name="experience" required>
+                                <option value="">Select experience level</option>
+                                <option value="1">No experience</option>
+                                <option value="2">Limited experience</option>
+                                <option value="3">Moderate experience</option>
+                                <option value="4">Good experience</option>
+                                <option value="5">Very experienced</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Risk Tolerance</label>
+                        <select class="form-select" name="tolerance" required>
+                            <option value="">How do you react to market volatility?</option>
+                            <option value="1">I prefer stable returns even if lower</option>
+                            <option value="2">I can accept small fluctuations</option>
+                            <option value="3">I can handle moderate volatility</option>
+                            <option value="4">I'm comfortable with high volatility</option>
+                            <option value="5">I seek maximum returns regardless of risk</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-calculator"></i>
+                        Calculate My Risk Profile
+                    </button>
+                </form>
+
+                <div class="risk-result" id="riskResult">
+                    <div class="risk-level" id="riskLevel"></div>
+                    <div class="risk-description" id="riskDescription"></div>
+                    <div class="recommended-products" id="recommendedProducts"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your Investment Journey Today</h2>
+            <p class="cta-subtitle">Our investment experts are ready to help you build a portfolio that matches your goals</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-white btn-lg">
+                    <i class="fas fa-phone"></i>
+                    Speak to an Advisor
+                </a>
+                <a href="/internet-banking" class="btn btn-outline btn-lg" style="color: white; border-color: white;">
+                    <i class="fas fa-laptop"></i>
+                    Start Online
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-university"></i>
+                        <span>Horizon Bank</span>
+                    </div>
+                    <p>Your trusted banking partner providing innovative financial solutions with exceptional service and cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/investments">Investments</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Investment Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="/investments">Mutual Funds</a></li>
+                        <li><a href="/investments">Fixed Deposits</a></li>
+                        <li><a href="/investments">Corporate Bonds</a></li>
+                        <li><a href="/investments">Wealth Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> investments@horizonbank.ae</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Horizon Bank. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/security">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculateRisk(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('riskForm');
+            const formData = new FormData(form);
+
+            let totalScore = 0;
+            for (let value of formData.values()) {
+                totalScore += parseInt(value);
+            }
+
+            const avgScore = totalScore / 5;
+
+            let riskLevel, riskDescription, recommendations;
+
+            if (avgScore <= 2) {
+                riskLevel = "Conservative Investor";
+                riskDescription = "You prefer stable, low-risk investments with predictable returns. Capital preservation is your priority.";
+                recommendations = [
+                    "Fixed Deposits",
+                    "Government Bonds",
+                    "Conservative Funds"
+                ];
+            } else if (avgScore <= 3) {
+                riskLevel = "Moderate Investor";
+                riskDescription = "You seek a balance between growth and stability, accepting moderate risk for potentially higher returns.";
+                recommendations = [
+                    "Balanced Funds",
+                    "Corporate Bonds",
+                    "Hybrid Products"
+                ];
+            } else if (avgScore <= 4) {
+                riskLevel = "Growth Investor";
+                riskDescription = "You're willing to accept higher volatility for the potential of significant long-term growth.";
+                recommendations = [
+                    "Equity Funds",
+                    "Growth Funds",
+                    "International Funds"
+                ];
+            } else {
+                riskLevel = "Aggressive Investor";
+                riskDescription = "You're comfortable with high risk and volatility in pursuit of maximum returns.";
+                recommendations = [
+                    "High-Growth Funds",
+                    "Sector Funds",
+                    "Alternative Investments"
+                ];
+            }
+
+            document.getElementById('riskLevel').textContent = riskLevel;
+            document.getElementById('riskDescription').textContent = riskDescription;
+
+            const recommendedProducts = document.getElementById('recommendedProducts');
+            recommendedProducts.innerHTML = recommendations.map(product =>
+                `<div class="recommended-product">${product}</div>`
+            ).join('');
+
+            document.getElementById('riskResult').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

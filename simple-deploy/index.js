@@ -35,6 +35,31 @@ app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/contact.html'));
 });
 
+// Investments page
+app.get('/investments', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/investments.html'));
+});
+
+// Cards page
+app.get('/cards', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/cards.html'));
+});
+
+// Privacy Policy page
+app.get('/privacy', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/privacy.html'));
+});
+
+// Terms of Service page
+app.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/terms.html'));
+});
+
+// Security page
+app.get('/security', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/security.html'));
+});
+
 // Health check
 app.get('/health', (req, res) => {
     res.json({ status: 'healthy', timestamp: new Date().toISOString() });

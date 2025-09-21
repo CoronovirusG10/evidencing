@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards & Payments - Horizon Bank</title>
+    <meta name="description" content="Discover Horizon Bank's credit cards, debit cards, and modern payment solutions with rewards, cashback, and global acceptance.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: #1e3a8a;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1e3a8a;
+            border: 2px solid #1e3a8a;
+        }
+
+        .btn-outline:hover {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+        }
+
+        .btn-platinum {
+            background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+            color: white;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Card Categories */
+        .card-categories {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .categories-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            padding: 0.75rem 2rem;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card-product {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .card-product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-visual {
+            height: 200px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card-visual.gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+
+        .card-visual.platinum {
+            background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+        }
+
+        .card-visual.premium {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        }
+
+        .card-mockup {
+            width: 280px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .card-chip {
+            width: 40px;
+            height: 30px;
+            background: #fbbf24;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+        }
+
+        .card-number {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        .card-holder {
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .card-logo {
+            font-size: 1.5rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-tier {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card-tier.gold {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .card-tier.platinum {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .card-tier.premium {
+            background: #f3e8ff;
+            color: #7c3aed;
+        }
+
+        .card-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-features i {
+            color: #10b981;
+        }
+
+        .card-rewards {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .reward-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .reward-category {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .reward-rate {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        /* Payment Solutions */
+        .payment-solutions {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .solution-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .solution-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Card Comparison */
+        .card-comparison {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 200px repeat(4, 1fr);
+            min-width: 800px;
+        }
+
+        .table-header {
+            background: #f8fafc;
+            padding: 1.5rem 1rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .table-cell {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .table-cell:last-child {
+            border-right: none;
+        }
+
+        .feature-name {
+            font-weight: 600;
+            color: #374151;
+            background: #f8fafc;
+        }
+
+        .feature-check {
+            color: #10b981;
+            text-align: center;
+        }
+
+        .feature-cross {
+            color: #ef4444;
+            text-align: center;
+        }
+
+        /* Application Process */
+        .application-process {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .btn-white:hover {
+            background: #f8fafc;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .comparison-grid {
+                font-size: 0.9rem;
+            }
+
+            .categories-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>Horizon Bank</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/cards" class="active">Cards</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="/internet-banking" class="btn btn-primary">
+                        <i class="fas fa-laptop"></i>
+                        Internet Banking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Cards & Payments</h1>
+                <p class="page-subtitle">Experience the freedom of modern banking with our reward-packed cards and innovative payment solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Categories -->
+    <section class="card-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Credit Cards</h2>
+                <p class="section-subtitle">Choose from our range of credit cards designed to match your lifestyle and spending habits</p>
+            </div>
+
+            <div class="categories-tabs">
+                <button class="category-tab active" onclick="showCards('all')">
+                    <i class="fas fa-credit-card"></i>
+                    All Cards
+                </button>
+                <button class="category-tab" onclick="showCards('cashback')">
+                    <i class="fas fa-money-bill-wave"></i>
+                    Cashback Cards
+                </button>
+                <button class="category-tab" onclick="showCards('travel')">
+                    <i class="fas fa-plane"></i>
+                    Travel Cards
+                </button>
+                <button class="category-tab" onclick="showCards('premium')">
+                    <i class="fas fa-crown"></i>
+                    Premium Cards
+                </button>
+            </div>
+
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Classic Card -->
+                <div class="card-product" data-category="cashback">
+                    <div class="card-visual">
+                        <div class="card-mockup">
+                            <div class="card-chip"></div>
+                            <div class="card-number">5432 •••• •••• 1234</div>
+                            <div class="card-info">
+                                <div class="card-holder">HORIZON CLASSIC</div>
+                                <div class="card-logo"><i class="fab fa-cc-visa"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tier">Classic</div>
+                        <h3 class="card-name">Horizon Classic Card</h3>
+
+                        <div class="card-rewards">
+                            <div class="reward-item">
+                                <span class="reward-category">All Purchases</span>
+                                <span class="reward-rate">1% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Dining & Entertainment</span>
+                                <span class="reward-rate">2% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Annual Fee</span>
+                                <span class="reward-rate">Free</span>
+                            </div>
+                        </div>
+
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> No annual fee for life</li>
+                            <li><i class="fas fa-check"></i> Welcome bonus AED 500</li>
+                            <li><i class="fas fa-check"></i> Global acceptance</li>
+                            <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Gold Card -->
+                <div class="card-product" data-category="cashback travel">
+                    <div class="card-visual gold">
+                        <div class="card-mockup">
+                            <div class="card-chip"></div>
+                            <div class="card-number">5432 •••• •••• 5678</div>
+                            <div class="card-info">
+                                <div class="card-holder">HORIZON GOLD</div>
+                                <div class="card-logo"><i class="fab fa-cc-mastercard"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tier gold">Gold</div>
+                        <h3 class="card-name">Horizon Gold Card</h3>
+
+                        <div class="card-rewards">
+                            <div class="reward-item">
+                                <span class="reward-category">All Purchases</span>
+                                <span class="reward-rate">2% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Dining & Travel</span>
+                                <span class="reward-rate">5% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Annual Fee</span>
+                                <span class="reward-rate">AED 299</span>
+                            </div>
+                        </div>
+
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Welcome bonus AED 1,000</li>
+                            <li><i class="fas fa-check"></i> Airport lounge access</li>
+                            <li><i class="fas fa-check"></i> Travel insurance included</li>
+                            <li><i class="fas fa-check"></i> Concierge services</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-gold">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Platinum Card -->
+                <div class="card-product" data-category="travel premium">
+                    <div class="card-visual platinum">
+                        <div class="card-mockup">
+                            <div class="card-chip"></div>
+                            <div class="card-number">5432 •••• •••• 9012</div>
+                            <div class="card-info">
+                                <div class="card-holder">HORIZON PLATINUM</div>
+                                <div class="card-logo"><i class="fab fa-cc-visa"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tier platinum">Platinum</div>
+                        <h3 class="card-name">Horizon Platinum Card</h3>
+
+                        <div class="card-rewards">
+                            <div class="reward-item">
+                                <span class="reward-category">All Purchases</span>
+                                <span class="reward-rate">3% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Luxury Spending</span>
+                                <span class="reward-rate">10% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Annual Fee</span>
+                                <span class="reward-rate">AED 799</span>
+                            </div>
+                        </div>
+
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Welcome bonus AED 2,500</li>
+                            <li><i class="fas fa-check"></i> Priority Pass membership</li>
+                            <li><i class="fas fa-check"></i> Personal relationship manager</li>
+                            <li><i class="fas fa-check"></i> Golf privileges worldwide</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-platinum">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Business Card -->
+                <div class="card-product" data-category="cashback">
+                    <div class="card-visual premium">
+                        <div class="card-mockup">
+                            <div class="card-chip"></div>
+                            <div class="card-number">5432 •••• •••• 3456</div>
+                            <div class="card-info">
+                                <div class="card-holder">HORIZON BUSINESS</div>
+                                <div class="card-logo"><i class="fab fa-cc-amex"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tier premium">Business</div>
+                        <h3 class="card-name">Horizon Business Card</h3>
+
+                        <div class="card-rewards">
+                            <div class="reward-item">
+                                <span class="reward-category">Business Purchases</span>
+                                <span class="reward-rate">4% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Office Supplies</span>
+                                <span class="reward-rate">6% Cashback</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-category">Annual Fee</span>
+                                <span class="reward-rate">AED 499</span>
+                            </div>
+                        </div>
+
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Business expense tracking</li>
+                            <li><i class="fas fa-check"></i> Multiple card facility</li>
+                            <li><i class="fas fa-check"></i> Corporate rewards program</li>
+                            <li><i class="fas fa-check"></i> Business insurance coverage</li>
+                        </ul>
+
+                        <a href="/contact" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Solutions -->
+    <section class="payment-solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Digital Payment Solutions</h2>
+                <p class="section-subtitle">Modern payment technologies for seamless transactions</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Payments</h3>
+                    <p>Pay with your smartphone using Apple Pay, Google Pay, and Samsung Pay. Secure, fast, and convenient.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Contactless payments</li>
+                        <li><i class="fas fa-check"></i> Biometric authentication</li>
+                        <li><i class="fas fa-check"></i> Instant notifications</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Learn More</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>QR Code Payments</h3>
+                    <p>Scan and pay instantly with our QR code technology. Perfect for merchants and personal transactions.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Instant QR generation</li>
+                        <li><i class="fas fa-check"></i> Merchant integration</li>
+                        <li><i class="fas fa-check"></i> Real-time settlement</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Get Started</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Contactless Cards</h3>
+                    <p>Tap and pay with our contactless-enabled cards. Fast, secure, and hygienic payment experience.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> NFC technology</li>
+                        <li><i class="fas fa-check"></i> Transaction limits up to AED 500</li>
+                        <li><i class="fas fa-check"></i> EMV chip security</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Order Card</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Online Payments</h3>
+                    <p>Secure online shopping with 3D Secure authentication and fraud protection for all your purchases.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> 3D Secure 2.0</li>
+                        <li><i class="fas fa-check"></i> Fraud monitoring</li>
+                        <li><i class="fas fa-check"></i> One-time virtual cards</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Secure Shopping</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>POS Solutions</h3>
+                    <p>Complete point-of-sale systems for businesses with card acceptance and payment processing.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> All card types accepted</li>
+                        <li><i class="fas fa-check"></i> Real-time reporting</li>
+                        <li><i class="fas fa-check"></i> Multi-currency support</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">For Business</a>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>P2P Transfers</h3>
+                    <p>Send money to friends and family instantly using just their mobile number or email address.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> Instant transfers</li>
+                        <li><i class="fas fa-check"></i> Split bills feature</li>
+                        <li><i class="fas fa-check"></i> Request money function</li>
+                    </ul>
+                    <a href="/contact" class="btn btn-outline">Send Money</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Comparison -->
+    <section class="card-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compare Credit Cards</h2>
+                <p class="section-subtitle">Find the perfect card that matches your spending needs</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <h3>Credit Card Comparison</h3>
+                </div>
+
+                <div class="table-container">
+                    <div class="comparison-grid">
+                        <div class="table-header">Features</div>
+                        <div class="table-header">Classic</div>
+                        <div class="table-header">Gold</div>
+                        <div class="table-header">Platinum</div>
+                        <div class="table-header">Business</div>
+
+                        <div class="table-cell feature-name">Annual Fee</div>
+                        <div class="table-cell">Free</div>
+                        <div class="table-cell">AED 299</div>
+                        <div class="table-cell">AED 799</div>
+                        <div class="table-cell">AED 499</div>
+
+                        <div class="table-cell feature-name">Welcome Bonus</div>
+                        <div class="table-cell">AED 500</div>
+                        <div class="table-cell">AED 1,000</div>
+                        <div class="table-cell">AED 2,500</div>
+                        <div class="table-cell">AED 1,500</div>
+
+                        <div class="table-cell feature-name">Cashback Rate</div>
+                        <div class="table-cell">Up to 2%</div>
+                        <div class="table-cell">Up to 5%</div>
+                        <div class="table-cell">Up to 10%</div>
+                        <div class="table-cell">Up to 6%</div>
+
+                        <div class="table-cell feature-name">Airport Lounge</div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+
+                        <div class="table-cell feature-name">Travel Insurance</div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+
+                        <div class="table-cell feature-name">Concierge Service</div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+
+                        <div class="table-cell feature-name">Priority Pass</div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+                        <div class="table-cell feature-check"><i class="fas fa-check"></i></div>
+                        <div class="table-cell feature-cross"><i class="fas fa-times"></i></div>
+
+                        <div class="table-cell feature-name">Credit Limit</div>
+                        <div class="table-cell">Up to AED 50K</div>
+                        <div class="table-cell">Up to AED 200K</div>
+                        <div class="table-cell">Up to AED 500K</div>
+                        <div class="table-cell">Up to AED 300K</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="application-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Easy Application Process</h2>
+                <p class="section-subtitle">Get your credit card in just 4 simple steps</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Card</h3>
+                    <p>Select the card that best fits your lifestyle and spending patterns</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Apply Online</h3>
+                    <p>Fill out our simple online application form with your personal and financial details</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Instant Approval</h3>
+                    <p>Get instant approval decision within minutes for qualified applicants</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Receive Your Card</h3>
+                    <p>Your new credit card will be delivered to your doorstep within 3-5 working days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Apply for Your Card?</h2>
+            <p class="cta-subtitle">Join millions of satisfied customers and start earning rewards today</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-white btn-lg">
+                    <i class="fas fa-credit-card"></i>
+                    Apply Now
+                </a>
+                <a href="/contact" class="btn btn-outline btn-lg" style="color: white; border-color: white;">
+                    <i class="fas fa-phone"></i>
+                    Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-university"></i>
+                        <span>Horizon Bank</span>
+                    </div>
+                    <p>Your trusted banking partner providing innovative financial solutions with exceptional service and cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Credit Cards</h4>
+                    <ul class="footer-links">
+                        <li><a href="/cards">Classic Card</a></li>
+                        <li><a href="/cards">Gold Card</a></li>
+                        <li><a href="/cards">Platinum Card</a></li>
+                        <li><a href="/cards">Business Card</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Payment Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="/cards">Mobile Payments</a></li>
+                        <li><a href="/cards">Contactless Cards</a></li>
+                        <li><a href="/cards">QR Payments</a></li>
+                        <li><a href="/cards">POS Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> cards@horizonbank.ae</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Horizon Bank. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/security">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showCards(category) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+
+            // Show/hide cards based on category
+            const cards = document.querySelectorAll('.card-product');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

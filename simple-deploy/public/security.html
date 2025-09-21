@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security - Horizon Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .security-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .security-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            margin-left: -2rem;
+            margin-right: -2rem;
+            margin-top: -2rem;
+        }
+
+        .security-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .security-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .security-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .security-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .security-card h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .security-card h3::before {
+            content: "🔒";
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .security-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .security-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .security-card li {
+            color: #666;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .security-card li:last-child {
+            border-bottom: none;
+        }
+
+        .security-card li::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .alert-section {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .alert-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .alert-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tips-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .tips-section h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tip-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #2a5298;
+        }
+
+        .tip-item h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .contact-security {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-security h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-security p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .security-feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .security-feature h3 {
+            color: #1e3c72;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #2a5298;
+        }
+
+        .feature-item h4 {
+            color: #1e3c72;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .security-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .security-header h1 {
+                font-size: 2rem;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Horizon Bank</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="investments.html" class="nav-link">Investments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cards.html" class="nav-link">Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/internet-banking/" class="nav-link cta-button">Internet Banking</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="security-container">
+        <div class="security-header">
+            <h1>Banking Security</h1>
+            <p>Protecting your financial information with state-of-the-art security measures and industry-leading protocols</p>
+        </div>
+
+        <div class="security-grid">
+            <div class="security-card">
+                <h3>Multi-Factor Authentication</h3>
+                <p>Advanced authentication protocols to ensure only you can access your accounts.</p>
+                <ul>
+                    <li>SMS verification codes</li>
+                    <li>Biometric authentication</li>
+                    <li>Secure token generation</li>
+                    <li>Device registration</li>
+                    <li>Login activity monitoring</li>
+                </ul>
+            </div>
+
+            <div class="security-card">
+                <h3>Encryption Technology</h3>
+                <p>Bank-grade encryption protects your data in transit and at rest.</p>
+                <ul>
+                    <li>256-bit SSL encryption</li>
+                    <li>End-to-end data protection</li>
+                    <li>Secure data transmission</li>
+                    <li>Encrypted database storage</li>
+                    <li>Regular security audits</li>
+                </ul>
+            </div>
+
+            <div class="security-card">
+                <h3>Fraud Detection</h3>
+                <p>Real-time monitoring and AI-powered systems detect suspicious activities.</p>
+                <ul>
+                    <li>24/7 transaction monitoring</li>
+                    <li>Machine learning algorithms</li>
+                    <li>Behavioral pattern analysis</li>
+                    <li>Instant fraud alerts</li>
+                    <li>Account protection measures</li>
+                </ul>
+            </div>
+
+            <div class="security-card">
+                <h3>Regulatory Compliance</h3>
+                <p>Full compliance with UAE Central Bank regulations and international standards.</p>
+                <ul>
+                    <li>Central Bank of UAE oversight</li>
+                    <li>Basel III compliance</li>
+                    <li>Anti-money laundering (AML)</li>
+                    <li>Know Your Customer (KYC)</li>
+                    <li>International security standards</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alert-section">
+            <h3>⚠️ Security Alert</h3>
+            <p><strong>Never share your banking credentials!</strong></p>
+            <p>Horizon Bank will never ask for your passwords, PINs, or OTPs via phone, email, or SMS. Always verify the authenticity of any communication claiming to be from the bank.</p>
+        </div>
+
+        <div class="security-feature">
+            <h3>Advanced Security Features</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Secure Session Management</h4>
+                    <p>Automatic logouts and session encryption for enhanced protection</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Transaction Limits</h4>
+                    <p>Customizable daily and monthly transaction limits for added security</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Device Recognition</h4>
+                    <p>Trusted device registration and unknown device alerts</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Geolocation Monitoring</h4>
+                    <p>Location-based access controls and suspicious location alerts</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Secure Communication</h4>
+                    <p>Encrypted messaging within the banking platform</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Regular Security Updates</h4>
+                    <p>Continuous system updates and security patch management</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3>Security Best Practices</h3>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <h4>Strong Passwords</h4>
+                    <p>Use unique, complex passwords with a mix of letters, numbers, and symbols. Change them regularly and never share with others.</p>
+                </div>
+                <div class="tip-item">
+                    <h4>Secure Networks</h4>
+                    <p>Always use secure, private networks for banking. Avoid public Wi-Fi for financial transactions.</p>
+                </div>
+                <div class="tip-item">
+                    <h4>Regular Monitoring</h4>
+                    <p>Check your account statements regularly and report any suspicious transactions immediately.</p>
+                </div>
+                <div class="tip-item">
+                    <h4>Software Updates</h4>
+                    <p>Keep your devices and browsers updated with the latest security patches.</p>
+                </div>
+                <div class="tip-item">
+                    <h4>Phishing Awareness</h4>
+                    <p>Be cautious of suspicious emails, texts, or calls asking for personal information.</p>
+                </div>
+                <div class="tip-item">
+                    <h4>Safe Logout</h4>
+                    <p>Always log out completely from your banking session and close your browser.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="security-feature">
+            <h3>What We Do to Protect You</h3>
+            <p>Horizon Bank employs multiple layers of security to safeguard your financial information:</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #1e3c72; margin-bottom: 1rem;">🛡️ Proactive Monitoring</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">• 24/7 security operations center</li>
+                        <li style="margin-bottom: 0.5rem;">• Real-time threat detection</li>
+                        <li style="margin-bottom: 0.5rem;">• Automated incident response</li>
+                        <li style="margin-bottom: 0.5rem;">• Continuous vulnerability assessment</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #1e3c72; margin-bottom: 1rem;">🔐 Data Protection</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">• Military-grade encryption</li>
+                        <li style="margin-bottom: 0.5rem;">• Secure data centers</li>
+                        <li style="margin-bottom: 0.5rem;">• Regular backup procedures</li>
+                        <li style="margin-bottom: 0.5rem;">• Access control systems</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: #1e3c72; margin-bottom: 1rem;">📱 Mobile Security</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">• App-based authentication</li>
+                        <li style="margin-bottom: 0.5rem;">• Biometric login options</li>
+                        <li style="margin-bottom: 0.5rem;">• Device fingerprinting</li>
+                        <li style="margin-bottom: 0.5rem;">• Secure push notifications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); margin: 2rem 0;">
+            <h3 style="color: #1e3c72; text-align: center; margin-bottom: 2rem;">Security Incident Response</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="background: #1e3c72; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">1</div>
+                    <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Detection</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Advanced monitoring systems detect potential threats in real-time</p>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="background: #2a5298; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">2</div>
+                    <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Response</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Immediate containment and mitigation procedures are activated</p>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="background: #3a6298; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">3</div>
+                    <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Recovery</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Systems are restored and customers are notified of any actions needed</p>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <div style="background: #4a7298; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">4</div>
+                    <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Prevention</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Security measures are enhanced to prevent similar incidents</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-security">
+            <h3>🚨 Report Security Concerns</h3>
+            <p><strong>Security Hotline:</strong> +971 4 123 4567 (24/7)</p>
+            <p><strong>Email:</strong> security@horizonbank.ae</p>
+            <p><strong>Emergency Response:</strong> Available 24/7 for immediate assistance</p>
+            <p style="margin-top: 1rem; font-size: 0.95rem;">If you suspect unauthorized access to your account or notice suspicious activity, contact us immediately. Quick reporting helps protect your account and prevent fraud.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horizon Bank</h3>
+                <p>Your trusted banking partner in the UAE, providing comprehensive financial solutions with excellence and integrity.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📞 +971 4 123 4567</p>
+                <p>✉️ info@horizonbank.ae</p>
+                <p>📍 Sheikh Zayed Road, Dubai, UAE</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Horizon Bank. All rights reserved. | Licensed by Central Bank of UAE</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
