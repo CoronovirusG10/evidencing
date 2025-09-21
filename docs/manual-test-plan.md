@@ -32,8 +32,10 @@ This plan covers high-value scenarios across manual transactions, exports, and a
 - [ ] Review disclaimer content for jurisdictional coverage (UAE + US) before release.
 
 ## 7. Deployment Review (UAE Focus)
+- [ ] Load `https://horizon-banking-uae.azurewebsites.net/internet-banking/` and verify assets resolve under the `/internet-banking/` base path.
 - [ ] Ensure `.env` and deployment settings use UAE regional services (App Service in UAE North, region-specific endpoints).
 - [ ] Validate security headers via browser DevTools (CSP, HSTS, frame options).
+- [ ] Confirm App Service startup command is `./startup.sh` and runtime is `NODE|20-lts`.
 - [ ] Run `npm run lint` and `npm run test` prior to deployment.
 
 ---

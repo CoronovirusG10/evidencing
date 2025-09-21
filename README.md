@@ -299,22 +299,22 @@ This application is optimized for deployment on Microsoft Azure, specifically in
 az login
 
 # Create Resource Group
-az group create --name rg-horizon-banking-prod --location "UAE North"
+az group create --name horizon-rg-uae --location "UAE North"
 
 # Create App Service Plan
 az appservice plan create \
-  --name plan-horizon-banking \
-  --resource-group rg-horizon-banking-prod \
+  --name horizon-asp-uae \
+  --resource-group horizon-rg-uae \
   --location "UAE North" \
   --sku P1V3 \
   --is-linux
 
 # Create Web App
 az webapp create \
-  --name horizon-banking-portal \
-  --resource-group rg-horizon-banking-prod \
-  --plan plan-horizon-banking \
-  --runtime "NODE|18-lts"
+  --name horizon-banking-uae \
+  --resource-group horizon-rg-uae \
+  --plan horizon-asp-uae \
+  --runtime "NODE|20-lts"
 ```
 
 #### **🔐 Secrets Management**
@@ -322,13 +322,13 @@ az webapp create \
 ```bash
 # Create Key Vault
 az keyvault create \
-  --name kv-horizon-banking \
-  --resource-group rg-horizon-banking-prod \
+  --name horizon-kv-uae \
+  --resource-group horizon-rg-uae \
   --location "UAE North"
 
 # Add secrets
-az keyvault secret set --vault-name kv-horizon-banking --name "appwrite-key" --value "your-key"
-az keyvault secret set --vault-name kv-horizon-banking --name "plaid-secret" --value "your-secret"
+az keyvault secret set --vault-name horizon-kv-uae --name "appwrite-key" --value "your-key"
+az keyvault secret set --vault-name horizon-kv-uae --name "plaid-secret" --value "your-secret"
 ```
 
 #### **📋 Deployment Checklist**
@@ -340,6 +340,23 @@ az keyvault secret set --vault-name kv-horizon-banking --name "plaid-secret" --v
 - [ ] Application Insights enabled
 - [ ] Backup and disaster recovery configured
 - [ ] Monitoring and alerts set up
+
+#### **🚀 Package & Deploy**
+
+```bash
+# Build the standalone artifact and zip contents
+scripts/create-azure-zip.sh
+
+# Deploy to horizon-banking-uae App Service (UAE North)
+./deploy-to-azure.sh
+
+# Manual redeploy (if needed)
+az webapp deploy --resource-group horizon-rg-uae --name horizon-banking-uae --src-path horizon-internet-banking.zip --type zip
+```
+
+After deployment, verify `https://horizon-banking-uae.azurewebsites.net/internet-banking/` renders correctly and run the manual test plan.
+
+The generated archive nests the app inside `internet-banking/` so the Web App can host additional root content without conflicts.
 
 #### **📚 Detailed Guide**
 

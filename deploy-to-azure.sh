@@ -1,179 +1,117 @@
 #!/bin/bash
+# Deploy the Horizon banking portal to Azure App Service (UAE North)
+set -euo pipefail
 
-# Horizon Banking App - Azure Deployment Script
-# Resource Group: horizon-rg-uae
-
-set -e
-
-# Configuration
 RESOURCE_GROUP="horizon-rg-uae"
-LOCATION="UAE North"  # or your preferred Azure region
-SUBSCRIPTION_ID="your-subscription-id"  # Update with your subscription ID
+LOCATION="uaenorth"
+APP_SERVICE_PLAN="horizon-asp-uae"
+WEBAPP_NAME="horizon-banking-uae"
+KEY_VAULT_NAME="horizon-kv-uae"
+ZIP_PATH="horizon-internet-banking.zip"
+NODE_RUNTIME="NODE|20-lts"
+STARTUP_FILE="./startup.sh"
 
-# App Service Names
-LANDING_APP_NAME="horizonbank-landing"
-BANKING_APP_NAME="horizonbank-app"
-APP_SERVICE_PLAN="horizonbank-plan"
+banner() {
+  echo "" && echo "=================================================="
+  echo "$1"
+  echo "=================================================="
+  echo ""
+}
 
-# Custom Domain (update with your actual domain)
-CUSTOM_DOMAIN="horizonbank.ae"
-BANKING_SUBDOMAIN="app.horizonbank.ae"
-
-echo "🚀 Starting deployment to Azure Resource Group: $RESOURCE_GROUP"
-
-# Check if Azure CLI is installed
-if ! command -v az &> /dev/null; then
-    echo "❌ Azure CLI is not installed. Please install it first."
+require_binary() {
+  if ! command -v "$1" >/dev/null 2>&1; then
+    echo "Required binary '$1' not found in PATH" >&2
     exit 1
+  fi
+}
+
+banner "Horizon Banking — Azure Deployment"
+
+require_binary az
+
+if ! az account show >/dev/null 2>&1; then
+  echo "Azure CLI session not found. Launching 'az login'..."
+  az login >/dev/null
 fi
 
-# Login and set subscription
-echo "🔐 Logging into Azure..."
-az login
-az account set --subscription "$SUBSCRIPTION_ID"
-
-echo "📋 Checking if resource group exists..."
-if ! az group show --name "$RESOURCE_GROUP" &> /dev/null; then
-    echo "📦 Creating resource group: $RESOURCE_GROUP"
-    az group create --name "$RESOURCE_GROUP" --location "$LOCATION"
-else
-    echo "✅ Resource group already exists"
+SUBSCRIPTION_ID="$(az account show --query id -o tsv)"
+if [[ -z "$SUBSCRIPTION_ID" ]]; then
+  echo "Unable to resolve active Azure subscription. Run 'az account set --subscription <id>'." >&2
+  exit 1
 fi
 
-echo "🏗️ Creating App Service Plan..."
-if ! az appservice plan show --name "$APP_SERVICE_PLAN" --resource-group "$RESOURCE_GROUP" &> /dev/null; then
-    az appservice plan create \
-        --name "$APP_SERVICE_PLAN" \
-        --resource-group "$RESOURCE_GROUP" \
-        --location "$LOCATION" \
-        --sku P1v2 \
-        --is-linux
-else
-    echo "✅ App Service Plan already exists"
+echo "Active subscription: $SUBSCRIPTION_ID"
+echo "Resource group:      $RESOURCE_GROUP"
+echo "App Service plan:    $APP_SERVICE_PLAN"
+echo "Web App:             $WEBAPP_NAME"
+echo "Key Vault:           $KEY_VAULT_NAME"
+echo "Package:             $ZIP_PATH"
+echo ""
+
+if [ ! -f "$ZIP_PATH" ]; then
+  echo "Deployment package '$ZIP_PATH' not found. Run scripts/create-azure-zip.sh first." >&2
+  exit 1
 fi
 
-echo "🌐 Creating Landing Site App Service..."
-if ! az webapp show --name "$LANDING_APP_NAME" --resource-group "$RESOURCE_GROUP" &> /dev/null; then
-    az webapp create \
-        --name "$LANDING_APP_NAME" \
-        --resource-group "$RESOURCE_GROUP" \
-        --plan "$APP_SERVICE_PLAN" \
-        --runtime "PHP|8.1"
+echo "Ensuring resource group exists..."
+az group create --name "$RESOURCE_GROUP" --location "$LOCATION" >/dev/null
 
-    # Configure PHP settings
-    az webapp config appsettings set \
-        --name "$LANDING_APP_NAME" \
-        --resource-group "$RESOURCE_GROUP" \
-        --settings \
-            PHP_VERSION="8.1" \
-            WEBSITE_LOAD_USER_PROFILE="1" \
-            WEBSITE_DYNAMIC_CACHE="0" \
-            BANKING_APP_URL="https://$BANKING_SUBDOMAIN"
-else
-    echo "✅ Landing App Service already exists"
-fi
-
-echo "💻 Creating Banking App Service..."
-if ! az webapp show --name "$BANKING_APP_NAME" --resource-group "$RESOURCE_GROUP" &> /dev/null; then
-    az webapp create \
-        --name "$BANKING_APP_NAME" \
-        --resource-group "$RESOURCE_GROUP" \
-        --plan "$APP_SERVICE_PLAN" \
-        --runtime "NODE|18-lts"
-
-    # Configure Node.js settings
-    az webapp config appsettings set \
-        --name "$BANKING_APP_NAME" \
-        --resource-group "$RESOURCE_GROUP" \
-        --settings \
-            WEBSITE_NODE_DEFAULT_VERSION="18.17.0" \
-            NEXT_PUBLIC_SITE_URL="https://$BANKING_SUBDOMAIN" \
-            NODE_ENV="production"
-else
-    echo "✅ Banking App Service already exists"
-fi
-
-echo "🔒 Creating Key Vault for secrets..."
-KEYVAULT_NAME="horizon-keyvault-$(date +%s)"
-if ! az keyvault show --name "$KEYVAULT_NAME" --resource-group "$RESOURCE_GROUP" &> /dev/null; then
-    az keyvault create \
-        --name "$KEYVAULT_NAME" \
-        --resource-group "$RESOURCE_GROUP" \
-        --location "$LOCATION" \
-        --enabled-for-template-deployment true
-else
-    echo "✅ Key Vault already exists"
-fi
-
-echo "📊 Setting up Application Insights..."
-APPINSIGHTS_NAME="horizon-insights"
-if ! az monitor app-insights component show --app "$APPINSIGHTS_NAME" --resource-group "$RESOURCE_GROUP" &> /dev/null; then
-    az monitor app-insights component create \
-        --app "$APPINSIGHTS_NAME" \
-        --location "$LOCATION" \
-        --resource-group "$RESOURCE_GROUP" \
-        --application-type web
-else
-    echo "✅ Application Insights already exists"
-fi
-
-echo "📦 Building and deploying Landing Site..."
-cd UI-UX
-zip -r ../landing-site.zip . -x "*.git*" "node_modules/*" "*.DS_Store*"
-cd ..
-
-az webapp deploy \
+echo "Ensuring App Service plan ($APP_SERVICE_PLAN) exists..."
+az appservice plan show --name "$APP_SERVICE_PLAN" --resource-group "$RESOURCE_GROUP" >/dev/null 2>&1 || \
+  az appservice plan create \
+    --name "$APP_SERVICE_PLAN" \
     --resource-group "$RESOURCE_GROUP" \
-    --name "$LANDING_APP_NAME" \
-    --src-path landing-site.zip \
-    --type zip
+    --location "$LOCATION" \
+    --sku P1v3 \
+    --is-linux >/dev/null
 
-echo "🏗️ Building Next.js Banking App..."
-npm ci
-npm run build
-
-echo "📦 Deploying Banking App..."
-# Create deployment package excluding unnecessary files
-zip -r banking-app.zip . \
-    -x "*.git*" \
-    -x "node_modules/*" \
-    -x "UI-UX/*" \
-    -x "*.DS_Store*" \
-    -x "landing-site.zip" \
-    -x "tests/*" \
-    -x "docs/*"
-
-az webapp deploy \
+echo "Ensuring Web App ($WEBAPP_NAME) exists..."
+az webapp show --name "$WEBAPP_NAME" --resource-group "$RESOURCE_GROUP" >/dev/null 2>&1 || \
+  az webapp create \
     --resource-group "$RESOURCE_GROUP" \
-    --name "$BANKING_APP_NAME" \
-    --src-path banking-app.zip \
-    --type zip
+    --plan "$APP_SERVICE_PLAN" \
+    --name "$WEBAPP_NAME" \
+    --runtime "$NODE_RUNTIME" >/dev/null
 
-echo "🌍 Setting up custom domains..."
-# Note: You'll need to configure your DNS to point to Azure before running these commands
-# az webapp config hostname add --webapp-name "$LANDING_APP_NAME" --resource-group "$RESOURCE_GROUP" --hostname "$CUSTOM_DOMAIN"
-# az webapp config hostname add --webapp-name "$BANKING_APP_NAME" --resource-group "$RESOURCE_GROUP" --hostname "$BANKING_SUBDOMAIN"
+echo "Configuring runtime and startup command..."
+az webapp config set \
+  --resource-group "$RESOURCE_GROUP" \
+  --name "$WEBAPP_NAME" \
+  --linux-fx-version "$NODE_RUNTIME" \
+  --startup-file "$STARTUP_FILE" >/dev/null
 
-echo "🔐 Enabling HTTPS..."
-# az webapp config ssl bind --certificate-source AppServiceManaged --hostname "$CUSTOM_DOMAIN" --name "$LANDING_APP_NAME" --resource-group "$RESOURCE_GROUP"
-# az webapp config ssl bind --certificate-source AppServiceManaged --hostname "$BANKING_SUBDOMAIN" --name "$BANKING_APP_NAME" --resource-group "$RESOURCE_GROUP"
+echo "Applying core app settings..."
+az webapp config appsettings set \
+  --resource-group "$RESOURCE_GROUP" \
+  --name "$WEBAPP_NAME" \
+  --settings \
+    SCM_DO_BUILD_DURING_DEPLOYMENT="false" \
+    WEBSITE_RUN_FROM_PACKAGE="0" \
+    WEBSITE_NODE_DEFAULT_VERSION="20-lts" >/dev/null
 
-echo "🧹 Cleaning up deployment files..."
-rm -f landing-site.zip banking-app.zip
+echo "Assigning system identity and granting Key Vault access (Key Vault Secrets User)..."
+PRINCIPAL_ID="$(az webapp identity assign --resource-group "$RESOURCE_GROUP" --name "$WEBAPP_NAME" --query principalId -o tsv)"
+if [[ -n "$PRINCIPAL_ID" ]]; then
+  SCOPE="/subscriptions/$SUBSCRIPTION_ID/resourceGroups/$RESOURCE_GROUP/providers/Microsoft.KeyVault/vaults/$KEY_VAULT_NAME"
+  az role assignment create \
+    --assignee "$PRINCIPAL_ID" \
+    --role "Key Vault Secrets User" \
+    --scope "$SCOPE" >/dev/null || true
+else
+  echo "Warning: could not resolve Web App managed identity principalId." >&2
+fi
 
-echo "✅ Deployment completed successfully!"
-echo ""
-echo "🌐 Your applications are now available at:"
-echo "   Landing Site: https://$LANDING_APP_NAME.azurewebsites.net"
-echo "   Banking App:  https://$BANKING_APP_NAME.azurewebsites.net"
-echo ""
-echo "📋 Next steps:"
-echo "   1. Configure your DNS to point $CUSTOM_DOMAIN to the landing site"
-echo "   2. Configure your DNS to point $BANKING_SUBDOMAIN to the banking app"
-echo "   3. Set up SSL certificates for your custom domains"
-echo "   4. Configure environment variables in Key Vault"
-echo "   5. Test the banking portal integration"
-echo ""
-echo "🔍 Monitor your applications:"
-echo "   Azure Portal: https://portal.azure.com"
-echo "   Resource Group: $RESOURCE_GROUP"
+echo "Deploying ZIP package..."
+az webapp deploy \
+  --resource-group "$RESOURCE_GROUP" \
+  --name "$WEBAPP_NAME" \
+  --src-path "$ZIP_PATH" \
+  --type zip >/dev/null
+
+echo "Validating Key Vault-backed app settings..."
+az webapp config appsettings list \
+  --resource-group "$RESOURCE_GROUP" \
+  --name "$WEBAPP_NAME" \
+  --query "[?contains(@.value,'@Microsoft.KeyVault')].[name,value]" -o table
+
+echo "Deployment complete. Validate at https://$WEBAPP_NAME.azurewebsites.net/internet-banking/"

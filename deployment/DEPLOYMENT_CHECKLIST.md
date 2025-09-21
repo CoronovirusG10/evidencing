@@ -160,7 +160,7 @@ If you want to deploy with current state (recommended):
 
 ```bash
 # Deploy to Azure now
-./deploy-integrated.sh
+./deploy-to-azure.sh
 
 # Add images later via:
 # 1. Upload images to assets/images/

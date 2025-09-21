@@ -9,8 +9,8 @@ This guide covers deploying your professional banking landing page alongside you
 ### **Resource Group: horizon-rg-uae**
 ```
 ├── 🌐 App Service Plan (Linux Premium)
-│   ├── horizonbank-landing     # PHP 8.1+ App Service (UI-UX folder)
-│   └── horizonbank-app         # Node.js 18+ App Service (Next.js)
+│   ├── horizon-landing-uae     # PHP 8.1+ App Service (UI-UX folder)
+│   └── horizon-banking-uae     # Node.js 20+ App Service (Next.js)
 ├── 🗄️ Azure Database for PostgreSQL
 ├── 🔒 Azure Key Vault
 ├── 📊 Application Insights
@@ -25,14 +25,14 @@ This guide covers deploying your professional banking landing page alongside you
 Deploy the PHP landing site and Next.js app as separate Azure App Services:
 
 #### **Landing Site Configuration:**
-- **App Service Name**: `horizonbank-landing`
+- **App Service Name**: `horizon-landing-uae`
 - **Runtime**: PHP 8.1
 - **Domain**: `horizonbank.ae` (root domain)
 - **Source**: `/UI-UX` folder
 
 #### **Banking App Configuration:**
-- **App Service Name**: `horizonbank-app`
-- **Runtime**: Node.js 18 LTS
+- **App Service Name**: `horizon-banking-uae`
+- **Runtime**: Node.js 20 LTS
 - **Domain**: `app.horizonbank.ae` (subdomain)
 - **Source**: Root directory (Next.js app)
 
@@ -141,7 +141,7 @@ pool:
 
 variables:
   azureSubscription: 'horizon-azure-connection'
-  appName: 'horizonbank-landing'
+  appName: 'horizon-landing-uae'
   resourceGroup: 'horizon-rg-uae'
 
 stages:
@@ -195,7 +195,7 @@ pool:
 
 variables:
   azureSubscription: 'horizon-azure-connection'
-  appName: 'horizonbank-app'
+  appName: 'horizon-banking-uae'
   resourceGroup: 'horizon-rg-uae'
 
 stages:
@@ -205,7 +205,7 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: '18.x'
+        versionSpec: '20.x'
 
     - script: |
         npm ci
@@ -244,7 +244,7 @@ stages:
               appName: '$(appName)'
               resourceGroupName: '$(resourceGroup)'
               package: '$(Pipeline.Workspace)/app/app.zip'
-              runtimeStack: 'NODE|18-lts'
+              runtimeStack: 'NODE|20-lts'
 ```
 
 ## 🌍 Domain Configuration
@@ -252,8 +252,8 @@ stages:
 ### **Azure DNS Zone Setup**
 ```
 horizonbank.ae                    A Record    → Landing App Service IP
-app.horizonbank.ae                CNAME       → horizonbank-app.azurewebsites.net
-www.horizonbank.ae                CNAME       → horizonbank-landing.azurewebsites.net
+app.horizonbank.ae                CNAME       → horizon-banking-uae.azurewebsites.net
+www.horizonbank.ae                CNAME       → horizon-landing-uae.azurewebsites.net
 ```
 
 ### **SSL Certificates**
@@ -274,7 +274,7 @@ BANKING_APP_URL=https://app.horizonbank.ae
 ```bash
 # Next.js Configuration
 NEXT_PUBLIC_SITE_URL=https://app.horizonbank.ae
-WEBSITE_NODE_DEFAULT_VERSION=18.17.0
+WEBSITE_NODE_DEFAULT_VERSION=20-lts
 
 # Appwrite Configuration
 NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
@@ -287,10 +287,10 @@ NEXT_PUBLIC_ENABLE_PLAID=true
 NEXT_PUBLIC_ENABLE_TRANSFERS=true
 
 # External APIs (store in Key Vault)
-PLAID_CLIENT_ID=@Microsoft.KeyVault(SecretUri=https://horizon-keyvault.vault.azure.net/secrets/plaid-client-id/)
-PLAID_SECRET=@Microsoft.KeyVault(SecretUri=https://horizon-keyvault.vault.azure.net/secrets/plaid-secret/)
-DWOLLA_KEY=@Microsoft.KeyVault(SecretUri=https://horizon-keyvault.vault.azure.net/secrets/dwolla-key/)
-DWOLLA_SECRET=@Microsoft.KeyVault(SecretUri=https://horizon-keyvault.vault.azure.net/secrets/dwolla-secret/)
+PLAID_CLIENT_ID=@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/plaid-client-id/)
+PLAID_SECRET=@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/plaid-secret/)
+DWOLLA_KEY=@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/dwolla-key/)
+DWOLLA_SECRET=@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/dwolla-secret/)
 ```
 
 ## 📊 Monitoring & Analytics
@@ -323,17 +323,19 @@ az account set --subscription "your-subscription-id"
 # Deploy Landing Site
 az webapp deploy \
   --resource-group horizon-rg-uae \
-  --name horizonbank-landing \
+  --name horizon-landing-uae \
   --src-path ./UI-UX \
   --type zip
 
 # Deploy Banking App
-npm run build
+scripts/create-azure-zip.sh
 az webapp deploy \
   --resource-group horizon-rg-uae \
-  --name horizonbank-app \
-  --src-path ./.next \
+  --name horizon-banking-uae \
+  --src-path horizon-internet-banking.zip \
   --type zip
+
+echo "Archive nests Next.js build under /internet-banking to avoid clobbering root assets."
 ```
 
 ## 🔄 Integration Points

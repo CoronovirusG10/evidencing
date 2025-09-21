@@ -14,12 +14,12 @@ This guide outlines how to deploy Horizon to Azure App Service in the UAE North 
 RESOURCE_GROUP="horizon-rg-uae"
 LOCATION="uaenorth"
 APP_SERVICE_PLAN="horizon-asp-uae"
-WEB_APP_NAME="horizon-portal-uae"
+WEB_APP_NAME="horizon-banking-uae"
 KEY_VAULT_NAME="horizon-kv-uae"
 
 az group create --name $RESOURCE_GROUP --location $LOCATION
 az appservice plan create --name $APP_SERVICE_PLAN --resource-group $RESOURCE_GROUP --location $LOCATION --sku P1v3 --is-linux
-az webapp create --resource-group $RESOURCE_GROUP --plan $APP_SERVICE_PLAN --name $WEB_APP_NAME --runtime "NODE|18-lts"
+az webapp create --resource-group $RESOURCE_GROUP --plan $APP_SERVICE_PLAN --name $WEB_APP_NAME --runtime "NODE|20-lts"
 az keyvault create --name $KEY_VAULT_NAME --resource-group $RESOURCE_GROUP --location $LOCATION
 ```
 
@@ -64,7 +64,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
       - run: npm install
       - run: npm run lint
       - run: npm run test

@@ -6,20 +6,20 @@
     "environment": "production"
   },
   "landing": {
-    "appServiceName": "horizonbank-landing",
+    "appServiceName": "horizon-landing-uae",
     "runtime": "PHP|8.1",
     "domain": "horizonbank.ae",
     "sourcePath": "./UI-UX"
   },
   "banking": {
-    "appServiceName": "horizonbank-app",
-    "runtime": "NODE|18-lts",
+    "appServiceName": "horizon-banking-uae",
+    "runtime": "NODE|20-lts",
     "domain": "app.horizonbank.ae",
     "sourcePath": "."
   },
   "infrastructure": {
-    "appServicePlan": "horizonbank-plan",
-    "keyVault": "horizon-keyvault",
+    "appServicePlan": "horizon-asp-uae",
+    "keyVault": "horizon-kv-uae",
     "applicationInsights": "horizon-insights",
     "storageAccount": "horizonbankstorage",
     "cdnProfile": "horizon-cdn"

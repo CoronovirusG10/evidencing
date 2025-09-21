@@ -71,6 +71,7 @@ This plan captures the work required to deliver the private banking portal exper
 - [x] Provide CI/CD guidance (GitHub Actions → App Service) *(docs/azure-deployment.md)*
 - [x] Outline secrets management via Key Vault and app settings *(docs/azure-deployment.md)*
 - [x] Detail verification steps post-deploy (health checks, logging, UAE compliance checks) *(docs/manual-test-plan.md, docs/azure-deployment.md)*
+- [x] Align App Service deployment scripts with Node 20 runtime, `/internet-banking` base path packaging, and real resource names *(deploy-to-azure.sh, scripts/create-azure-zip.sh)*
 
 ## Phase 12 — Validation & Handover
 - [x] Run lint/tests locally; capture results in log *(logs/daily/2025-09-20.md)*

@@ -47,6 +47,9 @@ This file records the purpose of the engagement, key deliverables, and an execut
 | 2025-09-20 | Codex  | Provisioned Azure infrastructure (RG/App Service/Key Vault) in UAE North via CLI. | Azure CLI (`az group/appservice plan/webapp/keyvault`) | Configure secrets + CI/CD before go-live. |
 | 2025-09-20 | Codex  | Loaded Appwrite/Plaid/Dwolla secrets into Key Vault and wired Web App settings to references. | `az keyvault secret set`, `az webapp config appsettings set` | Trigger CI/CD build + manual verification next. |
 | 2025-09-20 | Codex  | Persisted Plaid transactions, added manual-entry action/UI, and moved reads to session clients. | `lib/actions/bank.actions.ts`, `components/ManualTransactionSheet.tsx`, `logs/tasks/TASK-20250920-006.md` | Continue with Phase 5 export features and statement tooling. |
+| 2025-09-20 | Codex  | Realigned Azure deployment tooling to `horizon-banking-uae`, added packaging workflow, and refreshed operational docs. | `startup.sh`, `scripts/create-azure-zip.sh`, `deploy-to-azure.sh`, `README.md`, `docs/azure-deployment.md`, `logs/tasks/TASK-20250920-014.md` | Run manual verification after next App Service deployment. |
+| 2025-09-21 | Codex  | Packaged Next.js standalone build and deployed to Azure App Service (`horizon-banking-uae`) via CLI. | `horizon-internet-banking.zip`, `deploy-to-azure.sh`, `logs/tasks/TASK-20250921-001.md`, `logs/daily/2025-09-21.md` | Execute manual test plan on the live site and monitor telemetry. |
+| 2025-09-21 | Codex  | Restructured deployment to serve from `/internet-banking/` subdirectory and redeployed. | `startup.sh`, `scripts/create-azure-zip.sh`, `logs/tasks/TASK-20250921-002.md`, `DEPLOY_INSTRUCTIONS.md`, `README.md` | Confirm root-level placeholder strategy if needed; complete live manual QA. |
 
 ## Outstanding Questions / Risks
 - Confirm whether Appwrite Cloud free tier is sufficient for expected traffic; upgrade path may be required.

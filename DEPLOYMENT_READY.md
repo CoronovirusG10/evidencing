@@ -67,24 +67,20 @@ UI-UX/ (Ready for deployment)
 ### **Ready to Deploy Now:**
 ```bash
 # Update your subscription ID in the script first
-./deploy-integrated.sh
+./deploy-to-azure.sh
 ```
 
 ### **What the deployment includes:**
-- ✅ PHP landing site at root domain
-- ✅ Next.js banking app at `/internet-banking/`
-- ✅ Proper Azure App Service configuration
-- ✅ Web.config for routing and security
-- ✅ HTTPS enforcement
-- ✅ Environment variables setup
+- ✅ Next.js banking app deployed under `/internet-banking/`
+- ✅ Standalone bundle packaged for Azure App Service
+- ✅ Startup script configured to run `node .next/standalone/server.js`
+- ✅ HTTPS enforced on Azure App Service
+- ✅ App settings backed by Azure Key Vault references
 
 ## 🌐 **Expected Results After Deployment**
 
 ### **Production URLs:**
-- **Landing Site**: `https://horizonbank.azurewebsites.net/`
-- **Internet Banking**: `https://horizonbank.azurewebsites.net/internet-banking/`
-- **About Page**: `https://horizonbank.azurewebsites.net/pages/about/`
-- **Contact Page**: `https://horizonbank.azurewebsites.net/pages/contact.php`
+- **Internet Banking**: `https://horizon-banking-uae.azurewebsites.net/internet-banking/`
 
 ### **User Flow:**
 1. **Visitor arrives** at professional homepage
@@ -135,6 +131,6 @@ UI-UX/ (Ready for deployment)
 
 The structure is **correctly set up**, all necessary files are **uploaded and configured**, and the banking portal integration is **properly implemented**.
 
-**Execute deployment**: `./deploy-integrated.sh`
+**Execute deployment**: `./deploy-to-azure.sh`
 
 Your professional banking website will be live and fully functional on Azure! 🌟

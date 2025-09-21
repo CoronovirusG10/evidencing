@@ -1,212 +1,81 @@
-# 🚀 DEPLOYMENT INSTRUCTIONS - Horizon Banking
+# 🚀 Horizon Banking — Azure Deployment Runbook
 
-## ✅ **READY TO DEPLOY**
-
-Your integrated banking website is packaged and ready for Azure deployment!
-
-## 📦 **Package Details**
-- **File**: `horizon-banking-integrated.zip` (6.1MB)
-- **Contains**: PHP landing site + Next.js banking app
-- **Structure**: Landing at root, banking at `/internet-banking/`
-
-## 🎯 **Quick Deployment (Recommended)**
-
-### **Option 1: Automated Script**
-```bash
-./deploy-now.sh
-```
-
-This script will:
-1. Login to Azure
-2. Create/update resources in horizon-rg-uae
-3. Deploy the integrated package
-4. Configure all settings
-5. Open your website in browser
-
-### **Option 2: Manual Azure CLI**
-```bash
-# 1. Login to Azure
-az login
-
-# 2. Set subscription (replace with your ID)
-az account set --subscription "your-subscription-id"
-
-# 3. Create resource group (if needed)
-az group create --name horizon-rg-uae --location "UAE North"
-
-# 4. Create App Service Plan
-az appservice plan create \
-    --name horizonbank-plan \
-    --resource-group horizon-rg-uae \
-    --location "UAE North" \
-    --sku P1V2 \
-    --is-linux
-
-# 5. Create Web App
-az webapp create \
-    --name horizonbank \
-    --resource-group horizon-rg-uae \
-    --plan horizonbank-plan \
-    --runtime "PHP|8.2"
-
-# 6. Configure settings
-az webapp config appsettings set \
-    --resource-group horizon-rg-uae \
-    --name horizonbank \
-    --settings \
-        WEBSITE_NODE_DEFAULT_VERSION="18.17.0" \
-        PHP_VERSION="8.2" \
-        NODE_ENV="production"
-
-# 7. Deploy the package
-az webapp deploy \
-    --resource-group horizon-rg-uae \
-    --name horizonbank \
-    --src-path horizon-banking-integrated.zip \
-    --type zip
-
-# 8. Enable HTTPS
-az webapp update \
-    --resource-group horizon-rg-uae \
-    --name horizonbank \
-    --https-only true
-```
-
-## 🌐 **After Deployment - URLs**
-
-Your website will be accessible at:
-```
-🏠 Homepage:           https://horizonbank.azurewebsites.net/
-🏦 Internet Banking:   https://horizonbank.azurewebsites.net/internet-banking/
-ℹ️ About:              https://horizonbank.azurewebsites.net/pages/about/
-📞 Contact:            https://horizonbank.azurewebsites.net/pages/contact.php
-```
-
-## ⚙️ **Required Environment Variables**
-
-After deployment, add these in Azure Portal > App Service > Configuration:
-
-### **Banking App Credentials**
-```bash
-# Appwrite
-NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
-NEXT_PUBLIC_APPWRITE_PROJECT=your-project-id
-APPWRITE_DATABASE_ID=your-database-id
-APPWRITE_USER_COLLECTION_ID=your-collection-id
-APPWRITE_BANK_COLLECTION_ID=your-collection-id
-APPWRITE_TRANSACTION_COLLECTION_ID=your-collection-id
-NEXT_APPWRITE_KEY=your-api-key
-
-# Plaid (for bank connections)
-PLAID_CLIENT_ID=your-plaid-client-id
-PLAID_SECRET=your-plaid-secret
-PLAID_ENV=sandbox  # or development/production
-PLAID_PRODUCTS=transactions
-PLAID_COUNTRY_CODES=US
-
-# Dwolla (for transfers)
-DWOLLA_KEY=your-dwolla-key
-DWOLLA_SECRET=your-dwolla-secret
-DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
-DWOLLA_ENV=sandbox  # or production
-
-# Feature Flags
-NEXT_PUBLIC_ENABLE_PLAID=true
-NEXT_PUBLIC_ENABLE_TRANSFERS=true
-```
-
-## 🧪 **Testing After Deployment**
-
-### **1. Test Landing Site**
-- [ ] Visit homepage: `https://horizonbank.azurewebsites.net/`
-- [ ] Check responsive design on mobile
-- [ ] Verify all CSS/JS loads properly
-- [ ] Test navigation menu
-
-### **2. Test Banking Portal**
-- [ ] Click "Internet Banking" button
-- [ ] Should redirect to `/internet-banking/sign-in`
-- [ ] Test login form (if credentials configured)
-- [ ] Verify Personal/Business tabs work
-
-### **3. Test Other Pages**
-- [ ] About page loads correctly
-- [ ] Contact form displays properly
-- [ ] FAQ accordion works
-- [ ] All links function correctly
-
-## 🔧 **Troubleshooting**
-
-### **If deployment fails:**
-```bash
-# Check deployment logs
-az webapp log deployment show \
-    --resource-group horizon-rg-uae \
-    --name horizonbank
-
-# View application logs
-az webapp log tail \
-    --resource-group horizon-rg-uae \
-    --name horizonbank
-```
-
-### **If pages don't load:**
-1. Check App Service is running in Azure Portal
-2. Verify web.config is properly configured
-3. Check application logs for errors
-4. Restart the App Service:
-```bash
-az webapp restart --resource-group horizon-rg-uae --name horizonbank
-```
-
-### **If banking app doesn't work:**
-1. Verify environment variables are set
-2. Check Node.js version is 18.17.0
-3. Review application logs
-4. Ensure database connections are configured
-
-## 📊 **Monitoring**
-
-### **Enable Application Insights:**
-```bash
-az monitor app-insights component create \
-    --app horizonbank-insights \
-    --location "UAE North" \
-    --resource-group horizon-rg-uae \
-    --application-type web
-```
-
-### **View Metrics:**
-- CPU Usage
-- Memory Usage
-- HTTP Request rates
-- Response times
-- Error rates
-
-## 🎯 **Success Indicators**
-
-✅ **Deployment is successful when:**
-- Homepage loads with professional design
-- Banking portal button redirects correctly
-- All navigation links work
-- Contact form displays properly
-- Mobile responsive design functions
-- HTTPS is enforced
-
-## 🚦 **Current Status**
-
-| Component | Status | Notes |
-|-----------|--------|-------|
-| Build | ✅ Complete | Next.js built successfully |
-| Package | ✅ Ready | 6.1MB ZIP file created |
-| Landing Site | ✅ Ready | PHP files configured |
-| Banking App | ✅ Ready | Standalone build prepared |
-| Deployment | 🔄 **Ready to Execute** | Run `./deploy-now.sh` |
+Follow this checklist to deploy the banking portal to **horizon-banking-uae** on Azure App Service. The Next.js app is published under `/internet-banking/` using the standalone output.
 
 ---
 
-## 🎉 **READY TO DEPLOY!**
+## 1. Build & Package
 
-**Execute:** `./deploy-now.sh`
+```bash
+npm install
+npm run lint
+npm run test
+scripts/create-azure-zip.sh          # Produces horizon-internet-banking.zip
+```
 
-Your professional banking website will be live on Azure in minutes! 🚀
+What gets packaged:
+- `internet-banking/.next/standalone` and `internet-banking/.next/static`
+- `internet-banking/public/`
+- `internet-banking/package.json`, `internet-banking/package-lock.json`
+- `startup.sh` at the archive root (runs `node .next/standalone/server.js` from `/home/site/wwwroot/internet-banking`)
+
+Verify `internet-banking/.next/standalone/server.js` exists before continuing.
+
+---
+
+## 2. Deploy to Azure (UAE North)
+
+```bash
+./deploy-to-azure.sh
+```
+
+The script performs:
+1. Confirms Azure CLI context (subscription + login).
+2. Ensures `horizon-rg-uae`, `horizon-asp-uae`, and `horizon-banking-uae` exist.
+3. Sets runtime to `NODE|20-lts` and startup command `./startup.sh`.
+4. Assigns the Web App system-managed identity and grants **Key Vault Secrets User** on `horizon-kv-uae`.
+5. Deploys `horizon-internet-banking.zip` via `az webapp deploy`.
+6. Prints Key Vault-referenced settings via `az webapp config appsettings list`.
+
+If a failure occurs, re-run after resolving the issue. The script is idempotent.
+
+---
+
+## 3. Post-Deploy Validation
+
+1. Browse `https://horizon-banking-uae.azurewebsites.net/internet-banking/`.
+2. Execute the manual test plan (`docs/manual-test-plan.md`) and log outcomes in `logs/daily/2025-09-20.md`.
+3. Confirm `appCommandLine` / startup command is `./startup.sh` under **App Service → Configuration → General settings**.
+4. Confirm `linuxFxVersion` is `NODE|20-lts`.
+5. Validate Key Vault-backed app settings resolve correctly (no `***` masking in Portal).
+6. Tail deployment logs if needed:
+   ```bash
+   az webapp log deployment show --resource-group horizon-rg-uae --name horizon-banking-uae
+   az webapp log tail --resource-group horizon-rg-uae --name horizon-banking-uae
+   ```
+
+---
+
+## 4. Environment & Secrets
+
+- System-assigned managed identity is required for Key Vault references.
+- App settings should be stored as `@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/<NAME>/<VERSION>)`.
+- Required secrets are listed in `.env.example` and `README.md`.
+
+---
+
+## 5. Rollback / Redeploy
+
+- Re-run `scripts/create-azure-zip.sh` after any code change, then execute `deploy-to-azure.sh`.
+- To redeploy a previous package, use `az webapp deploy --resource-group horizon-rg-uae --name horizon-banking-uae --src-path <package>.zip --type zip`.
+- Restart the Web App if traffic is routed before the package settles: `az webapp restart --resource-group horizon-rg-uae --name horizon-banking-uae`.
+
+---
+
+## 6. Support Notes
+
+- All navigation is relative; the Next.js `basePath` and `assetPrefix` are locked to `/internet-banking/` in production.
+- For CI/CD, replicate the packaging command then call `az webapp deploy` with the same zip artifact.
+- Keep `PROJECT_PLAN.md`, `AGENTS.md`, and task logs updated whenever deployment steps are executed.
+
+✅ Deployment is complete when the `/internet-banking/` app loads successfully on Azure and manual tests pass.

@@ -246,22 +246,20 @@ cat > deployment/web.config << 'EOF'
 EOF
 
 # Deploy to Azure
-cd deployment
-zip -r ../horizon-banking.zip .
-cd ..
+scripts/create-azure-zip.sh
 
 az webapp deploy \
     --resource-group horizon-rg-uae \
-    --name horizonbank-app \
-    --src-path horizon-banking.zip \
+    --name horizon-banking-uae \
+    --src-path horizon-internet-banking.zip \
     --type zip
 
 echo "🧹 Cleaning up..."
-rm -rf deployment horizon-banking.zip
+rm -f horizon-internet-banking.zip
 
 echo "✅ Deployment completed!"
 echo "🌐 Landing Site: https://horizonbank.ae"
-echo "🏦 Internet Banking: https://horizonbank.ae/internet-banking"
+echo "🏦 Internet Banking: https://horizon-banking-uae.azurewebsites.net/internet-banking/"
 ```
 
 ## 🔗 Navigation Updates
@@ -292,8 +290,8 @@ PHP_VERSION=8.1
 WEBSITE_LOAD_USER_PROFILE=1
 
 # Node.js Settings for Internet Banking
-WEBSITE_NODE_DEFAULT_VERSION=18.17.0
-NEXT_PUBLIC_SITE_URL=https://horizonbank.ae/internet-banking
+WEBSITE_NODE_DEFAULT_VERSION=20-lts
+NEXT_PUBLIC_SITE_URL=https://horizon-banking-uae.azurewebsites.net/internet-banking/
 
 # Banking App Configuration
 NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
@@ -301,8 +299,8 @@ NEXT_PUBLIC_ENABLE_PLAID=true
 NEXT_PUBLIC_ENABLE_TRANSFERS=true
 
 # Secrets (store in Key Vault)
-APPWRITE_DATABASE_ID=@Microsoft.KeyVault(SecretUri=https://horizon-keyvault.vault.azure.net/secrets/appwrite-db/)
-PLAID_CLIENT_ID=@Microsoft.KeyVault(SecretUri=https://horizon-keyvault.vault.azure.net/secrets/plaid-client/)
+APPWRITE_DATABASE_ID=@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/appwrite-db/)
+PLAID_CLIENT_ID=@Microsoft.KeyVault(SecretUri=https://horizon-kv-uae.vault.azure.net/secrets/plaid-client/)
 ```
 
 ## 🧪 Local Development
